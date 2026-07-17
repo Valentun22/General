@@ -1,0 +1,569 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.articleOneBox {
+    height: 100vh;
+    background-image: url("../../../img/homeImg.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    background-attachment: scroll;
+}
+
+.boxTwoAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.boxTwo {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9vh;
+    align-items: center;
+    position: relative;
+}
+
+.boxTwoContOne {
+    position: absolute;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.boxTwoContOne h4 {
+    margin-right: 15px;
+}
+
+.boxTwoContTwo img {
+    width: clamp(20vw, 28vw, 400px);
+    max-width: 450px;
+    padding-top: 50px;
+    transition: 0.5s ease;
+}
+
+.boxTwoContThree {
+    position: absolute;
+    right: 10vw;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes headerSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes navFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes btnFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.articleOneBoxHeader {
+    animation: headerSlideDown 1.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    position: relative;
+    z-index: 1005;
+}
+
+@keyframes borderSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logoAnimate {
+    animation: logoSlideDown 2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 1s;
+}
+
+.navItem1 {
+    animation: navFadeIn 0.5s ease 0.35s both;
+}
+
+.navItem2 {
+    animation: navFadeIn 0.5s ease 0.45s both;
+}
+
+.navItem3 {
+    animation: navFadeIn 0.5s ease 0.55s both;
+}
+
+.navItem4 {
+    animation: navFadeIn 0.5s ease 0.65s both;
+}
+
+.boxTwoContTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    width: 100%;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+    z-index: 1002;
+}
+
+.dropdownTrigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+    font-family: "Ysabeau", sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 0.9vw, 1rem);
+    color: white;
+    text-transform: uppercase;
+    margin-right: 18px;
+    position: relative;
+}
+
+.dropdownTrigger::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.dropdownTrigger:hover::after {
+    width: 100%;
+}
+
+.dropdownArrow {
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+    font-size: clamp(0.95rem, 0.9vw, 1rem);
+}
+
+.dropdownArrowOpen {
+    transform: rotate(-90deg);
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: calc(17vh + 18px);
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+    z-index: 999;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.dropdownMenuVisible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdownSwiperWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dropdownSwiper {
+    flex: 1;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.swiperNavPrev,
+.swiperNavNext {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.07);
+    color: white;
+    font-size: clamp(21px, 2.19vw, 35px);
+    padding-bottom: 6px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+    user-select: none;
+}
+
+.swiperNavPrev:hover,
+.swiperNavNext:hover {
+    background: rgba(185, 157, 117, 0.25);
+    border-color: #B99D75;
+}
+
+.dropdownSwiper :global(.swiper-button-next),
+.dropdownSwiper :global(.swiper-button-prev) {
+    display: none !important;
+}
+
+.dropdownCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.dropdownCard:hover {
+    transform: translateY(-5px);
+}
+
+.dropdownCardImg {
+    width: 90%;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dropdownCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.dropdownCard:hover .dropdownCardImg img {
+    transform: scale(1.05);
+}
+
+.dropdownCardLabel {
+    font-family: "Ysabeau", sans-serif;
+    font-size: clamp(0.6rem, 0.8vw, 0.8rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition: color 0.2s ease;
+    padding-bottom: 5px;
+}
+
+.dropdownCard:hover .dropdownCardLabel {
+    color: #B99D75;
+}
+
+.swiperNavHidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.navLink {
+    font-family: "Ysabeau", sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.6rem, 1vw, 1rem);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.contactIcon {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding-right: 10px;
+}
+
+.navLinkBtn {
+    font-family: "Ysabeau", sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.95rem, 0.9vw, 1rem);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1002;
+}
+
+.navLinkBtn::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.navLinkBtn:hover::after {
+    width: 100%;
+}
+
+
+@media (max-width: 1000px) {
+    .boxTwoContOne {
+        display: none;
+    }
+
+    .boxTwoContThree {
+        display: none;
+    }
+
+    .boxTwoContTwo img {
+        width: 45vw;
+        padding-top: 0;
+        min-width: 280px;
+    }
+
+    .articleOneBox {
+        background-attachment: scroll;
+    }
+
+    .articleOneBoxHeader {
+        width: 100%;
+        animation: headerSlideDown 1.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        position: fixed;
+        z-index: 1004;
+        top: 0;
+        left: 0;
+    }
+
+    .headerWrapper {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1004;
+    }
+
+    .boxTwoAll {
+        padding-top: 50px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .boxTwoContTwo img {
+        width: 45vw;
+        padding-top: 150px;
+    }
+}
+
+.mobileMenuItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-family: "Ysabeau", sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.75rem, 0.9vw, 0.95rem);
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: left;
+    padding: 15px 54px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease, padding-left 0.2s ease;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.mobileMenuItem.active {
+    text-decoration: none;
+    color: #B99D75;
+}
+
+.mobileMenuItem:last-of-type {
+    border-bottom: none;
+}
+
+.mobileMenuItem:hover,
+.mobileMenuItem:focus {
+    color: #B99D75;
+    background: rgba(185, 157, 117, 0.07);
+    padding-left: 72px;
+    outline: none;
+}
+
+.mobileMenuItem svg {
+    flex-shrink: 0;
+}
+
+.mobileMenuItem:hover svg,
+.mobileMenuItem:focus svg {
+    color: #B99D75;
+}
+
+.mobileBookingBtn {
+    display: block;
+    margin: 16px 24px 20px;
+    width: calc(100% - 48px);
+    height: 42px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Ysabeau", sans-serif;
+    font-size: clamp(0.75rem, 0.9vw, 0.95rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.3s ease, color 0.2s ease, font-size 0.7s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.mobileBookingBtn:hover {
+    background-color: #B99D75;
+    color: #131212;
+    box-shadow: 0 0 14px 4px rgba(185, 157, 117, 0.45);
+    font-size: 13.5px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 1000px) {
+    .headerWrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1004;
+    }
+
+    .boxTwoAll {
+        padding-top: 50px;
+    }
+}
+
+.arrow::after {
+    margin-right: 5px;
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg) translateY(-3px);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}

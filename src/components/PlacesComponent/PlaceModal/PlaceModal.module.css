@@ -1,0 +1,614 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1012;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: overlayFadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeDownZ {
+    from { opacity: 0; transform: translateX(20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeDownX {
+    from { opacity: 0; transform: translateX(-20px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.modal {
+    background: #f5f2f0;
+    width: 88vw;
+    max-width: 1100px;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    touch-action: pan-y;
+    border-radius: 6px;
+    position: relative;
+    padding: 28px 50px;
+    box-sizing: border-box;
+}
+
+.placeNavPrev, .placeNavNext {
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0 20px;
+    transition: color 0.2s, opacity 0.2s;
+    z-index: 99999;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.placeNavPrev:hover, .placeNavNext:hover {
+    color: #B99D75;
+}
+
+.placeNavPrev:disabled, .placeNavNext:disabled {
+    opacity: 0.35;
+    cursor: default;
+    color: white;
+}
+
+@media (hover: none) {
+    .placeNavPrev:hover, .placeNavNext:hover {
+        color: white;
+    }
+}
+
+.placeNavPrev {
+    left: 10px;
+    animation: fadeDownX 0.3s ease 1s both !important;
+}
+
+.placeNavNext {
+    right: 10px;
+    animation: fadeDownZ 0.3s ease 1s both !important;
+}
+
+
+.mobileNavPrev,
+.mobileNavNext {
+    width: 60px !important;
+    display: none;
+    position: fixed;
+    top: 46%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #B99D75;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: color 0.2s, opacity 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobileNavPrev:hover, .mobileNavNext:hover {
+    color: #4e4332;
+}
+
+.mobileNavPrev:disabled, .mobileNavNext:disabled {
+    opacity: 0.4;
+    cursor: default;
+    color: #B99D75;
+}
+
+.mobileNavPrev {
+    left: 20px;
+    animation: fadeDownX 0.8s ease 0.55s both;
+}
+
+.mobileNavNext {
+    right: 20px;
+    animation: fadeDownZ 0.8s ease 0.55s both;
+}
+
+.header {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #B99D75;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.category {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #B99D75;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.name {
+    font-family: "Cormorant Infant", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.top {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.mainImgWrap {
+    width: 48%;
+    height: 350px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #B99D75;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.description {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 0;
+    white-space: pre-line;
+    text-indent: 1.5em;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contacts a {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contactIcon {
+    color: #B99D75;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contactLink {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+    color: #B99D75;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-bottom: 15px;
+}
+
+.linkBtn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border: 1px solid #B99D75;
+    border-radius: 4px;
+    color: #B99D75;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+}
+
+.linkBtn:hover {
+    background: #B99D75;
+    color: white;
+}
+
+.linkBtnInstagram {
+    border-color: #c13584;
+    color: #c13584;
+}
+
+.linkBtnInstagram:hover {
+    background: #c13584;
+    color: white;
+}
+
+.gallery {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+
+.galleryTitle {
+    font-family: "Cormorant Infant", serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    color: #1a1a1a;
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.galleryItem {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: zoom-in;
+    transition: border-color 0.2s ease;
+}
+
+.galleryItem:hover {
+    border-color: #B99D75;
+}
+
+.galleryItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.galleryItem:hover img {
+    transform: scale(1.05);
+}
+
+.fullOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.fullImg {
+    max-width: 85vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.fullPrev,
+.fullNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0 20px;
+    transition: color 0.2s;
+}
+
+.fullPrev:hover,
+.fullNext:hover {
+    color: #B99D75;
+}
+
+.fullPrev {
+    left: 20px;
+}
+
+.fullNext {
+    right: 20px;
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .name {
+        font-size: 2.2rem;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .modal {
+        width: 90vw;
+        padding: 26px 40px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .mainImgWrap {
+        width: 45%;
+        height: 320px;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .galleryGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .placeNavPrev {
+        left: 10px;
+    }
+
+    .placeNavNext {
+        right: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .overlay {
+        gap: 0;
+    }
+
+    .modal {
+        width: 90vw;
+        max-height: 92vh;
+        padding: 24px 38px;
+    }
+
+    .placeNavPrev,
+    .placeNavNext {
+        display: none;
+    }
+
+    .mobileNavPrev,
+    .mobileNavNext {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .description {
+        font-size: 1.3rem;
+    }
+
+    .mainImgWrap {
+        width: 100%;
+        height: 450px;
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .galleryGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .galleryTitle {
+        font-size: 1.5rem;
+    }
+
+    .contacts {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .galleryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        width: 92vw;
+        max-height: 93vh;
+        padding: 20px 18px;
+        border-radius: 6px;
+    }
+
+    .header {
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+    }
+
+    .category {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .mainImgWrap {
+        height: 350px;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .contactItem {
+        font-size: 0.9rem;
+    }
+
+    .linkBtn {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+    }
+
+    .galleryGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .galleryTitle {
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+    }
+
+    .gallery {
+        padding-top: 20px;
+    }
+
+    .fullImg {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+    .fullPrev {
+        left: 8px;
+    }
+
+    .fullNext {
+        right: 8px;
+    }
+
+    .fullPrev,
+    .fullNext {
+        font-size: 2.8rem;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal {
+        width: 92vw;
+        max-height: 85vh;
+        border-radius: 10px;
+        padding: 20px 20px 28px;
+    }
+
+    .header {
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        margin-top: 4px;
+    }
+
+    .name {
+        font-size: 1.3rem;
+    }
+
+    .category {
+        font-size: 0.68rem;
+    }
+
+    .mainImgWrap {
+        height: 300px;
+    }
+
+    .top {
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .info {
+        gap: 16px;
+        margin: 20px 0;
+    }
+    .contactItem {
+        font-size: 0.86rem;
+    }
+
+    .links {
+        gap: 8px;
+        padding-bottom: 10px;
+    }
+
+    .linkBtn {
+        padding: 7px 12px;
+        font-size: 0.74rem;
+        letter-spacing: 0.5px;
+    }
+
+    .galleryGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .galleryTitle {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+
+    .gallery {
+        padding-top: 16px;
+    }
+
+    .fullImg {
+        max-width: 98vw;
+        max-height: 75vh;
+    }
+
+    .fullPrev,
+    .fullNext {
+        font-size: 2.2rem;
+        padding: 0 8px;
+    }
+
+    .contacts {
+        padding-top: 20px;
+    }
+}

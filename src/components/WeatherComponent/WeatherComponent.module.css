@@ -1,0 +1,518 @@
+@keyframes barReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes iconWake {
+    0% {
+        opacity: 0;
+        transform: scale(0.55);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes tempReveal {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dayReveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dividerGrow {
+    from {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+
+.weatherBox {
+    background-color: #131212;
+    display: flex;
+    align-items: center;
+    padding: 15px 8vw;
+    gap: 8vw;
+    color: #B99D75;
+    border: 1px solid #B99D75;
+    opacity: 0;
+}
+
+.weatherBoxVisible {
+    animation: barReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.weatherBoxVisible .weatherLabel {
+    opacity: 0;
+    animation: slideFromLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) 80ms forwards;
+}
+
+.weatherIcon {
+    font-size: 5rem;
+    display: block;
+    opacity: 0;
+}
+
+.weatherIconVisible {
+    animation: iconWake 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 180ms forwards;
+}
+
+.weatherBoxVisible .weatherTempBlock {
+    opacity: 0;
+    animation: tempReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) 260ms forwards;
+}
+
+.weatherBoxVisible .weatherDay {
+    opacity: 0;
+    animation: dayReveal 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.weatherBoxVisible .weatherCurrent::after {
+    transform-origin: top;
+    animation: dividerGrow 0.4s ease 200ms both;
+}
+
+.weatherCurrent {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    min-width: 280px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 60px;
+}
+
+.weatherCurrent p,
+.weatherLabel {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #B99D75;
+    margin: 0;
+}
+
+.weatherCurrent strong {
+    font-size: 1.8rem;
+    color: #B99D75;
+    font-weight: 700;
+}
+
+.weatherTempBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.weatherTemp {
+    font-family: 'Jost', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    display: block;
+    color: #B99D75;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.weatherDesc {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.weatherForecast {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.weatherDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.weatherDay p {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #B99D75;
+    margin: 0;
+}
+
+.weatherDay span {
+    font-size: 1.2rem;
+}
+
+.weatherDayMax {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+}
+
+.weatherDayMin {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1400px) {
+    .weatherBox {
+        padding: 20px 5vw;
+        gap: 5vw;
+    }
+
+    .weatherCurrent {
+        padding-right: 40px;
+        min-width: 240px;
+        gap: 18px;
+    }
+
+    .weatherIcon {
+        font-size: 4.2rem;
+    }
+
+    .weatherTemp {
+        font-size: 2.2rem;
+    }
+
+    .weatherForecast {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .weatherBox {
+        padding: 18px 4vw;
+        gap: 4vw;
+    }
+
+    .weatherCurrent {
+        min-width: 210px;
+        padding-right: 30px;
+        gap: 14px;
+    }
+
+    .weatherCurrent p,
+    .weatherLabel {
+        font-size: 0.88rem;
+        letter-spacing: 1.5px;
+    }
+
+    .weatherCurrent strong {
+        font-size: 1.5rem;
+    }
+
+    .weatherIcon {
+        font-size: 3.6rem;
+    }
+
+    .weatherTemp {
+        font-size: 2rem;
+    }
+
+    .weatherForecast {
+        gap: 6px;
+    }
+
+    .weatherDay span {
+        font-size: 1.1rem;
+    }
+
+    .weatherDayMax {
+        font-size: 0.82rem;
+    }
+
+    .weatherDayMin {
+        font-size: 0.72rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .weatherBox {
+        flex-direction: column;
+        align-items: center;
+        padding: 22px 5vw;
+        gap: 0;
+    }
+
+    .weatherForecast {
+        display: none;
+    }
+
+    .weatherCurrent {
+        justify-content: center;
+        align-items: center;
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 0;
+        min-width: unset;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .weatherIconWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .forecastToggleBtn {
+        display: inline-block;
+        background: transparent;
+        border: 1px solid #B99D75;
+        width: 120px;
+        color: #B99D75;
+        font-family: 'Jost', sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        cursor: pointer;
+        transition: background 0.25s ease, color 0.25s ease;
+        white-space: nowrap;
+        opacity: 0;
+        animation: tempReveal 0.4s ease 380ms forwards;
+    }
+
+    .weatherBoxVisible .forecastToggleBtn {
+        opacity: 0;
+        animation: tempReveal 0.4s ease 380ms forwards;
+    }
+
+    .forecastToggleBtn:hover {
+        background: #B99D75;
+        color: #131212;
+    }
+
+    .weatherForecastMobile {
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s ease,
+        padding 0.35s ease;
+        opacity: 0;
+        padding-top: 0;
+    }
+
+    .forecastMobileOpen {
+        max-height: 140px;
+        opacity: 1;
+        padding-top: 16px;
+    }
+
+    .weatherForecastMobileInner {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4px;
+        border-top: 1px solid rgba(185, 157, 117, 0.25);
+        padding-top: 14px;
+        width: 100%;
+    }
+
+    .weatherForecastMobileInner .weatherDay {
+        gap: 4px;
+        padding: 5px 2px;
+        background: rgba(185, 157, 117, 0.05);
+        border: 1px solid rgba(185, 157, 117, 0.12);
+        border-radius: 4px;
+    }
+
+    .weatherForecastMobileInner .weatherDay p {
+        font-size: 0.65rem;
+        letter-spacing: 0;
+    }
+
+    .weatherForecastMobileInner .weatherDay span {
+        font-size: 1rem;
+    }
+
+    .weatherForecastMobileInner .weatherDayMax {
+        font-size: 0.7rem;
+    }
+
+    .weatherForecastMobileInner .weatherDayMin {
+        font-size: 0.62rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .weatherBox {
+        padding: 18px 4vw;
+    }
+
+    .weatherCurrent {
+        gap: 14px;
+    }
+
+    .weatherCurrent p,
+    .weatherLabel {
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+    }
+
+    .weatherCurrent strong {
+        font-size: 1.2rem;
+    }
+
+    .weatherIcon {
+        font-size: 2.8rem;
+    }
+
+    .weatherTemp {
+        font-size: 1.6rem;
+    }
+
+    .weatherDesc {
+        font-size: 0.7rem;
+    }
+
+    .forecastToggleBtn {
+        font-size: 0.62rem;
+        padding: 4px 5px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .weatherBox {
+        padding: 14px 3vw;
+        margin-bottom: 3vh;
+    }
+
+    .weatherCurrent {
+        gap: 10px;
+    }
+
+    .weatherCurrent p,
+    .weatherLabel {
+        font-size: 0.6rem;
+    }
+
+    .weatherCurrent strong {
+        font-size: 1rem;
+    }
+
+    .weatherIcon {
+        font-size: 2.2rem;
+    }
+
+    .weatherTemp {
+        font-size: 1.4rem;
+    }
+
+    .weatherDesc {
+        font-size: 0.62rem;
+        letter-spacing: 0.5px;
+    }
+
+    .forecastToggleBtn {
+        margin-left: 5px;
+        font-size: 0.5rem;
+        padding: 4px 4px;
+        letter-spacing: 1px;
+        max-width: 100px;
+    }
+
+    .weatherForecastMobileInner .weatherDay p {
+        font-size: 0.55rem;
+    }
+
+    .weatherForecastMobileInner .weatherDay span {
+        font-size: 0.85rem;
+    }
+
+    .weatherForecastMobileInner .weatherDayMax {
+        font-size: 0.6rem;
+    }
+
+    .weatherForecastMobileInner .weatherDayMin {
+        font-size: 0.55rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .weatherForecastMobile {
+        display: none;
+    }
+
+    .forecastToggleBtn {
+        display: none;
+    }
+
+    .weatherIconWrap {
+        display: contents;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .weatherBox,
+    .weatherLabel,
+    .weatherIcon,
+    .weatherTempBlock,
+    .weatherDay,
+    .forecastToggleBtn {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        filter: none !important;
+    }
+}

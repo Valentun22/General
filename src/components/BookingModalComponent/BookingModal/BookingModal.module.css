@@ -1,0 +1,275 @@
+.overlay {
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    animation: overlayFadeIn 0.3s ease forwards;
+}
+
+.overlayHidden {
+    display: none !important;
+    animation: none !important;
+    pointer-events: none;
+}
+
+@keyframes overlayFadeIn {
+    from { opacity: 0; backdrop-filter: blur(0px); }
+    to   { opacity: 1; backdrop-filter: blur(3px); }
+}
+
+.modal {
+    background: #fff;
+    width: 500px;
+    border-radius: 2px;
+    z-index: 99999;
+    display: flex;
+    position: relative;
+    max-height: 90vh;
+    border: 1px solid rgba(81, 66, 43, 0.68);
+}
+
+.closeBtn {
+    width: 20px !important;
+    height: 20px !important;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    border: none;
+    font-size: 1rem !important;
+    cursor: pointer;
+    color: #fff !important;
+    z-index: 10;
+    transition: color 0.2s ease, transform 0.2s ease !important;
+    line-height: 1;
+    background-color: #242424;
+}
+
+.closeBtn:hover {
+    color: #B99D75 !important;
+    transform: rotate(90deg);
+}
+
+.left {
+    width: 100%;
+    background: #1a1a1a;
+    padding: 45px 35px 25px 35px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border-left: 2px solid rgba(185, 157, 117, 0.3);
+    background: linear-gradient(135deg, #0b0a0a 0%, #242424 60%, #12100e 100%);
+}
+
+.leftTitle {
+    font-family: "Cormorant Infant", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    border-bottom: #8a7d6b 1px solid;
+}
+
+.leftSubtitle {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 0.85rem;
+    color: #999;
+    margin: 0 0 40px 0;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    margin-left: 10px;
+    color: #ccc;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.25s;
+}
+
+.contactItem:hover {
+    color: #B99D75;
+}
+
+.contactIcon {
+    font-size: 1.3rem;
+    color: #B99D75;
+    min-width: 20px;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal {
+    animation: fadeSlideUp 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.leftTitle {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.15s;
+    opacity: 0;
+}
+
+.leftSubtitle {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.25s;
+    opacity: 0;
+}
+
+.contacts {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.35s;
+    opacity: 0;
+}
+
+.logoModal {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoModal img {
+    width: 200px;
+    animation: fadeIn 1.3s ease forwards;
+
+}
+
+@media (max-width: 900px) {
+    .modal {
+        width: 420px;
+    }
+
+    .left {
+        padding: 40px 28px 22px 28px;
+    }
+
+    .leftTitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        width: 400px;
+        border-radius: 4px;
+    }
+
+    .left {
+        padding: 36px 24px 20px 24px;
+    }
+
+    .leftTitle {
+        font-size: 1.6rem;
+    }
+
+    .leftSubtitle {
+        font-size: 0.8rem;
+        margin-bottom: 30px;
+    }
+
+    .contacts {
+        gap: 14px;
+    }
+
+    .contactItem {
+        font-size: 1rem;
+        gap: 12px;
+    }
+
+    .contactIcon {
+        font-size: 1.15rem;
+    }
+
+    .logoModal img {
+        width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        align-items: center;
+    }
+
+    .modal {
+        width: 80vw;
+    }
+
+    .left {
+        padding: 32px 18px 28px 18px;
+        border-left: none;
+        border-top: 2px solid rgba(185, 157, 117, 0.3);
+    }
+
+    .closeBtn {
+        top: 14px;
+        right: 14px;
+    }
+
+    .leftTitle {
+        font-size: 1.45rem;
+        margin-bottom: 8px;
+    }
+
+    .leftSubtitle {
+        font-size: 0.78rem;
+        margin-bottom: 24px;
+    }
+
+    .contacts {
+        gap: 12px;
+    }
+
+    .contactItem {
+        font-size: 0.95rem;
+        gap: 10px;
+        margin-left: 6px;
+    }
+
+    .contactIcon {
+        font-size: 1.1rem;
+    }
+
+    .logoModal {
+        margin-top: 20px;
+    }
+
+    .logoModal img {
+        width: 120px;
+    }
+}

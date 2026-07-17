@@ -1,0 +1,30 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(200, 200, 200, 0.6);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #666 #111;
+}
+
+

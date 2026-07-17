@@ -1,0 +1,1319 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxOne {
+    height: 40vh;
+    background: #ffffff;
+}
+
+.boxOneText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+
+.boxOneText h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-size: clamp(3rem, 2.3vw, 3.2rem);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.boxOneText h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(0.85rem, 0.8vw, 1.1rem);
+    font-weight: 500;
+    text-align: center;
+    color: #B99D75;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.boxTwoContOne img {
+    width: 100.1%;
+    height: 750px;
+    object-fit: cover;
+}
+
+.boxTwoContOne {
+    width: 100%;
+}
+
+.boxThree {
+    height: 25vh;
+    margin: 3vw 0 6vw;
+    text-align: center;
+}
+
+.boxThreeContOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+
+.boxThree h3 {
+    font-family: "Ysabeau", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #B99D75;
+    font-size: clamp(0.85rem, 0.8vw, 1.1rem);
+    margin: 9vh 0 2vh 0;
+}
+
+.boxThree h2 {
+    font-family: "Cormorant Infant", serif;
+    font-optical-sizing: auto;
+    font-size: clamp(3rem, 2.3vw, 3.2rem);
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.boxFour {
+    display: flex;
+    gap: 30px;
+    padding: 35px;
+    align-items: flex-start;
+    margin-bottom: 3vh;
+    justify-content: space-between
+}
+
+.card {
+    position: relative;
+    width: 26%;
+    max-width: 470px;
+    height: 510px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card:nth-child(even) {
+    margin-top: 70px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.card:hover::before {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.cardBg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+.card:hover .cardBg {
+    transform: scale(1.07);
+}
+
+.cardText {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 3;
+}
+
+.cardText h3 {
+    position: absolute;
+    width: 300px;
+    bottom: 20px;
+    color: white;
+    font-size: clamp(1.6rem, 1.1vw, 2rem);
+    z-index: 3;
+    margin-bottom: 5px;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    color: #B99D75;
+    cursor: pointer;
+    font-size: clamp(0.6rem, 0.7vw, 0.8rem);
+    letter-spacing: 1px;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.cardAnimate {
+    opacity: 0;
+    transform: translateY(55px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.cardAnimate:nth-child(even) {
+    margin-top: 70px;
+}
+
+.cardVisible {
+    opacity: 1;
+    transform: translateY(0) !important;
+}
+
+.cardVisible:nth-child(even) {
+    transform: translateY(70px) !important;
+}
+
+.boxFive {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 510px;
+    gap: 25px;
+    width: 100%;
+    padding: 150px 8vw;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 350px;
+    transition: margin-bottom 0.5s ease;
+}
+
+.boxFiveContOne {
+    width: 100%;
+    height: 500px;
+    max-width: 590px;
+}
+
+.boxFiveContTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    height: auto;
+    max-height: 550px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.boxFiveContOneText {
+    margin-bottom: 20px;
+}
+
+.boxFiveContOneText h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(0.85rem, 0.8vw, 1.1rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #B99D75;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.boxFiveContOneText h2 {
+    font-family: "Cormorant Infant", serif;
+    font-size: clamp(3rem, 2.3vw, 3.2rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border-bottom: 1px solid #B99D75;
+}
+
+.serviceGrid {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 20px;
+    width: 600px;
+}
+
+.serviceItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.serviceIcon {
+    font-size: 2.7rem;
+    color: #B99D75;
+    min-width: 45px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2px;
+}
+
+.serviceItem h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.4rem, 1.1vw, 1.6rem);
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.serviceItem p {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
+    color: #666;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.moreBtn {
+    background: transparent;
+    border: 1px solid #B99D75;
+    color: #B99D75;
+    padding: 12px 30px;
+    font-family: 'Ysabeau', sans-serif;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+
+.moreBtn:hover {
+    background: #B99D75;
+    color: white;
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #B99D75;
+    padding: 3px 8px;
+    font-size: 0.9rem;
+    z-index: 3;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+}
+
+.boxFiveImg {
+    border: 1px solid #B99D75;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.85s ease, transform 0.85s ease;
+}
+
+.imgFromLeft {
+    transform: translateX(-60px) translateY(20px);
+}
+
+.imgFromRight {
+    transform: translateX(60px) translateY(20px);
+    transition-delay: 0.425s;
+}
+
+.imgVisible {
+    opacity: 1;
+    transform: translateX(0) translateY(0) !important;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1005;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.modal {
+    background: white;
+    width: 85vw;
+    max-width: 1000px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    position: relative;
+    padding: 45px 40px;
+    box-sizing: border-box;
+}
+
+.modalTitle {
+    font-family: "Cormorant Infant", serif;
+    font-size: clamp(1.86rem, 3.1vw, 3.1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
+
+.modalCategoryGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+}
+
+.modalCategory {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modalCategoryHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #B99D75;
+}
+
+.modalCategoryIcon {
+    font-size: clamp(1.8em, 3vw, 3em);
+    color: #B99D75;
+    display: flex;
+    align-items: center;
+}
+
+.modalCategoryHeader h3 {
+    font-family: "Cormorant Infant", serif;
+    font-size: clamp(1.32rem, 2.2vw, 2.2rem);
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modalList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.modalList li {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: clamp(0.72rem, 1.2vw, 1.2rem);
+    color: #444;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.modalList li::before {
+    display: none;
+}
+
+.modalItemIcon {
+    font-size: 1.7rem;
+    color: #B99D75;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 30px;
+}
+
+/* ===== АНІМАЦІЯ ПОЯВИ (ServicesModal, як у FaqModalComponent) ===== */
+@keyframes servicesOverlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes servicesModalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+@keyframes servicesFadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modalOverlay {
+    animation: servicesOverlayFadeIn 0.3s ease forwards;
+}
+
+.modal {
+    animation: servicesModalFadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.modalTitle {
+    animation: servicesFadeSlideUp 0.45s ease forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.modalCategoryGrid {
+    animation: servicesFadeSlideUp 0.45s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+    --swiper-navigation-color: black;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    width: 55px !important;
+    height: 55px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2vw !important;
+    padding: 17px;
+    transition: background 0.3s ease, border-color 0.2s ease !important;
+}
+
+:global(.swiper-button-next:hover),
+:global(.swiper-button-prev:hover) {
+    --swiper-navigation-color: #ffffff;
+    background: rgba(185, 157, 117, 0.6);
+    border: 1px solid #B99D75;
+}
+
+:global(.swiper-button-next::after),
+:global(.swiper-button-prev::after) {
+    font-size: 14px !important;
+    line-height: 1 !important;
+}
+
+@media (max-width: 1400px) {
+    .boxOneText {
+        width: 70vw;
+    }
+
+    .boxOneText h2 {
+        font-size: 2.6rem;
+    }
+
+    .boxTwoContOne img {
+        height: 640px;
+    }
+
+    .boxThreeContOne {
+        width: 80vw;
+    }
+
+    .boxFour {
+        gap: 28px;
+        padding: 28px;
+    }
+
+    .card {
+        max-width: 310px;
+        height: 450px;
+    }
+
+    .boxFive {
+        grid-template-columns: 2fr 1fr;
+        margin-bottom: 300px;
+    }
+
+    .boxFiveContTwo {
+        gap: 16px;
+        width: 400px;
+        min-width: 0;
+        overflow: hidden;
+        margin-left: -8vw;
+    }
+
+    .imgFromLeft {
+        position: relative;
+        top: 160px;
+        right: -120px;
+        width: 190px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 1px solid #B99D75;
+        z-index: 2;
+        cursor: default;
+    }
+
+    .imgFromRight {
+        position: relative;
+        bottom: 50px;
+        left: -40px;
+        width: 300px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 1px solid #B99D75;
+        z-index: 1;
+        cursor: default;
+    }
+
+    .serviceGrid {
+        width: 100%;
+        gap: 24px 15px;
+    }
+
+    .boxFiveContOne {
+        width: auto;
+    }
+
+    .modal {
+        width: 850px;
+        padding: 35px 30px;
+        max-height: 90vh;
+        border-radius: 10px;
+    }
+
+    .modalTitle {
+        font-size: 2.7rem;
+    }
+
+    .modalCategoryHeader h3 {
+        font-size: 2rem;
+    }
+
+    .cardText h3 {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        font-size: 0.6rem;
+    }
+
+    .boxThree h3 {
+        font-size: 1rem;
+        margin: 9vh 0 2vh 0;
+    }
+
+    .boxThree h2 {
+        font-size: 3.2rem;
+    }
+
+    .moreBtn {
+        padding: 10px 30px;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        margin-top: 14px;
+        margin-left: 6px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 30%;
+        max-width: 310px;
+        height: 400px;
+    }
+
+    .cardText h3 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        font-size: 0.55rem;
+    }
+
+    .boxFour {
+        gap: 20px;
+    }
+
+    .boxFive {
+        padding: 130px 6vw 110px;
+    }
+
+    .serviceGrid {
+        width: 100%;
+        gap: 24px 15px;
+    }
+
+    .boxThree h3 {
+        font-size: 0.9rem;
+    }
+
+    .boxThree h2 {
+        font-size: 2.6rem;
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .boxOne {
+        height: 35vh;
+    }
+
+    .boxOneText {
+        width: 80vw;
+    }
+
+    .boxOneText h2 {
+        font-size: 2.3rem;
+    }
+
+    .boxOneText h3 {
+        font-size: 0.95rem;
+    }
+
+    .boxTwoContOne img {
+        height: 540px;
+    }
+
+    .boxThree h2 {
+        font-size: 2.9rem;
+    }
+
+    .boxFour {
+        width: auto;
+        gap: 40px;
+        padding: 22px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 64%;
+        max-width: 395px;
+        height: 550px;
+    }
+
+    .card:nth-child(even),
+    .cardAnimate:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .cardVisible:nth-child(even) {
+        transform: translateY(0) !important;
+    }
+
+    .boxFive {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-width: auto;
+        width: 100%;
+        max-height: none;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .boxFiveContOne {
+        margin-left: 0;
+        width: 84vw;
+        max-width: 780px;
+        max-height: none;
+        height: auto;
+    }
+
+    .boxFiveContOneText h2 {
+        font-size: 3rem;
+    }
+
+    .serviceGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px 20px;
+        width: 850px;
+        max-width: none;
+    }
+
+    .boxFiveContTwo {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .imgFromLeft {
+        width: 220px;
+        height: 330px;
+    }
+
+    .imgFromRight {
+        width: 350px;
+        height: 550px;
+    }
+
+    .modal {
+        width: 758px;
+        padding: 40px 40px;
+    }
+
+    .modalCategoryGrid {
+        gap: 30px 40px;
+    }
+
+    .modalCategoryHeader h3 {
+        font-size: 1.8rem;
+    }
+
+    .modalList li {
+        font-size: 1.3rem;
+    }
+
+    .cardText h3 {
+        font-size: 1.9rem;
+    }
+
+    .btn {
+        font-size: 0.65rem;
+    }
+
+    .boxFiveContTwo {
+        max-height: none;
+        margin-top: 105px;
+        padding-top: 50px;
+        width: 600px;
+    }
+
+    .boxFiveContOneText h2 {
+        font-size: 2.5rem;
+    }
+
+    .boxFiveContOneText h3 {
+        font-size: 0.8rem;
+    }
+
+    .serviceGrid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 30px;
+    }
+
+    .serviceIcon {
+        font-size: 2.6rem;
+        min-width: 35px;
+    }
+
+    .serviceItem h4 {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+
+    .serviceItem p {
+        font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+    }
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+        width: 45px !important;
+        height: 45px !important;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .boxOne {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .boxOneText {
+        width: 90vw;
+    }
+
+    .boxOneText h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .boxOneText h3 {
+        font-size: 0.9rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+    .boxTwoContOne img {
+        height: 420px;
+    }
+
+    .boxThree {
+        height: auto;
+        padding: 40px 20px 20px;
+        margin-bottom: 3vh;
+    }
+
+    .boxThreeContOne {
+        width: 85vw;
+    }
+
+    .boxThree h2 {
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .boxThree h3 {
+        margin: 55px 0 1.5vh 0;
+        font-size: 0.82rem;
+    }
+
+    .boxFour {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 28px;
+    }
+
+    .card {
+        width: 46%;
+        height: 100vh;
+        max-height: 530px;
+    }
+
+    .cardText h3 {
+        font-size: 1.6rem;
+        width: 220px;
+    }
+
+    .btn {
+        font-size: 0.62rem;
+    }
+
+    .boxFive {
+        flex-direction: column;
+        padding: 40px 5vw;
+        margin-top: 50px;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .boxFiveContOne {
+        width: auto;
+        height: 380px;
+        min-width: 542px;
+        max-width: 650px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .boxFiveContTwo {
+        margin-top: 105px;
+        padding-top: 50px;
+    }
+
+    .boxFiveContOneText h2 {
+        font-size: 2.5rem;
+    }
+
+    .boxFiveContOneText h3 {
+        font-size: 0.8rem;
+    }
+
+    .serviceGrid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 28px;
+    }
+
+    .serviceIcon {
+        font-size: 2.2rem;
+        min-width: 38px;
+    }
+
+    .serviceItem h4 {
+        font-size: 1.3rem;
+    }
+
+    .serviceItem p {
+        font-size: 0.85rem;
+    }
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+        margin-top: -10px !important;
+        width: 45px !important;
+        height: 45px !important;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 835px) {
+    .modal {
+        width: 500px;
+        padding: 35px 30px;
+        max-height: 90vh;
+        border-radius: 10px;
+    }
+
+    .modalTitle {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .modalCategoryGrid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .card {
+        max-height: 430px;
+    }
+
+    .modalCategoryHeader h3 {
+        font-size: 1.5rem;
+    }
+
+    .modalCategoryIcon {
+        font-size: 2.2em;
+    }
+
+    .modalList li {
+        padding-left: 13%;
+        font-size: 1.1rem;
+    }
+
+    .modalItemIcon {
+        margin-left: 8px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .boxOne {
+        padding: 40px 16px;
+    }
+
+    .boxOneText {
+        width: 95vw;
+    }
+
+    .boxOneText h2 {
+        font-size: 1.65rem;
+        letter-spacing: 0.5px;
+    }
+
+    .boxOneText h3 {
+        font-size: 0.8rem;
+    }
+
+    .boxTwoContOne img {
+        height: 300px;
+    }
+
+    .boxTwoContOne {
+        min-width: 0;
+    }
+
+    .boxThree {
+        padding: 30px 16px 15px;
+    }
+
+    .boxThree h2 {
+        font-size: 1.9rem;
+    }
+
+    .boxThree h3 {
+        font-size: 0.8rem;
+    }
+
+    .boxFour {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .card {
+        width: 92%;
+        height: 100vw;
+        min-height: 550px;
+    }
+
+    .card:nth-child(even),
+    .cardAnimate:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .cardVisible:nth-child(even) {
+        transform: translateY(0) !important;
+    }
+
+    .cardText h3 {
+        font-size: 1.4rem;
+        width: 180px;
+        bottom: 15px;
+    }
+
+    .btn {
+        font-size: 0.58rem;
+        letter-spacing: 0.5px;
+    }
+
+    .boxFive {
+        margin: 30px 0 0 0;
+        padding: 30px 0;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .boxFiveContOneText h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #B99D75;
+    }
+
+    .boxFiveContOneText h3 {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    .serviceGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .serviceIcon {
+        font-size: 2rem;
+        min-width: 34px;
+    }
+
+    .serviceItem h4 {
+        font-size: 1.2rem;
+    }
+
+
+    .serviceItem p {
+        font-size: 0.82rem;
+    }
+
+    .moreBtn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 24px;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .boxFiveContOne {
+        width: auto;
+        height: auto;
+        min-width: 400px;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .boxFiveContTwo {
+        width: 470px;
+        display: flex;
+        align-items: center;
+        height: 560px;
+        justify-content: center;
+        margin: 10px 0 0 0;
+        padding-top: 30px;
+    }
+
+    .imgFromLeft {
+        top: 100px;
+        right: -50px;
+        width: 170px !important;
+        height: 250px;
+        z-index: 2;
+    }
+
+    .imgFromRight {
+        bottom: 60px;
+        left: -60px;
+        width: 250px !important;
+        height: 440px;
+        z-index: 1;
+
+    }
+
+    .boxFiveImg {
+        width: 100%;
+    }
+
+    .modal {
+        width: 82vw;
+        padding: 28px 25px;
+        max-height: 92vh;
+        border-radius: 10px;
+    }
+
+    .modalTitle {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+        margin-top: -10px !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .boxOneText h2 {
+        font-size: 1.4rem;
+    }
+
+    .boxOneText h3 {
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .boxTwoContOne img {
+        height: 240px;
+    }
+
+    .boxThree h2 {
+        font-size: 1.6rem;
+    }
+
+    .boxThree h3 {
+        font-size: 0.75rem;
+    }
+
+    .card {
+        width: 96%;
+        height: 100vw;
+        min-height: 500px;
+    }
+
+    .cardText h3 {
+        font-size: 1.2rem;
+        width: 150px;
+        bottom: 12px;
+    }
+
+    .btn {
+        font-size: 0.54rem;
+    }
+
+    .boxFiveContOneText h2 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+
+    .boxFiveContOneText h3 {
+        font-size: 0.73rem;
+    }
+
+    .serviceItem h4 {
+        font-size: 1.1rem;
+    }
+
+    .serviceItem p {
+        font-size: 0.78rem;
+    }
+
+    .moreBtn {
+        font-size: 0.9rem;
+        padding: 9px 20px;
+    }
+
+    .boxFive {
+        margin: 30px 0 0 0;
+        padding: 30px 8vw;
+        gap: 30px;
+    }
+
+    .modal {
+        width: 83vw;
+        padding: 22px 14px;
+        max-height: 80vh;
+    }
+
+    .modalTitle {
+        font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+        margin-bottom: 20px;
+    }
+
+    .modalCategoryHeader h3 {
+        font-size: clamp(1.5em, 1.43vw, 1.5rem);
+    }
+
+    .modalCategoryIcon {
+        font-size: clamp(1.5em, 1.8vw, 1.8em);
+        margin-left: 20px;
+    }
+
+    .modalList li {
+        font-size: clamp(1.2rem, 1.2vw, 1.3rem);
+        gap: 6px;
+    }
+
+    .modalItemIcon {
+        margin-left: 4px;
+        font-size: clamp(1.3em, 1.8vw, 1.8em);
+    }
+
+    .boxFiveContOne {
+        min-width: 300px;
+    }
+
+    .boxFiveContTwo {
+        height: 560px;
+        width: 390px;
+    }
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+        margin-top: -8px !important;
+        width: 30px !important;
+        height: 30px !important;
+        padding: 10px;
+    }
+
+
+}
+@media (max-width: 1000px) {
+    .headerWrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .boxTwoAll {
+        padding-top: 50px;
+    }
+}

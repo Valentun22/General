@@ -1,0 +1,173 @@
+.boxThree {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: #111111;
+    height: 80px;
+    width: 100%;
+    padding: 0 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.boxThreeCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.boxThreeContText {
+    display: flex;
+    gap: 2vw;
+}
+
+.animateFadeLeft {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animateFadeRight {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animateFadeUp {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+.visibleFadeLeft {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.visibleFadeRight {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.visibleFadeUp {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navLinkBtn {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 15px;
+    position: relative;
+    transition: color 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.navLinkBtn::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.navLinkBtn:hover::after {
+    width: 100%;
+}
+
+.boxThreeCont h3 {
+    font-family: "Cormorant Infant", serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+@media (max-width: 900px) {
+    .boxThree {
+        padding: 0 8vw;
+    }
+
+    .boxThreeCont {
+        padding: 30px 0;
+    }
+
+    .navLinkBtn {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .boxThree {
+        padding: 0 8vw;
+        height: 130px;
+    }
+
+    .boxThreeCont {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .boxThreeContText {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 10px 0;
+    }
+
+    .navLinkBtn {
+        font-size: 0.9rem;
+        margin-right: 0;
+    }
+
+    .boxThreeCont h3 {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .boxThree {
+        padding: 0 8vw;
+    }
+
+    .boxThreeCont {
+        gap: 16px;
+    }
+
+    .navLinkBtn {
+        font-size: 0.88rem;
+    }
+
+    .boxThreeCont h3 {
+        font-size: 0.7rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animateFadeLeft,
+    .animateFadeRight,
+    .animateFadeUp {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

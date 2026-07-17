@@ -1,0 +1,215 @@
+.photoGrid {
+    width: 100%;
+    padding: 40px 8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photoRow {
+    display: flex;
+    gap: 20px;
+}
+
+.photoItem {
+    width: 32%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #131212;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.photoItem:hover {
+    opacity: 0.85;
+}
+
+.fullOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: auto;
+    animation: overlayFadeIn 0.25s ease forwards;
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fullImg {
+    max-width: 85vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: default;
+    animation: imgFadeIn 0.3s ease forwards;
+}
+
+@keyframes imgFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fullPrev,
+.fullNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.2s;
+    z-index: 1;
+}
+
+.fullPrev:hover,
+.fullNext:hover {
+    color: #B99D75;
+}
+
+.fullPrev {
+    left: 20px;
+}
+
+.fullNext {
+    right: 20px;
+}
+
+.fullClose {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.fullClose:hover {
+    color: #B99D75;
+}
+
+@media (max-width: 1400px) {
+    .photoItem {
+        height: 520px;
+    }
+
+    .photoRow {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .photoRow {
+        gap: 15px;
+    }
+
+    .photoItem {
+        height: 450px;
+    }
+}
+
+@media (max-width: 900px) {
+    .photoGrid {
+        padding: 10px 8vw;
+    }
+
+    .photoItem {
+        height: 350px;
+    }
+}
+
+@media (max-width: 800px) {
+    .photoRow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .photoItem {
+        width: 100%;
+        height: 450px;
+    }
+
+    .photoGrid {
+        padding: 20px 5vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .photoItem {
+        height: 400px;
+    }
+}
+
+@media (max-width: 650px) {
+    .photoItem {
+        height: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .photoItem {
+        height: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .photoItem {
+        height: 250px;
+    }
+}
+
+@media (max-width: 420px) {
+    .photoItem {
+        height: 230px;
+    }
+
+    .fullPrev,
+    .fullNext {
+        font-size: 2.5rem;
+        padding: 0 10px;
+    }
+
+    .fullClose {
+        top: 14px;
+        right: 18px;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 385px) {
+    .photoItem {
+        height: 220px;
+    }
+
+    .fullImg {
+        max-width: 98vw;
+        max-height: 80vh;
+    }
+}

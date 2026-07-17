@@ -1,0 +1,112 @@
+.boxThree {
+    background-color: #111111;
+    width: 100%;
+    padding: 0 8vw;
+    overflow: hidden;
+}
+
+.boxThreeCont {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    width: 100%;
+}
+
+.boxThreeContText {
+    display: flex;
+    gap: 2vw;
+    width: 33%;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.boxThreeContImg {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+.boxThreeContH {
+    width: 33%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+}
+
+.visibleFadeLeft  { opacity: 1 !important; transform: translateX(0) !important; }
+.visibleFadeRight { opacity: 1 !important; transform: translateX(0) !important; }
+.visibleFadeUp    { opacity: 1 !important; transform: translateY(0) !important; }
+
+.navLinkBtn {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.navLinkBtn::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.navLinkBtn:hover::after {
+    width: 100%;
+}
+
+.copyrightText {
+    font-family: "Cormorant Infant", serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.imgLogo {
+    width: 120px;
+}
+
+@media (max-width: 600px) {
+    .imgLogo {
+        width: 95px;
+    }
+
+    .navLinkBtn {
+        font-size: 0.7rem;
+        margin-right: 3px;
+    }
+
+    .copyrightText {
+        font-size: 0.56rem;
+    }
+
+    .boxThreeCont {
+        height: 60px;
+    }
+}

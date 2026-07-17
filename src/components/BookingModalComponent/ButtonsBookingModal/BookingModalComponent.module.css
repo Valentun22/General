@@ -1,0 +1,65 @@
+.bookingBtn {
+    background-color: rgba(185, 157, 117, 0.59);
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px solid #B99D75;
+    padding: 12px 1.6vw;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background 1.3s ease, color 0.3s ease, border-radius 0.9s ease;
+    font-family: "Ysabeau", sans-serif;
+    font-size: clamp(12px, 0.8vw, 15px) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    backdrop-filter: blur(2px);
+}
+
+.bookingBtn:hover {
+    background-color: #B99D75 !important;
+    color: #131212;
+    border-radius: 5px;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bookingBtnAnimate {
+    animation: fadeDown 0.5s ease 0.2s both;
+}
+
+.bookingBtnAttention {
+    animation: subtleBounce 2s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes subtleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        background-color: rgba(185, 157, 117, 0.61);
+        box-shadow: 0 0 0 0 rgba(185, 157, 117, 0),
+        0 0 0 1px rgba(185, 157, 117, 0.5);
+    }
+    50% {
+        background-color: rgba(185, 157, 117, 0.78);
+        box-shadow: 0 0 14px 4px rgba(185, 157, 117, 0.45),
+        0 0 0 2px rgba(185, 157, 117, 1);
+    }
+}

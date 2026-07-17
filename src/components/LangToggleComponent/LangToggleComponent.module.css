@@ -1,0 +1,72 @@
+.langToggle:hover {
+    border-color: #B99D75;
+}
+
+.langActive {
+    font-family: "Ysabeau", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    transition: font-size 0.3s ease;
+
+}
+
+.langInactive {
+    font-family: "Ysabeau", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: font-size 0.3s ease;
+}
+
+.langDivider {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.langToggle {
+    width: 70px;
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    margin-right: 2vw;
+    transition: border-color 0.3s ease;
+    max-width: 90px;
+    justify-content: center;
+}
+
+.langToggle:hover {
+    border-color: #B99D75;
+}
+
+.langActive {
+    font-family: "Ysabeau", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    transition: font-weight 0.1s ease;
+
+}
+
+.langInactive {
+    font-family: "Ysabeau", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.langDivider {
+    font-size: 0.9rem;
+    color: #ffffff;
+}

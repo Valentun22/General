@@ -1,0 +1,392 @@
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalRise {
+    from {
+        opacity: 0;
+        transform: translateY(32px) scale(0.97);
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    animation: overlayFadeIn 0.28s ease forwards;
+    padding: 16px;
+    box-sizing: border-box;
+    will-change: transform, opacity;
+}
+
+.modal {
+    background: #f5f2f0;
+    width: 80vw;
+    max-width: 1050px;
+    max-height: 88vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    position: relative;
+    padding: 50px 60px;
+    box-sizing: border-box;
+    animation: modalRise 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    will-change: transform, opacity;
+}
+
+.close {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease, transform 0.25s ease;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeSlideUp 0.3s ease 0.35s forwards;
+    will-change: transform, opacity;
+}
+
+.close:hover {
+    color: #B99D75;
+    transform: rotate(90deg);
+}
+
+.modalHeader {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #B99D75;
+    margin-bottom: 35px;
+    opacity: 0;
+    animation: fadeSlideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.18s forwards;
+    will-change: transform, opacity;
+}
+
+.modalSubtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #B99D75;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modalTitle {
+    font-family: "Cormorant Infant", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.modalBody {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    height: auto;
+    min-height: 400px;
+}
+
+
+.modalText {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-self: stretch;
+    opacity: 0;
+    animation: fadeSlideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+    will-change: transform, opacity;
+}
+
+.modalText p {
+    text-indent: 1em;
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.modalBtn {
+    display: inline-block;
+    margin-top: auto;
+    padding: 12px 28px;
+    border: 1px solid #B99D75;
+    border-radius: 4px;
+    color: #B99D75;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.25s ease, color 0.25s ease;
+    align-self: flex-start;
+}
+
+.modalBtn:hover {
+    background: #B99D75;
+    color: white;
+}
+
+.modalPhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    animation: fadeSlideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.42s forwards;
+    will-change: transform, opacity;
+}
+
+.videosRow {
+    display: flex;
+    gap: 10px;
+}
+
+.videoWrap {
+    position: relative;
+    flex: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #B99D75;
+}
+
+.video {
+    height: 600px;
+    display: block;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+
+.videoControls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 6px 12px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    display: flex;
+    gap: 8px;
+}
+
+.videoBtn {
+    background: rgba(185, 157, 117, 0.2);
+    border: 1px solid #B99D75;
+    color: #B99D75;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.videoBtn:hover {
+    background: #B99D75;
+    color: white;
+}
+
+.modalVideoWrap {
+    border-radius: 4px;
+}
+
+@media (max-width: 1400px) {
+    .modal {
+        width: 88vw;
+        padding: 44px 50px;
+    }
+
+    .modalTitle {
+        font-size: 2.1rem;
+    }
+
+    .modalBody {
+        gap: 30px;
+    }
+
+    .modalText p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .modalText p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .modalText p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .modalBtn {
+        font-size: 0.7rem;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .modal {
+        width: 90vw;
+        padding: 36px 32px;
+        max-height: 92vh;
+    }
+
+    .modalTitle {
+        font-size: 1.8rem;
+    }
+
+    .modalBody {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .modalText {
+        align-self: auto;
+    }
+
+    .modalText p {
+        font-size: 0.95rem;
+    }
+
+    .modalBtn {
+        margin-top: 16px;
+        align-self: flex-start;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .videosRow {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .modalVideoWrap {
+        width: 200px;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        max-width: 85vw;
+        padding: 28px 22px;
+    }
+
+    .modalTitle {
+        font-size: 1.5rem;
+    }
+
+    .videosRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modalText p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+
+    .modalVideoWrap {
+        width: 70%;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modalSubtitle {
+        font-family: 'Jost', sans-serif;
+        font-size: 0.7rem;
+        margin-bottom: 15px;
+    }
+    .modalHeader {
+        padding-bottom: 12px;
+        margin-bottom: 5px;
+    }
+
+    .overlay {
+        align-items: center;
+        padding: 12px;
+    }
+
+    .modalText p {
+        line-height: 1.3;
+    }
+
+    .modal {
+        width: 100%;
+        max-height: 75vh;
+        padding: 24px 18px 28px;
+        border-radius: 10px;
+    }
+
+    .modalTitle {
+        font-size: 1.3rem;
+    }
+
+    .videosRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modalVideoWrap {
+        width: 100%;
+        border-radius: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .overlay {
+        animation: none;
+    }
+
+    .modal {
+        animation: none;
+    }
+
+    .close, .modalHeader, .modalText, .modalPhotos {
+        opacity: 1;
+        animation: none;
+    }
+}

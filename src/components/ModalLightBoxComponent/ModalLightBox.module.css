@@ -1,0 +1,103 @@
+@keyframes fadeDownZ {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeDownX {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fullOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1026;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.imgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    user-select: none;
+}
+
+.fullImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.fullPrev {
+    left: 10px;
+    animation: fadeDownX 0.8s ease 0.55s both;
+}
+
+.fullNext {
+    right: 10px;
+    animation: fadeDownZ 0.8s ease 0.55s both;
+}
+
+.fullPrev, .fullNext {
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0 20px;
+    z-index: 99999;
+    transition: color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.fullPrev:hover, .fullNext:hover {
+    color: #B99D75;
+}
+
+@media (hover: none) {
+    .fullPrev:hover, .fullNext:hover {
+        color: white;
+    }
+}
+
+.counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+@media (max-width: 480px) {
+    .fullPrev, .fullNext {
+        font-size: 3.5rem;
+        color: rgba(255, 255, 255, 0.76);
+    }
+}

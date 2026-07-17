@@ -1,0 +1,593 @@
+{
+  "nav": {
+    "questions": "FAQ",
+    "routes": "Routes",
+    "places": "Places",
+    "rules": "Rules",
+    "bookNow": "BOOK NOW",
+    "home": "Home"
+  },
+  "bookNow": {
+    "textOne": "Contact us",
+    "textTwo": "Happy to answer any questions"
+  },
+  "header": {
+    "location": "Skole, Lviv region"
+  },
+  "servicesTextBut": {
+    "textOne": "Contact us",
+    "textTwo": "3.2 km · ~4 min from the station"
+  },
+  "footer": {
+    "copyright": "© generals_dacha 2026",
+    "questions": "FAQ",
+    "rules": "Rules"
+  },
+  "common": {
+    "location": "Location"
+  },
+  "articleTwo": {
+    "heroTitle": "Your private space amidst the grandeur of the Carpathians",
+    "heroSubtitle": "General's Dacha in the heart of the mountains...",
+    "paradiseTitle": "Enjoy an unparalleled experience",
+    "paradiseSubtitle": "Your paradise for relaxation",
+    "servicesTitle": "Discover the services we offer",
+    "servicesSubtitle": "Highlights",
+    "moreBtn": "Learn more →",
+    "cardMoreBtn": "LEARN MORE  →",
+    "allServicesTitle": "All services",
+    "cards": {
+      "house": "House",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "territory": "Territory"
+    },
+    "services": {
+      "mountains": {
+        "title": "Mountain views",
+        "desc": "Enjoy a breathtaking view of the mountain peaks."
+      },
+      "tub": {
+        "title": "Hot tub",
+        "desc": "Relax in a warm tub under the open sky."
+      },
+      "private": {
+        "title": "Private territory",
+        "desc": "Complete privacy and tranquility on your own fenced plot."
+      },
+      "parking": {
+        "title": "Parking",
+        "desc": "Convenient parking right next to the house."
+      },
+      "power": {
+        "title": "Autonomous power",
+        "desc": "Light, warmth and comfort even without electricity in the grid."
+      },
+      "fire": {
+        "title": "Campfire area",
+        "desc": "A cozy area for evening gatherings by the fire."
+      },
+      "wifi": {
+        "title": "Wi-Fi & Internet",
+        "desc": "Internet works throughout the territory."
+      }
+    }
+  },
+  "articleFour": {
+    "bookTitle": "Book your stay now",
+    "bookDesc": "Dive into a journey where dreams come true. Feel the healing properties of nature, mountains, and peace, away from the hustle of everyday life.",
+    "stayTitle": "COZY STAY",
+    "stayDesc": "General's Dacha is a cottage in the heart of the Carpathians, created for those seeking peace, solitude and rest in nature. Here you will find picturesque mountain views, fresh air and an atmosphere that helps restore energy and enjoy the moment far from the daily rush.",
+    "contacts": "Contacts:",
+    "location": "Skole, Lviv region, Ukraine",
+    "stayWith": "Stay with us:"
+  },
+  "faq": {
+    "title": "FAQ",
+    "categories": {
+      "house": "House",
+      "territory": "Territory",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom"
+    },
+    "house": [
+      {
+        "question": "How does check-in work?",
+        "answer": "We offer contactless check-in — around 14:00, when the cottage is ready, we send you the key safe code. All necessary information will be provided in advance."
+      },
+      {
+        "question": "Is there Wi-Fi and electricity?",
+        "answer": "Yes, there is high-speed Wi-Fi throughout the house. There is also autonomous power supply in case of outages."
+      },
+      {
+        "question": "Can I bring pets?",
+        "answer": "Yes, we welcome pets! We just ask that you notify us in advance and keep an eye on your animals on the territory."
+      },
+      {
+        "question": "What is the minimum stay?",
+        "answer": "The minimum stay is 2 nights."
+      },
+      {
+        "question": "How many guests can stay?",
+        "answer": "The house comfortably accommodates 2 guests. There are also 2 additional sleeping spots."
+      },
+      {
+        "question": "How to book?",
+        "answer": "You can book via direct message on Instagram."
+      },
+      {
+        "question": "Do you have separate bedrooms?",
+        "answer": "We do not have separate bedrooms. For guests' relaxation, there is a double bed on the attic floor, and a comfortable sofa bed on the ground floor. Both sleeping places provide comfortable accommodation."
+      }
+    ],
+    "territory": [
+      {
+        "question": "Is the territory private?",
+        "answer": "Yes, we have a large private territory with only one cottage, so no one will disturb your rest."
+      },
+      {
+        "question": "Is there parking?",
+        "answer": "Yes, a parking spot is located on the territory."
+      },
+      {
+        "question": "Is there a BBQ area and firewood?",
+        "answer": "We have a BBQ area already equipped with a grill, skewers, and firewood."
+      },
+      {
+        "question": "Can I get there without a car?",
+        "answer": "Yes, trains and buses go to our town. You can walk to the cottage, or we can pick you up."
+      },
+      {
+        "question": "How to use the hot tub properly?",
+        "answer": "The tub takes about 3 hours to heat. If you want it ready at 7 PM, we arrive around 4–4:30 PM to start heating it."
+      },
+      {
+        "question": "Can I swim in the lake?",
+        "answer": "The lake is not intended for swimming — it is purely decorative."
+      }
+    ],
+    "kitchen": [
+      {
+        "question": "Is there all necessary kitchenware?",
+        "answer": "Yes, our kitchen is fully equipped with all necessary cutlery and cookware."
+      },
+      {
+        "question": "Do I need to bring tea, coffee, oil and spices?",
+        "answer": "No, everything needed for cooking and drinks is already there: tea, coffee, sugar, vinegar, oil and basic spices."
+      },
+      {
+        "question": "Is there a stove?",
+        "answer": "Yes, we have an induction stove."
+      }
+    ],
+    "bathroom": [
+      {
+        "question": "Do I need to bring towels and robes?",
+        "answer": "No, we provide towels and robes for each guest."
+      },
+      {
+        "question": "Are hygiene products available?",
+        "answer": "Yes, we provide shower gels, disposable toothbrushes and other hygiene items."
+      },
+      {
+        "question": "Is a hair dryer provided?",
+        "answer": "Yes, a hair dryer is included among the available amenities."
+      }
+    ]
+  },
+  "services": {
+    "houseItems": {
+      "wifi": "Wi-Fi",
+      "ac": "Air conditioning",
+      "power": "Autonomous power",
+      "tv": "TV (Smart TV)",
+      "windows": "Panoramic windows",
+      "games": "Board games",
+      "checkin": "Self check-in",
+      "pets": "Pet-friendly"
+    },
+    "kitchenItems": {
+      "fridge": "Refrigerator",
+      "kettle": "Electric kettle",
+      "coffee": "Coffee machine",
+      "microwave": "Microwave",
+      "spices": "Spices",
+      "drinks": "Coffee / tea",
+      "stove": "Induction stove",
+      "dishes": "Dishes & cookware"
+    },
+    "bathroomItems": {
+      "dryer": "Hair dryer",
+      "towels": "Towels",
+      "shower": "Shower cabin",
+      "robes": "Bathrobes",
+      "hygiene": "Hygiene products",
+      "dental": "Dental kits",
+      "slippers": "Disposable slippers",
+      "mirror": "Backlit mirror",
+      "floor": "Heated floor",
+      "wall": "Heated wall"
+    },
+    "territoryItems": {
+      "tub": "Hot tub",
+      "wood": "Firewood",
+      "lake": "Lake",
+      "grill": "BBQ area",
+      "parking": "Parking",
+      "gazebo": "Gazebo",
+      "area": "Large territory",
+      "swing": "Swing",
+      "hammock": "Hammock",
+      "fenced": "Enclosed territory",
+      "eco": "Eco format",
+      "mountains": "Mountain views",
+      "quiet": "Silence & remoteness",
+      "loungers": "Lounge chairs",
+      "fire": "Campfire area"
+    }
+  },
+  "modals": {
+    "house": {
+      "title": "House",
+      "desc1": "An A-frame house — a unique architecture where walls and roof merge into a single triangular shape. Inside you'll find a cozy interior of natural wood, panoramic windows overlooking the forest and mountains.",
+      "desc2": "The space is thoughtfully designed: soft lighting, quality textiles and everything needed for a comfortable stay. Here it's easy to feel at one with nature without giving up modern comforts."
+    },
+    "kitchen": {
+      "title": "Kitchen",
+      "desc1": "A cozy kitchen — a harmony of natural wood, modern design and thoughtful comfort. Warm tones, stylish dark accents and soft lighting create an atmosphere of calm, perfect for starting and ending your day.",
+      "desc2": "The compact space is equipped with everything needed for convenient cooking, so you can enjoy your stay without any hassle. This is a place where simplicity becomes aesthetics and every moment is special."
+    },
+    "bathroom": {
+      "title": "Bathroom",
+      "desc1": "The bathroom combines functionality and style: natural wood, dark accents and thoughtful design create a spa atmosphere. Every detail is chosen for your comfort.",
+      "desc2": "Guests enjoy quality hygiene products, fluffy towels and robes. It's easy to relax and recharge here after mountain walks."
+    },
+    "territory": {
+      "title": "Territory",
+      "desc1": "A spacious private territory surrounded by forest and mountains. Here you'll find everything for a full outdoor experience: a hot tub, BBQ area, gazebo and a decorative lake.",
+      "desc2": "The enclosed plot ensures complete privacy. No neighbors — just you, nature and the silence of the Carpathians."
+    },
+    "photo": "Photos"
+  },
+  "booking": {
+    "title": "Booking",
+    "nameLabel": "Name",
+    "phoneLabel": "Phone",
+    "submitBtn": "Send"
+  },
+  "rules": {
+    "title": "Rules",
+    "sections": [
+      {
+        "title": "Number of guests",
+        "items": [
+          "Only guests listed in the booking may stay in the house."
+        ]
+      },
+      {
+        "title": "Careful use of the cottage",
+        "items": [
+          "Please handle furniture, appliances, textiles and decor with care.",
+          "In case of damage or loss of property — compensation is made according to its value.",
+          "If you notice a malfunction — please inform us."
+        ]
+      },
+      {
+        "title": "Cleanliness and order",
+        "items": [
+          "Please keep the house and territory tidy.",
+          "Do not flush hygiene products or other items down the toilet."
+        ]
+      },
+      {
+        "title": "BBQ area",
+        "items": [
+          "Use the BBQ area carefully.",
+          "Fire may only be lit in designated areas."
+        ]
+      },
+      {
+        "title": "Smoking",
+        "items": [
+          "Smoking inside the premises is prohibited.",
+          "Smoking is allowed in open-air areas.",
+          "Smoking hookahs and vaping inside the cottage is prohibited."
+        ]
+      },
+      {
+        "title": "Responsibility for belongings",
+        "items": [
+          "We are not responsible for personal belongings left unattended."
+        ]
+      },
+      {
+        "title": "Additional rules",
+        "items": [
+          "Any candles inside the cottage are prohibited.",
+          "Do not leave fire, electrical appliances or the BBQ unattended.",
+          "Storing flammable or explosive substances is prohibited.",
+          "Upon departure, turn off lights, water and electrical appliances.",
+          "Before leaving, make sure doors and windows are closed.",
+          "Children must be under adult supervision."
+        ]
+      },
+      {
+        "title": "Rules for guests with pets",
+        "items": [
+          "Staying with pets only with prior agreement (up to 10 kg, small breeds).",
+          "Cleaning up after pets is mandatory.",
+          "Do not leave pets alone in the house.",
+          "In case of property damage — compensation applies."
+        ]
+      },
+      {
+        "title": "Hot tub rules",
+        "items": [
+          "Jumping, diving, pushing or creating dangerous situations is prohibited.",
+          "Adding foam, shampoos, salts, oils, fragrances or cosmetics to the water is prohibited.",
+          "Children may only use the tub under adult supervision.",
+          "Not recommended for people with cardiovascular diseases or high blood pressure.",
+          "In case of equipment damage, the guest bears financial responsibility."
+        ]
+      }
+    ]
+  },
+  "parashka": {
+    "navTitle": "Mount\nParashka",
+    "subtitle": "Enjoy the sun and the views",
+    "title": "Hiking through a blooming summer landscape",
+    "desc1": "Everyone who likes to relax in the Carpathians should visit Mount Parashka at least once in their life. This is a favorite place for many generations. Tourists come here for unforgettable impressions of a wonderful trip through the Carpathians. For many, the route to Mount Parashka brings back pleasant memories of school or student years, of heartfelt gatherings by the fire, of fun and not so fun adventures that they had to experience in these travels.",
+    "desc2": "The mountain is located near the city of Skole in the Lviv region, its height reaches 1268 meters above sea level. Parashka Mountain is the highest peak of the Skole Beskids. It is a favorite of tourists not only because of its \"accessibility\" and ease of getting from any city, but also because in clear weather the top offers a breathtaking view of the surrounding mountain ranges and their peaks. In addition, you can see the neighboring city of Korchyn, Stryi and even Lviv, which is 90 kilometers away. The Skole Beskids are rich in picturesque landscapes and the most popular place here is Parashka Mountain, photos taken on its top will not leave anyone indifferent",
+    "locationDesc": "Parashka Mountain is located in the territory of the Skoliv Beskydy National Nature Park. Its slopes are covered with coniferous forests with beech and birch zones. Many rare plants also grow here, most of which are listed in the Red Book of Ukraine. At the foot of the mountain, the Velyka River begins, on which the famous Gurkalo waterfall is located. It is best to admire it in spring, when the river becomes more full-flowing. The Opir and Stryi rivers also flow nearby.",
+    "atmosphereTitle": "Where the mountain atmosphere is born",
+    "atmosphereDesc": "The weather on Mount Parashka has its own unique character and often becomes part of a unique climbing experience. The summit is often shrouded in thick fog, and weather conditions can change literally in a matter of minutes. This creates an atmosphere reminiscent of scenes from movies: you can start the route in sunny weather, and already at the top you will find yourself among clouds and cool mountain air. <br/> To get the most out of the climb, it is worth planning a hike in the morning or evening hours. At this time, there are significantly fewer people on the routes, and the light becomes softer and more atmospheric. The combination of fog, sunlight and mountain views creates ideal conditions for both relaxation and photography.",
+    "legendsTitle": "Legends of Mount Parashka",
+    "legendsDesc": "Mount Parashka is shrouded in numerous legends that are passed down from generation to generation and give this peak a special mystical mood.\n\nOne of the most famous legends tells of Prince Svyatoslav Volodymyrovich, who died in a fierce battle on these lands. His wife (according to other versions, his daughter) Paraskeviia also died with him. According to legend, the mountain was named in her honor.\n\nAnother legend tells of the free and proud beauty Parashka, who was fleeing from Tatar attackers. She did not surrender to the enemies, but her life tragically ended on the slopes of this mountain, leaving behind only her memory and name.\n\nThere is also a more instructive story. According to her, a woman named Parashka drove her oxen to graze on the mountain on the great holiday of Easter and sat down to spin. For such a sin, she was punished - she turned into stone along with the oxen right on the slopes. It is said that some rock formations still commemorate these events today.\n\nSuch legends give the mountain not only historical but also spiritual depth, making it even more attractive to travelers and connoisseurs of Ukrainian folklore.",
+    "routeTitle": "Route to Mount Parashka",
+    "routeDesc": "The most popular route to its summit starts in the town of Skole. This is the most popular and most accessible option. The trail begins at the point where the Skole bypass road and the road from the town converge. Before reaching the left tributary of the Opor, we turn right, then near the sawmill along the trail we reach the beginning of the route. It is marked in white and yellow. You can also start the climb near the gas station, which is located near the railway station. Along the trail we constantly climb up to the ridge line, moving northwest, and after three kilometers we reach a clearing, where the trail changes direction first to the west, and then to the southwest. This clearing offers a beautiful view of the Parashka ridge. There is a spring in the forest near the clearing, if you wish, you can replenish your drinking water supplies here. Then we climb the trail up another two kilometers, so we reach the Parashka ridge. On the ridge you need to turn right (on the left is Mount Korchanka 1180 m) and walk another five kilometers in a north-westerly direction along the top of the ridge. Moving along the ridge, we will cross two peaks: Zelena (1221 m) and Kobyla (1231). As soon as you pass these peaks, you will be able to see the top of Mount Parashka."
+  },
+  "kamyanka": {
+    "navTitle": "Kamyanka\nWaterfall",
+    "subtitle": "The magical beauty of Carpathian nature",
+    "title": "Kamyanka Waterfall — a gem of the Skolivski Beskydy",
+    "desc1": "Kamyanka Waterfall is one of the most picturesque natural landmarks of the Lviv region. It is located in the scenic valley of the Kamyanka River, among dense Carpathian forests. Its height reaches about 8 meters, and the surrounding nature is stunning in its pristine beauty. The waterfall looks especially spectacular in spring, when the stream becomes powerful and turbulent after the snow melts.",
+    "desc2": "The waterfall is located near the town of Skole and is a great place for a day hike. The trail to the waterfall passes through a picturesque forest and is not too difficult, so it is suitable for tourists of any level of fitness. Along the way, you can admire typical Carpathian landscapes - coniferous forests, mountain streams and a variety of vegetation, some of which is listed in the Red Book.",
+    "locationDesc": "The Kamyanka Waterfall is located in the Skole Beskydy National Nature Park, approximately 7 kilometers from the town of Skole. It can be reached both on foot and by car. The Opir and Kamyanka rivers flow nearby, feeding the waterfall all year round. The best time to visit is spring and early summer, when nature is in bloom and the waterfall is at its fullest.",
+    "legendsTitle": "Legends of Kamyanka Waterfall",
+    "legendsDesc": "Locals have long told legends about this magical place. According to one legend, in ancient times, a mavka, a forest beauty, lived near the waterfall, guarding the purity of the Carpathian waters. She appeared only to good people and helped travelers find their way in the dense forest.\n\nAnother legend tells of a young Hutsul who fell in love with a girl from a neighboring village. To prove his love, he brought her water from the highest waterfall in the district, Kamyanka. They say that since then the water of this waterfall has healing properties for lovers.\n\nAnother story is connected with the ancient Opryshki, who hid treasures in caves near the waterfall. No one has yet found these treasures, but locals say that on moonlit nights you can hear the ringing of gold amidst the noise of the waterfall.\n\nThere is a belief that at night near the waterfall you can see strange shadows or reflections in the water that have no explanation. Some say that these are the souls of those who once died in the mountains or near the river.",
+    "routeTitle": "Route to Kamyanka Waterfall",
+    "routeDesc": "The most convenient route starts from the center of Skole. From the railway station, you need to move towards the forest along a marked trail with yellow-blue markings. The route runs along the Kamyanka River through a mixed forest. The distance from the city to the waterfall is about 7 kilometers, the travel time is about 2 hours one way. The trail is well marked and does not require special equipment. We recommend taking comfortable shoes, water and a snack with you. It is best to visit the waterfall in the morning, when the sun illuminates the valley and the waterfall looks especially impressive."
+  },
+  "lopata": {
+    "navTitle": "Mount\nLopata",
+    "subtitle": "Silence and space above the Carpathian ridges",
+    "title": "Mount Lopata — an open summit of the Skolivski Beskydy",
+    "desc1": "Mount Lopata is one of the scenic peaks of the Skolivski Beskydy, with a height of about 1,067 meters above sea level. The unforested summit offers tourists a stunning panoramic view of the surrounding ridges, the Opir River valley, and the snow-capped peaks of the Carpathians.",
+    "desc2": "Lopata Mountain is located in the Skoliv Beskydy National Nature Park, near the villages of Koziova and Pokhivka. The slopes are covered with dense beech and fir forests, which take on bright golden-red hues in autumn. The peak of the mountain is characterized by its gentle relief and wide open space, resembling an inverted shovel - hence its name.",
+    "desc3": "The routes to Lopata are attractive for tourists of any level of training. There are no difficult rocky sections or steep cliffs here - just a smooth climb through the Carpathian forest with gradually opening views. In winter, the peak is covered with snow and becomes an ideal place for snowshoeing and skiing on unmarked trails. In spring, the first snowdrops and somniferum bloom here - plants listed in the Red Book of Ukraine.",
+    "locationDesc": "Lopata Mountain is located approximately 18 kilometers from the city of Skole, on the border of the Skole and Stryi districts of Lviv region. The most convenient access is through the village of Koziova along the Skole–Boryslav highway. The mountain is part of the Skole Beskydy National Nature Park, so visiting requires compliance with the rules of the reserve. The sources of the Stryi River flow nearby, and picturesque Carpathian meadows and forests are spread around.",
+    "legendsTitle": "Legends of Mount Lopata",
+    "legendsDesc": "Locals say that the name of the mountain comes from an ancient legend about a giant lumberjack who dropped his shovel while working in the mountains. Where it fell, the earth rose and formed this peak with a characteristic gentle ridge.\n\nAccording to another legend, in ancient times, molfars - Carpathian sorcerers - gathered on the top of Lopata for their secret rituals on the days of the summer and winter solstices. They say that even today, on these special nights, an unusual glow can be seen above the mountain.\n\nThere is also a romantic legend about the shepherd Vasyl and the girl Oksana, who were separated by their parents due to family feud. Every summer, Vasyl went to the top of Lopata and played the trembita, hoping that his melody would reach his beloved beyond the mountains. They say that on quiet summer evenings, the echoes of the trembita can still be heard on the top.\n\nOld-timers also say that at the foot of the mountain there is a secret spring with healing water, which opens only to those who come to it with a pure heart and sincere intentions.",
+    "routeTitle": "Route to Mount Lopata",
+    "routeDesc": "The most popular route starts from the village of Kozyova, on the Skole–Boryslav highway. From the bus stop, you need to move along a dirt road up towards the forest - the road is clearly visible and does not require a navigator during the day. The first two kilometers of the route pass through pastures and meadows with magnificent views of the Opora Valley. Then the climb begins through a beech-fir forest along a marked trail with blue marks on the trees. The total distance from the village to the summit is about 5 kilometers, the ascent time is about 1.5–2 hours. The trail is not technically difficult, but comfortable shoes with good tread are recommended, especially after rain. There is a convenient place at the top for resting and lighting a bonfire. The best time to visit is early morning, when the clouds have not yet covered the panorama, or in the evening to watch the sunset over the Carpathians."
+  },
+  "opir": {
+    "navTitle": "Opir\nRiver",
+    "subtitle": "The living soul of the Carpathian mountains",
+    "title": "The Opir River — a gem of the Skolivski Beskydy",
+    "desc1": "The Opir is one of the most picturesque mountain rivers in the Lviv region, flowing through the heart of the Skoli Beskids. Its crystal clear waters carry the energy of the Carpathian peaks, and its banks are covered with pristine forests. The river attracts fishermen, kayakers, and everyone who seeks unity with the wild nature of the Carpathians.",
+    "desc2": "The Opir River originates on the slopes of the Carpathian Mountains and flows through the city of Skole, flowing into the Stryi River. Its length is about 96 kilometers, and its basin covers a significant part of the Skole Beskids. Thanks to its clean water and picturesque banks, the Opir is one of the most attractive places for outdoor recreation in the Lviv region. In spring, when the snow melts, the river becomes especially full-flowing and turbulent.",
+    "desc3": "There are picturesque hiking and cycling routes along the banks of the Opor. The river is famous among rafting and kayaking enthusiasts - the fast current and rapids make it an ideal place for active water recreation. Fishermen appreciate the Opor for its rich fish life: trout, grayling and other valuable fish species are found here. In winter, the snow-covered banks turn the river valley into a fabulous winter panorama.",
+    "locationDesc": "The Opir River flows through the center of the city of Skole, Lviv region, located in a picturesque mountain valley. Getting to the banks of the river is extremely easy - it passes directly through the city. The best places for recreation are located upstream, where the banks have not yet been affected by the city. Nearby is the National Nature Park \"Skolivskie Beskydy\", which makes this area especially attractive for nature lovers.",
+    "legendsTitle": "Legends of the Opir River",
+    "legendsDesc": "According to folk tales, the river's name comes from the word «to resist» — as its turbulent waters have long resisted all who tried to conquer these lands. Carpathian legends say that the Opir helped local people defend themselves against enemies by flooding in the most difficult times.\n\nLocal Hutsuls believed that a water spirit lived in the deep pools of the river, guarding the fish stocks and punishing greedy fishermen.\n\nThe most romantic legend tells of two lovers from feuding families who met secretly on the banks of the Opir. Since then the water of the Opir is said to have healing power for those in love.",
+    "routeTitle": "Route along the Opir River",
+    "routeDesc": "The most convenient route starts from the center of Skole, where the Opir River is clearly visible from the main bridge. From here, you can move upstream along the path along the right bank. The first two kilometers of the route pass through the urban area, then through a picturesque floodplain forest. Approximately 4 kilometers from the city center, the first rapids begin, where in spring it is especially beautiful to watch the rushing water. The route is well suited for family walks and does not require special equipment. The length of the one-way walking route is about 6 kilometers, travel time is about 1.5 hours. We recommend taking comfortable waterproof shoes with you, as some sections of the trail pass close to the water. The best time to visit is May-June, when the banks are covered with lush greenery and the river is at its highest."
+  },
+  "tustan": {
+    "navTitle": "Tustan\nFortress",
+    "subtitle": "A medieval fortress among the Carpathian rocks",
+    "title": "Tustan — the cliff city of ancient Rus",
+    "desc1": "Tustan is a unique rock fortress of the 9th–13th centuries, which is one of the most outstanding monuments of medieval architecture in Ukraine. Located among majestic sandstone cliffs, it was once a powerful defensive fortification and customs post on the Carpathian trade route. Today it is an open-air reserve that attracts thousands of tourists from all over the world every year.",
+    "desc2": "The Tustan complex consists of several huge rock massifs, in which hundreds of holes and grooves from the wooden structures of the ancient Russian fortress have been preserved. Thanks to the unique system of grooves in the rocks, archaeologists were able to reconstruct the appearance of the structures that stood here over a thousand years ago. At the top of the rocks, a breathtaking view of the Carpathian Mountains and the Stryi River valley opens. Tustan is included in the preliminary list of UNESCO World Heritage Sites.",
+    "locationDesc": "Tustan Fortress is located near the village of Urych, Skole district, approximately 15 kilometers from the city of Skole. You can get there by car along the Skole–Boryslav highway, stop in the village of Urych. The reserve is open daily from 9:00 to 18:00, entrance is paid. There are observation decks, information stands and reconstructed elements of the fortress on the territory. There is a museum with archaeological finds nearby.",
+    "legendsTitle": "Legends of Tustan",
+    "legendsDesc": "Tustan is shrouded in many mysterious legends that are passed down from generation to generation. According to one of them, in the underground passages under the rocks is hidden the treasure of the last prince, who never managed to take out the gold before the Mongol invasion. They say that the treasure is guarded by the spirit of an old warrior, and only a person with a pure heart can find it.\n\nAnother legend tells of an underground passage connecting Tustan with a fortress in a distant city. The defenders of the fortress allegedly fled through this passage during a siege. Local residents claim that on foggy nights they heard footsteps underground and saw wandering lights at the foot of the rocks.\n\nThe most romantic legend is about two lovers, Roksolana and Svyatoslav, who were separated by war. The girl climbed the highest rock every day and looked to the east, waiting for her lover. It is said that her silhouette can still be seen at sunset, when the rays illuminate the rocks with gold.",
+    "seeTitle": "What to see at Tustan",
+    "seeDesc": "The main attraction of the reserve is three huge rock massifs: Kamin, Tatarska Skelia and Maly Kamin. On their surfaces, more than 4,000 man-made holes, grooves and grooves from the structures of the ancient Russian fortress have been preserved - this is one of the largest collections of such traces in Europe.\n\nThe climb to the rock takes about 20-30 minutes and does not require climbing equipment - there are convenient paths and ladders. From the top, a panorama of the Carpathians opens, which you will never forget. Around the reserve, hiking routes through the forest of various lengths - from 1 to 4 hours - are laid.\n\nEvery year in August, a large-scale medieval festival \"Tustan\" is held here with knightly tournaments, craft workshops and authentic music. This is one of the brightest cultural events in the Lviv region, which gathers tens of thousands of guests.",
+    "routeTitle": "Route to Tustan",
+    "routeDesc": "The most convenient route starts from the town of Skole. Head toward Boryslav on the E85 highway; after 15 kilometers there will be a sign for the village of Urych — turn right. By car the journey takes about 20 minutes. Public transport: minibuses run from Skole bus station toward Boryslav several times a day; get off at the Urych stop."
+  },
+  "zakharBerkut": {
+    "navTitle": "Zakhar\nBerkut",
+    "subtitle": "Legendary Carpathians — the heart of the Ukrainian spirit",
+    "title": "Zakhar Berkut — a symbol of freedom and resilience",
+    "desc1": "Zakhar Berkut is a legendary hero of the Ukrainian people, the defender of the Carpathian Mountains. His name is forever inscribed in the history of the Tukhol community, which, under his leadership, stopped the Mongol invasion in the 13th century. Places associated with this heroic page are located near Skole and attract thousands of tourists every year.",
+    "desc2": "The Tuchola Basin is the place where the legendary events described by Ivan Franko in his story \"Zakhar Berkut\" took place. Today, the ski resort of the same name is located here, which attracts tourists all year round. In summer, there are hiking trails and mountain bikes, in winter, there are excellent trails for skiing and snowboarding. The surrounding mountains preserve the spirit of ancient legends and inspire new discoveries.",
+    "desc3": "The name \"Zakhar Berkut\" often causes confusion among travelers. In fact, it is not a separate peak, but the name of a ski complex located on the slopes of Mount Zvorets (1223 m), which smoothly passes into Vysoky Verkh with a height of 1242 m above sea level. The complex got its name in honor of the legendary Carpathian leader from the historical novel by Ivan Franko. The peak of Vysoky Verkh is the highest point in the vicinity of Slavske. Its slopes are not wooded, which provides wonderful panoramic views of the surrounding Carpathian ranges. A feature of this massif is the longest chairlift in Ukraine with a length of 2710 m. The Zakhar Berkut ski resort in Volosyanets began active development in 2005. Today, several trails of different levels of difficulty with a total length of about 9 km operate here.",
+    "locationDesc": "The Zakhar Berkut resort is located in the Tukholska hollow, approximately 21 kilometers from Skole. You can get there by car via the road through the village of Tukhlya. The resort is open all year round: in winter it offers ski slopes of various levels of difficulty, in summer - hiking and cycling routes among the picturesque Carpathian landscapes. Nearby are mineral water springs and picturesque waterfalls.",
+    "legendsTitle": "The Legend of Zakhar Berkut",
+    "legendsDesc": "According to legend, in the 13th century, the Mongol army led by Burunda invaded the Carpathians. A small Tukhol community led by the wise elder Zakhar Berkut stood in their way. The elder knew every path of these mountains, every stream and every stone.\n\nZakhar Berkut developed a cunning plan: to destroy the banks of mountain lakes and drown the enemy in a narrow valley. Despite the betrayal of his own son Maxim, who was taken prisoner by the Mongols, the elder did not deviate from his plan and sacrificed his own blood for the freedom of the community.\n\nIvan Franko immortalized this legend in his story \"Zakhar Berkut\", making it a symbol of the indomitability of the Ukrainian spirit and love for his native land. Today, the image of Zakhar Berkut is a symbol of wisdom, courage and self-sacrifice.",
+    "routeTitle": "Route to Zakhar Berkut",
+    "routeDesc": "From the town of Skole, you need to head towards the village of Tukhlya along the main road. The distance is about 21 kilometers and will take about 25-30 minutes by car. On the way, you will pass picturesque Carpathian villages and forests. Public transport also runs along this route several times a day. For hikers, there is a marked route through mountain trails, which will take about 6-7 hours and will give you unforgettable views of the Skole Beskids."
+  },
+  "zhuravlyne": {
+    "navTitle": "Zhuravlyne\nLake",
+    "subtitle": "A mirror of the sky among Carpathian forests",
+    "title": "Zhuravlyne Lake — a hidden gem of the Beskydy",
+    "desc1": "Lake Zhuravline is one of the most romantic and mysterious natural reservoirs of the Skole Beskids. Located among dense coniferous forests at an altitude of over 800 meters above sea level, it impresses with its mirror surface, which reflects the Carpathian ridges and the cloudy sky. The lake is a nesting place for rare birds and a symbol of pristine Carpathian nature.",
+    "desc2": "Zhuravlyne was formed during the Ice Age and is a typical example of a Carpathian mountain lake. Its area is small, but its beauty is extraordinary - especially in the morning, when fog spreads over the water and absolute silence reigns around, broken only by the cries of birds. The shores of the lake are covered with moss and wildflowers, and the water is home to trout and other valuable fish.",
+    "desc3": "An ecological trail has been laid around the lake, which allows you to go around the perimeter of the reservoir and enjoy different angles. Along the way, you can meet rare birds - cranes, herons and ducks, which gave the lake its name. In autumn, the water acquires a special dark blue color and contrasts beautifully with the yellow-red leaves of the surrounding forests. In winter, the lake is covered with ice and turns into a natural skating rink for local residents.",
+    "locationDesc": "Zhuravlyne is located within the Skole Beskydy National Nature Park, approximately 12 kilometers from the city of Skole. You can get there by car to the nearest village, and then on foot along a marked eco-trail. The lake is located at an altitude of about 820 meters, so the road to it is a pleasant walk with a gradual climb. Nearby are sources of clean mountain water and observation platforms with views of the Opora Valley.",
+    "legendsTitle": "Legends of Zhuravlyne Lake",
+    "legendsDesc": "The oldest legend says that the lake was created from the tears of a crane, a bird that lost its kitten in the dense Carpathian forest. She cried for so long that her tears filled the lowland and formed a pond as clear as a tear. Since then, cranes have been flying here every year and circling over the lake, as if searching for something lost.\n\nAnother legend is associated with a young witch, Yavdokha, who lived in the forest near the lake. She supposedly turned unkind people into cranes and forced them to fly over the water forever. That is why the birds here are so numerous and so sad.\n\nLocal Hutsuls believed that a water maiden lived in the depths of the lake - a guardian who protected the purity of the water and punished those who polluted nature. Fishermen always threw a flower or a piece of bread into the water before fishing to appease the mistress of the lake.\n\nAccording to another legend, during the full moon, the water of the lake takes on a silvery sheen and one can see the reflection of the future in it. But one must look only with pure thoughts - otherwise the lake will show only darkness.",
+    "routeTitle": "Route to Zhuravlyne Lake",
+    "routeDesc": "The route starts from the city of Skole. You need to move in the direction of Truskavets along the highway, after 8 kilometers turn to the signpost to the nature park. From the turn, the road leads another 4 kilometers to the parking lot at the entrance to the forest. From here begins a hiking trail to the lake with blue-yellow markings on the trees. The distance from the parking lot to the lake is about 3 kilometers, travel time is about 50–60 minutes. The trail is well-maintained, in places there are wooden bridges over streams. We recommend taking warm clothes with you even in summer - it can be cool at altitude, especially in the mornings and evenings. The best time to visit is early morning on a weekday, when the fog has not yet cleared and the lake looks especially mystical. In autumn, in October, the landscapes around the lake turn into an incredible golden palette."
+  },
+  "pavlivPotik": {
+    "navTitle": "Pavliv\nPotik",
+    "subtitle": "A cozy corner of wild Carpathian nature",
+    "title": "Pavliv Potik - a hidden waterfall near Skole",
+    "desc1": "Pavliv Potik - a small but extremely picturesque Carpathian waterfall, hidden among dense forests near the city of Skole. This place is not so well known among mass tourists, so here you can enjoy real silence, the noise of a mountain stream and the atmosphere of wild nature. Clear water, rocky rapids and fresh mountain air make it a great place for leisurely relaxation and photography.",
+    "desc2": "The waterfall is formed by a mountain stream that flows among the beech and coniferous forests of the Skole Beskydy National Nature Park. Pavlov Potik looks most impressive in spring and after heavy rains, when the water becomes especially full. Even in summer In the heat, there is a pleasant coolness here, and the surrounding forest is filled with birdsong and the aroma of Carpathian herbs.",
+    "desc3": "Pavliv Potok will be a great choice for those who want to take a break from the city bustle and be alone with nature. Here you can take a leisurely walk through the forest, listen to the sound of water, take beautiful photos, or simply enjoy the coolness even on the hottest summer days. This place will especially appeal to lovers of quiet relaxation and a true Carpathian atmosphere.",
+    "locationDesc": "Pavliv Potik is located among the picturesque Carpathian slopes near Skole. The area around the waterfall has preserved its natural appearance and attracts those who appreciate peace, clean air, and the beauty of mountain nature. Nearby are tourist routes that allow you to combine a visit to the waterfall with other popular places in the Skole Beskids.",
+    "legendsTitle": "Legends about Pavliv Potik",
+    "legendsDesc": "Paul's Stream, like many little-known corners of the Carpathians, is shrouded in an atmosphere of mystery and tranquility. Local residents say that the sound of water hides the ancient history of the mountains, and anyone who stops at the waterfall for at least a few minutes and listens to nature will certainly find inner peace. According to one legend, a kind spirit of the forest lives in the clear waters of the stream, which protects this place from human fuss and helps travelers find the right path.\n\nAnother legend tells of the shepherd Paul, who once often rested near this stream. They say that it was in his honor that the locals began to call the waterfall Paul's Stream. According to legend, the water here always remained cold and clean, even on the hottest summer days, and anyone who washes in it after a long journey will gain new strength for further travel.\n\nAlthough most of these stories are passed down only orally and have no historical confirmation, they add This place has a special charm. It is the combination of Carpathian nature, the sound of water and local legends that creates an atmosphere that is memorable for everyone who has been to Pavlovy Potok at least once.",
+    "routeTitle": "Route to Pavlovy Potok",
+    "routeDesc": "It is most convenient to start the route from the city of Skole. You can reach the beginning of the trail by car or bicycle, after which there will be a short walk along the forest road. The route does not require special physical training and is suitable for most tourists. The road offers picturesque views of the Carpathian forest, and near the waterfall itself there are convenient places for a short rest. It is recommended to bring comfortable shoes, because after rain the stones can be slippery. The best time to visit is spring, early summer or autumn, when nature is especially picturesque."
+  },
+  "weather": {
+    "label": "weather forecast in",
+    "city": "SKOLE",
+    "hide": "hide ▲",
+    "more": "more ▼",
+    "days": [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat"
+    ],
+    "clear": "clear",
+    "cloudy": "cloudy",
+    "rain": "rain",
+    "snow": "snow",
+    "storm": "storm"
+  },
+  "servicesPlus": {
+    "subtitle": "General's Dacha",
+    "title": "Services",
+    "moreHint": "Learn more →",
+    "openBtn": "Open →",
+    "events": {
+      "title": "Event organization assistance",
+      "shortDesc": "We'll make your celebration unforgettable",
+      "backDesc": "Organization of birthdays, romantic evenings, corporate events or any special celebration. We'll help with decor, catering and program.",
+      "modalText": "We'll help create a special atmosphere for any event on our territory — from a cozy romantic evening to a birthday celebration or an unforgettable marriage proposal.\n\nWe'll take care of every detail: space decoration, delicious menu, music and the mood of the evening. All you need to do is enjoy the moment.\n\nContact us in advance and we'll prepare everything so this day will be remembered for a long time."
+    },
+    "transfer": {
+      "title": "Transfer from the station",
+      "shortDesc": "We'll meet and drive you in comfort",
+      "backDesc": "If you're arriving by train or bus — we can meet you at the station and comfortably take you to our cottage.",
+      "modalText": "Getting to us is easy even without your own car. We offer a transfer from the Skole railway or bus station right to the cottage door.\n\nJust let us know your arrival time — and we'll be waiting for you. The ride takes about 5-10 minutes.\n\nThe service is provided by arrangement. Contact us for details."
+    }
+  },
+  "placeModal": {
+    "menu": "Menu",
+    "site": "Site"
+  },
+  "places": [
+    {
+      "name": "Khata Sviata",
+      "category": "Restaurant",
+      "description": [
+        "An atmospheric restoration near Skole, combining traditional Carpathian cuisine, a cozy atmosphere and picturesque views of the river and mountain slopes. The spacious terrace allows you to enjoy nature and fresh air at any time of the year, and the personal staff creates a comfortable atmosphere for each guest.",
+        "This is a place where you can relax from the city noise, taste Ukrainian and Carpathian cuisine and spend time in harmony with nature, enjoying the peaceful atmosphere and beautiful mountain landscapes."
+      ],
+      "address": "v. Hrebiniv, Kniazia Sviatoslava St., 1"
+    },
+    {
+      "name": "Vivcharyk",
+      "category": "Restaurant",
+      "description": [
+        "A cozy restaurant in Skole with a homely atmosphere and dishes of Ukrainian and Carpathian cuisine. The establishment is decorated in a traditional style with a wooden interior, Boyko motifs and several thematic rooms.",
+        "Here you can taste banosh, mushroom soup, meat dishes and other local Carpathian recipes. Suitable for a quiet dinner after a road trip or walks in the Carpathians, as well as for celebrations, family gatherings or company outings."
+      ],
+      "address": "Skole, D. Halytskoho St., 43"
+    },
+    {
+      "name": "G.A.M",
+      "category": "Coffee shop",
+      "description": [
+        "A coffee shop in Skole with an emphasis on quality coffee and desserts. The establishment has a cozy atmosphere for relaxation, but is more focused on coffee with gout, meetings or a short break during a trip to the Carpathians.",
+        " The menu includes classic coffee drinks, original seasonal items, desserts and light sweets. Suitable for both morning coffee and a walk by the river with a fragrant drink."
+      ],
+      "address": "Skole, M. Hrushevskoho St., 18"
+    },
+    {
+      "name": "Zolota Forel",
+      "category": "Restaurant",
+      "description": [
+        "A colorful Carpathian restaurant in Korostov near Skole, known for its trout dishes and traditional Ukrainian cuisine. The establishment is decorated in a wooden style with an atmosphere of mountain relaxation, terraces above water bodies and cozy halls.",
+        "Here you can taste grilled trout, yushka, bograch, meat dishes and other local Carpathian dishes. Suitable for family vacations, dinner after a trip to the Carpathians or celebrations in a large company."
+      ],
+      "address": "Korostiv village, Ivana Franka St., 67"
+    },
+    {
+      "name": "Ollio",
+      "category": "Pizzeria",
+      "description": [
+        "Ollio is a cozy pizzeria in Skole, which prepares classic and original pizza with crispy dough and fresh ingredients. The establishment is focused on fast and quality food: pizza from the oven, snacks, salads and drinks.",
+        "The ideal place for lunch or dinner after walking around the city or trips to the Carpathians. The atmosphere is modern, relaxed, suitable for both companies and a quick snack."
+      ],
+      "address": "Skole, Stepana Okhrimovycha St., 22"
+    },
+    {
+      "name": "CACAO",
+      "category": "Coffee shop",
+      "description": [
+        "CACAO is a cozy coffee shop in Skole with a modern atmosphere and a large selection of coffee drinks and desserts. The establishment is suitable for relaxing, meeting with friends or a short break during a trip through the Carpathians.",
+        " The menu includes classic coffee, seasonal drinks, sweets and light desserts. The interior is made in a modern style with a comfortable atmosphere for guests."
+      ],
+      "address": "Skole, Danyla Halytskoho St., 10"
+    },
+    {
+      "name": "Pinsa Mia",
+      "category": "Pizzeria",
+      "description": [
+        "The establishment combines a modern interior, a pleasant atmosphere, and fast service, making it a great place to relax.",
+        "Here you can enjoy crispy pinsa with tender dough, various pizza flavors, snacks and drinks. Thanks to its convenient location, Pinsa Mia will be a great choice for both locals and tourists visiting Skole and seeking a delicious break."
+      ],
+      "address": "Skole city, Independence Square 1b"
+    },
+    {
+      "name": "Domino",
+      "category": "Pizzeria",
+      "description": [
+        "We offer a clear and delicious cuisine, where each dish is prepared with love. Aromatic coffee and cool drinks will be the perfect complement to your vacation.",
+        "\"Domino\" is a space of peace on the second floor, where a special coziness reigns. Soft light and a comfortable interior create ideal conditions for sincere conversations."
+      ],
+      "address": "Skole, Danyla Halytskoho St., 2A"
+    }
+  ],
+  "routes": [
+    {
+      "label": "Mount Parashka",
+      "distance": "9 km"
+    },
+    {
+      "label": "Kamyanka Waterfall",
+      "distance": "7 km"
+    },
+    {
+      "label": "Zakhar Berkut",
+      "distance": "22 km"
+    },
+    {
+      "label": "Zhuravlyne Lake",
+      "distance": "7 km"
+    },
+    {
+      "label": "Opir River",
+      "distance": "0.5 km"
+    },
+    {
+      "label": "Tustan Fortress",
+      "distance": "14 km"
+    },
+    {
+      "label": "Mount Lopata",
+      "distance": "9 km"
+    },
+    {
+      "label": "Pavliv Potik",
+      "distance": "0,5 km"
+    }
+  ],
+  "locationRoutesDropdown": {
+    "distanceLabel": "Distance:"
+  }
+}

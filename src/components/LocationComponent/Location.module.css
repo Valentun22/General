@@ -1,0 +1,737 @@
+:root {
+    --hero-bg: none;
+    --panoram-bg: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(44px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animFadeUp,
+.animFadeIn,
+.animScaleIn,
+.animSlideLeft,
+.animSlideRight {
+    opacity: 0;
+}
+
+.animFadeUp.visible {
+    animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animFadeIn.visible {
+    animation: fadeIn 0.9s ease both;
+}
+
+.animScaleIn.visible {
+    animation: scaleIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animSlideLeft.visible {
+    animation: slideLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animSlideRight.visible {
+    animation: slideRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.articleOneBox {
+    height: 100vh;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    background-attachment: scroll;
+}
+
+.articleOneBoxHeader {
+    position: relative;
+    z-index: 100;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+.arrow::after {
+    margin-right: 5px;
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg) translateY(-3px);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+.articleTwoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw 0;
+}
+
+.articleTwoBoxText {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.articleTwoBoxText h4 {
+    font-family: "Ysabeau", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #B99D75;
+    font-size: 1rem;
+    margin: 60px 0 10px 0;
+}
+
+.articleTwoBoxText h2 {
+    font-family: "Cormorant Infant", serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1.5vh 0;
+}
+
+.articleTwoBoxText h3 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.5vw 0 2vw 0;
+    line-height: 1.6;
+}
+
+.articleThreeBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 8vw;
+}
+
+.articleThreeBox img {
+    width: 41vw;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.articleFourBox {
+    padding: 0 5vw;
+    margin: 7vh 0 100px 0;
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), var(--panoram-bg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+.articleFourBox h2 {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 3vh;
+}
+
+.articleFourBoxCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2vw 0;
+    max-width: 1800px;
+}
+
+.mapBox {
+    width: 45vw;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+}
+
+.mapBox iframe {
+    filter: invert(90%) hue-rotate(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+.articleFourBoxText {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.articleFourBox h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.6;
+    color: #ffffff;
+    width: 560px;
+}
+
+.articleFiveBox {
+    padding: 10vh 0 6vh 0;
+}
+
+.articleSixBox {
+    padding: 6vh 0;
+}
+
+.articleSixBox {
+    padding: 6vh 0;
+}
+
+@media (max-width: 1400px) {
+    .articleTwoBoxText {
+        width: 1150px;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1.4rem;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 3rem;
+        margin: 1vh 0;
+    }
+
+    .articleThreeBox img {
+        height: 450px;
+    }
+
+    .articleFourBoxCont {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mapBox {
+        width: 80vw;
+        height: 350px;
+    }
+
+    .articleFourBox h2 {
+        font-size: 2.2rem;
+        margin: 1vh;
+    }
+
+    .articleFourBox h3 {
+        width: 980px;
+        font-size: 1.35rem;
+    }
+
+    .articleFourBox {
+        height: auto;
+        padding: 40px 5vw;
+        box-sizing: border-box;
+    }
+
+    .articleFourBoxText {
+        width: 80vw;
+    }
+
+    .articleSixBox {
+        padding: 4vh 0 6vh 0;
+    }
+
+    .articleOneBox h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    .articleTwoBoxText {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .articleTwoBoxText {
+        width: 920px;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1.4rem;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 2.7rem;
+        margin: 0.6vh 0;
+    }
+
+    .articleThreeBox img {
+        height: 450px;
+    }
+
+    .articleFourBoxCont {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mapBox {
+        width: 80vw;
+        height: 350px;
+    }
+
+    .articleFourBox h3 {
+        width: 800px;
+        font-size: 1.2rem;
+    }
+
+    .articleFourBox {
+        height: auto;
+        margin-top: 4vh;
+        box-sizing: border-box;
+    }
+
+    .articleFourBoxText {
+        width: 80vw;
+    }
+
+    .articleFiveBox {
+        padding: 8vh 0 4vh 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .articleTwoBoxText {
+        width: 820px;
+    }
+
+    .articleFourBox h3 {
+        width: 750px;
+    }
+
+    .articleSixBox {
+        padding: 4vh 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .articleThreeBox img {
+        height: 400px;
+    }
+
+    .articleFourBoxCont {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .mapBox {
+        width: 90vw;
+    }
+
+    .articleFourBox h3 {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+
+    .articleFourBox {
+        height: auto;
+        padding: 30px 5vw;
+        box-sizing: border-box;
+    }
+
+    .articleFourBoxText {
+        width: 90vw;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 2.3rem;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1.3rem;
+    }
+
+    .articleFiveBox {
+        padding: 6vh 0 4vh 0;
+    }
+
+    .articleTwoBoxText {
+        width: 720px;
+    }
+
+    .articleFourBox h3 {
+        width: 720px;
+    }
+
+    .articleFourBox {
+        margin: 100px 0 50px 0;
+    }
+
+    .articleSixBox {
+        padding: 4vh 0;
+    }
+
+    .animSlideLeft.visible,
+    .animSlideRight.visible {
+        animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+}
+
+@media (max-width: 800px) {
+    .articleTwoBoxText {
+        width: 620px;
+    }
+
+    .articleFourBox h3 {
+        padding-top: 15px;
+        width: 610px;
+    }
+
+    .articleTwoBoxText h4 {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .articleThreeBox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .articleThreeBox img {
+        width: 90vw;
+        height: 500px;
+        object-fit: cover;
+        padding: 10px 0;
+    }
+
+    .articleFourBoxCont {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .articleTwoBoxText {
+        width: 590px;
+    }
+
+    .articleFourBox h3 {
+        width: 590px;
+    }
+
+    .articleOneBox h1 {
+        font-size: 4rem;
+    }
+
+    .articleTwoBoxText h4{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .articleThreeBox img {
+        height: 450px;
+    }
+
+    .articleTwoBoxText {
+        width: 520px;
+    }
+
+    .articleFourBox h3 {
+        width: 610px;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 2.1rem;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1.2rem;
+    }
+
+    .articleFourBox h3 {
+        width: 540px;
+    }
+
+
+    .articleFourBox {
+        margin: 60px 0 50px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .articleThreeBox img {
+        height: 450px;
+    }
+
+    .articleTwoBoxText {
+        width: 490px;
+    }
+
+    .articleFourBox h3 {
+        width: 495px;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 2rem;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1.2rem;
+    }
+
+    .articleFourBox h3 {
+        width: 495px;
+    }
+
+    .articleFiveBox {
+        padding: 4vh 0 4vh 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .articleThreeBox img {
+        height: 450px;
+    }
+
+    .articleThreeBox {
+        padding: 5vw 0;
+    }
+
+    .articleTwoBoxText {
+        width: 455px;
+    }
+
+    .articleFourBox h3 {
+        width: 450px;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 1.9rem;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .articleThreeBox img {
+        height: 400px;
+    }
+
+    .articleTwoBoxText {
+        width: 405px;
+    }
+
+    .articleFourBox h3 {
+        width: 410px;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 1.9rem;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1.1rem;
+    }
+
+    .articleTwoBoxText h4 {
+        font-size: 0.8rem;
+    }
+
+    .articleSixBox {
+        padding: 2.5vh 0;
+    }
+
+    .articleOneBox {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 450px) {
+    .articleThreeBox img {
+        height: 350px;
+    }
+
+    .articleTwoBoxText {
+        width: 380px;
+    }
+
+    .articleFourBox h3 {
+        width: 370px;
+    }
+
+    .footerMin img {
+        width: 90px;
+    }
+
+    .footerMin .navLinkBtn {
+        font-size: 0.62rem;
+    }
+
+    .footerMin .copyrightText {
+        font-size: 0.53rem;
+    }
+
+    .mapBox {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .articleThreeBox img {
+        height: 320px;
+    }
+
+    .articleTwoBoxText {
+        width: 345px;
+    }
+
+    .articleFourBox h3 {
+        width: 345px;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 1.5rem;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 1rem;
+    }
+
+    .articleTwoBoxText h4 {
+        font-size: 0.7rem;
+    }
+
+    .footerMin img {
+        width: 70px;
+    }
+
+    .footerMin .navLinkBtn {
+        font-size: 0.55rem;
+    }
+
+    .footerMin .copyrightText {
+        font-size: 0.48rem;
+    }
+}
+
+@media (max-width: 385px) {
+    .articleThreeBox img {
+        height: 300px;
+    }
+
+    .articleTwoBoxText {
+        width: 320px;
+    }
+
+    .articleFourBox h3 {
+        width: 320px;
+    }
+
+    .articleTwoBoxText h2 {
+        font-size: 1.6rem;
+    }
+
+    .articleTwoBoxText h3 {
+        font-size: 0.8rem;
+    }
+
+    .articleOneBox h1 {
+        font-size: 3rem;
+    }
+}

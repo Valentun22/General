@@ -1,0 +1,399 @@
+.wrapper {
+    padding: 0 8vw 80px 8vw;
+    background: #ffffff;
+}
+
+.subtitle,
+.title,
+.cardWrap {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.wrapperVisible .subtitle {
+    animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0ms forwards;
+}
+
+.wrapperVisible .title {
+    animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 90ms forwards;
+}
+
+.wrapperVisible .cardWrap:nth-child(1) {
+    animation: cardReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) 200ms forwards;
+}
+
+.wrapperVisible .cardWrap:nth-child(2) {
+    animation: cardReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) 330ms forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+        filter: blur(3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(0.85rem, 0.8vw, 1.1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #B99D75;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-family: "Cormorant Infant", serif;
+    font-size: clamp(3rem, 2.3vw, 3.2rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.cardWrap {
+    width: 48%;
+    height: 220px;
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cardWrap:hover .card {
+    transform: rotateX(180deg);
+}
+
+.cardFront,
+.cardBack {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    padding: 32px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardFront {
+    background: #f5f2f0;
+    border: 1px solid rgba(185, 157, 117, 0.25);
+    border-left: 3px solid #B99D75;
+    transition: box-shadow 0.3s ease;
+}
+
+.cardWrap:hover .cardFront {
+    box-shadow: 4px 4px 20px rgba(185, 157, 117, 0.15);
+}
+
+.cardIcon {
+    font-size: 2.2rem;
+    color: #B99D75;
+    margin-bottom: 14px;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.cardWrap:hover .cardIcon {
+    transform: scale(1.1);
+}
+
+.cardTitle {
+    font-family: "Cormorant Infant", serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.cardDesc {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 0.95rem;
+    color: #777;
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+}
+
+.cardHint {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 0.8rem;
+    color: #B99D75;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.cardBack {
+    background: linear-gradient(135deg, #0b0a0a 0%, #242424 60%, #12100e 100%);
+    border: 1px solid rgba(185, 157, 117, 0.3);
+    border-left: 3px solid #B99D75;
+    transform: rotateX(180deg);
+}
+
+.cardBackIcon {
+    font-size: 2rem;
+    color: rgba(185, 157, 117, 0.6);
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.cardBackTitle {
+    font-family: "Cormorant Infant", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #B99D75;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+.cardBackDesc {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 16px 0;
+    line-height: 1.7;
+}
+
+.cardBackBtn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    color: #B99D75;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    align-self: flex-start;
+    border-bottom: 1px solid rgba(185, 157, 117, 0.4);
+    padding-bottom: 2px;
+}
+
+@media (max-width: 1400px) {
+    .wrapper {
+        padding: 10px 8vw 120px 8vw;
+    }
+
+    .cardBackIcon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .cardBackTitle {
+        font-size: 1.3rem;
+        margin: 0 0 10px 0;
+    }
+
+    .cardBackDesc {
+        font-size: 0.9rem;
+        margin: 0 0 16px 0;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 2.6rem;
+    }
+
+    .cardWrap {
+        height: 210px;
+    }
+
+    .cardFront,
+    .cardBack {
+        padding: 28px 32px;
+    }
+
+    .cardTitle {
+        font-size: 1.45rem;
+    }
+
+    .cardBackIcon {
+        font-size: 1.7rem;
+        margin-bottom: 12px;
+    }
+
+    .cardBackTitle {
+        font-size: 1.2rem;
+        margin: 0 0 10px 0;
+    }
+
+    .cardBackDesc {
+        font-size: 0.78rem;
+        margin: 0 0 16px 0;
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        padding: 10px 10vw 100px 10vw;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .cardWrap {
+        width: 100%;
+        height: 200px;
+    }
+
+    .cardFront,
+    .cardBack {
+        padding: 24px 28px;
+    }
+
+    .cardTitle {
+        font-size: 1.45rem;
+    }
+
+    .cardBackIcon {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .cardBackTitle {
+        font-size: 1.2rem;
+        margin: 0 0 10px 0;
+    }
+
+    .cardBackDesc {
+        font-size: 1rem;
+        margin: 0 0 12px 0;
+        line-height: 1.3;
+    }
+
+    .wrapperVisible .cardWrap:nth-child(1) {
+        animation-delay: 200ms;
+    }
+
+    .wrapperVisible .cardWrap:nth-child(2) {
+        animation-delay: 310ms;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardTitle {
+        font-size: 1.45rem;
+    }
+
+    .cardBackIcon {
+        font-size: 1.7rem;
+        margin-bottom: 8px;
+    }
+
+    .cardBackTitle {
+        font-size: 1.2rem;
+        margin: 0 0 6px 0;
+    }
+
+    .cardBackDesc {
+        font-size: 0.87rem;
+        margin: 0 0 10px 0;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 10px 5vw 60px 5vw;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .cardWrap {
+        height: 185px;
+    }
+
+    .cardFront,
+    .cardBack {
+        padding: 20px 22px;
+    }
+
+    .cardIcon {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .cardTitle {
+        font-size: 1.45rem;
+    }
+
+    .cardDesc {
+        font-size: 0.85rem;
+    }
+
+    .cardBackIcon {
+        font-size: 1.7rem;
+        margin-bottom: 6px;
+    }
+
+    .cardBackTitle {
+        font-size: 1.05rem;
+        margin: 0 0 6px 0;
+    }
+
+    .cardBackDesc {
+        font-size: 0.8rem;
+        margin: 0 0 8px 0;
+        line-height: 1.5;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .subtitle,
+    .title,
+    .cardWrap {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+    }
+}

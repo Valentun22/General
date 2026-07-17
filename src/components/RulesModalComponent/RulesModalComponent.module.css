@@ -1,0 +1,489 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.modal {
+    background: #ffffff;
+    width: 75vw;
+    max-width: 900px;
+    height: 88vh;
+    max-height: 800px;
+    overflow-y: auto;
+    border-radius: 10px;
+    position: relative;
+    padding: 55px 70px;
+    box-sizing: border-box;
+}
+
+.close {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+
+.close:hover {
+    color: #B99D75;
+}
+
+.header {
+    margin-bottom: 40px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #B99D75;
+}
+
+.subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #B99D75;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-family: "Cormorant Infant", serif;
+    font-size: clamp(2.6rem, 2.3vw, 2.8rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border-bottom: 1px solid rgba(185, 157, 117, 0.25);
+    transition: background 0.2s ease;
+}
+
+.item:first-child {
+    border-top: 1px solid rgba(185, 157, 117, 0.25);
+}
+
+.itemOpen {
+    background: rgba(185, 157, 117, 0.05);
+    border-radius: 3px;
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: transparent;
+    border: none;
+    padding: 18px 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.question:hover .questionText {
+    color: #B99D75;
+}
+
+.number {
+    font-family: "Cormorant Infant", serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #B99D75;
+    opacity: 0.8;
+    flex-shrink: 0;
+    width: 28px;
+}
+
+.questionText {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    flex: 1;
+    transition: color 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #B99D75;
+    flex-shrink: 0;
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-weight: 300;
+    line-height: 1;
+}
+
+.iconOpen {
+    transform: rotate(45deg);
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.4s ease;
+}
+
+.answerOpen {
+    max-height: 600px;
+    opacity: 1;
+}
+
+.ruleList {
+    list-style: none;
+    padding: 0 16px 20px 46px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ruleItem {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.7;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.dot {
+    color: #B99D75;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.overlay {
+    animation: overlayFadeIn 0.3s ease forwards;
+}
+
+.modal {
+    animation: modalFadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.header {
+    animation: fadeSlideUp 0.45s ease forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.categories, .list {
+    animation: fadeSlideUp 0.45s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+@media (max-width: 1400px) {
+    .modal {
+        width: 80vw;
+        padding: 50px 60px;
+    }
+
+    .title {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .modal {
+        width: 85vw;
+        padding: 45px 52px;
+    }
+
+    .title {
+        font-size: 2.3rem;
+    }
+
+    .questionText {
+        font-size: 1.2rem;
+    }
+
+    .ruleList {
+        padding-left: 40px;
+    }
+
+    .ruleItem {
+        font-size: 0.92rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .modal {
+        width: 90vw;
+        max-height: 90vh;
+        height: auto;
+        padding: 40px 40px;
+        border-radius: 7px;
+    }
+
+    .header {
+        margin-bottom: 32px;
+        padding-bottom: 18px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .question {
+        padding: 16px 12px;
+        gap: 14px;
+    }
+
+    .number {
+        font-size: 0.95rem;
+        width: 24px;
+    }
+
+    .questionText {
+        font-size: 1.15rem;
+    }
+
+    .icon {
+        font-size: 1.3rem;
+    }
+
+    .ruleList {
+        padding: 0 12px 18px 38px;
+        gap: 8px;
+    }
+
+    .ruleItem {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .modal {
+        width: 92vw;
+        max-height: 92vh;
+        height: auto;
+        padding: 32px 24px;
+        border-radius: 10px;
+
+    }
+
+    .close {
+        top: 18px;
+        right: 18px;
+        font-size: 1.1rem;
+    }
+
+    .header {
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+    }
+
+    .subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 2.5px;
+        margin-bottom: 6px;
+    }
+
+    .title {
+        font-size: 1.7rem;
+    }
+
+    .question {
+        padding: 14px 8px;
+        gap: 12px;
+    }
+
+    .number {
+        font-size: 0.88rem;
+        width: 22px;
+    }
+
+    .questionText {
+        font-size: 1.05rem;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .ruleList {
+        padding: 0 8px 16px 32px;
+        gap: 8px;
+    }
+
+    .ruleItem {
+        font-size: 0.87rem;
+        line-height: 1.65;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        align-items: center;
+    }
+
+    .modal {
+        width: 85vw;
+        max-height: 75vh;
+        padding: 28px 16px 32px;
+        border-radius: 10px;
+    }
+
+    .close {
+        top: 14px;
+        right: 14px;
+        font-size: 1rem;
+    }
+
+    .header {
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+    }
+
+    .subtitle {
+        font-size: 0.68rem;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        font-size: 1.45rem;
+    }
+
+    .question {
+        padding: 13px 6px;
+        gap: 10px;
+    }
+
+    .number {
+        font-size: 0.82rem;
+        width: 20px;
+    }
+
+    .questionText {
+        font-size: 0.98rem;
+    }
+
+    .icon {
+        font-size: 1.1rem;
+    }
+
+    .ruleList {
+        padding: 0 6px 14px 28px;
+        gap: 7px;
+    }
+
+    .ruleItem {
+        font-size: 0.84rem;
+        line-height: 1.6;
+        gap: 8px;
+    }
+
+    .answerOpen {
+        max-height: 400px;
+    }
+}
+
+.item {
+    opacity: 0;
+    animation: fadeSlideUp 0.4s ease forwards;
+}
+
+.item:nth-child(1) {
+    animation-delay: 0.25s;
+}
+
+.item:nth-child(2) {
+    animation-delay: 0.31s;
+}
+
+.item:nth-child(3) {
+    animation-delay: 0.37s;
+}
+
+.item:nth-child(4) {
+    animation-delay: 0.43s;
+}
+
+.item:nth-child(5) {
+    animation-delay: 0.49s;
+}
+
+.item:nth-child(6) {
+    animation-delay: 0.55s;
+}
+
+.item:nth-child(7) {
+    animation-delay: 0.61s;
+}
+
+.item:nth-child(8) {
+    animation-delay: 0.67s;
+}
+
+.item:nth-child(9) {
+    animation-delay: 0.73s;
+}
+
+.item:nth-child(10) {
+    animation-delay: 0.79s;
+}
+
+.item:nth-child(11) {
+    animation-delay: 0.85s;
+}
+
+.item:nth-child(12) {
+    animation-delay: 0.91s;
+}

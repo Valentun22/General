@@ -1,0 +1,23 @@
+.close {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.close:hover {
+    color: #B99D75;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 480px) {
+    .close {
+        font-size: 1.3rem;
+    }
+}

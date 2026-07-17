@@ -1,0 +1,89 @@
+@keyframes floatBounce {
+    0%   { transform: translateY(30px); opacity: 0; }
+    55%  { transform: translateY(-8px); opacity: 1; }
+    75%  { transform: translateY(4px); }
+    90%  { transform: translateY(-3px); }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes floatDown {
+    from { transform: translateY(0); opacity: 1; }
+    to   { transform: translateY(30px); opacity: 0; }
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+}
+
+.scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #B99D75;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: background 0.3s ease;
+}
+
+.scrollTop.show {
+    pointer-events: all;
+    animation:
+            floatBounce 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+            floating 2.5s ease-in-out 0.65s infinite;
+}
+
+.scrollTop.hide {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.scrollTop::after {
+    content: '';
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border-right: 4px solid #B99D75;
+    border-top: 4px solid #B99D75;
+    transform: rotate(-45deg) translateY(3px);
+    display: block;
+    transition: border-color 0.3s ease;
+}
+
+.scrollTop:hover {
+    background: #B99D75;
+}
+
+.scrollTop:hover::after {
+    border-color: white;
+}
+
+@media (max-width: 480px) {
+    .scrollTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        background: transparent;
+        border: 2px solid #B99D75;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: background 0.3s ease;
+    }
+}
