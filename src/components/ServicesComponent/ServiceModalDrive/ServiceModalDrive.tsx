@@ -46,7 +46,6 @@ const ServiceModalDrive: FC<IProps> = ({open, service, onClose}) => {
                             src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d49766.766856596908!2d23.483935992503945!3d49.03828894171067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d49.034379099999995!2d23.5049319!4m3!3m2!1d49.047404099999994!2d23.5138583!5e0!3m2!1suk!2sua!4v1779870780149!5m2!1suk!2sua"
                             className={css.modalMap}
                             allowFullScreen
-                            loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                         />
                         <div className={css.mapBadge}>
