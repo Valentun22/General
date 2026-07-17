@@ -193,6 +193,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
+    gap: 5px;
     background: rgba(185, 157, 117, 0.85);
     color: white;
     font-family: 'Jost', sans-serif;
