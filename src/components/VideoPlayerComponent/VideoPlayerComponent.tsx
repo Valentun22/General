@@ -54,7 +54,7 @@ export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapCl
                 className={css.video}
                 src={src}
                 playsInline
-                preload="metadata"
+                preload="none"
                 onLoadedData={() => setLoaded(true)}
                 onPlay={() => setPlaying(true)}
                 onPause={() => setPlaying(false)}
