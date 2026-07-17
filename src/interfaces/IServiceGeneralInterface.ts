@@ -7,4 +7,5 @@ export interface IServiceGeneralInterface {
     photos: string[];
     icon: React.ReactElement;
     videos?: string[];
+    videoPosters?: string[];
 }

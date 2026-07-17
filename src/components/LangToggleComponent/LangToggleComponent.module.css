@@ -41,10 +41,16 @@
     transition: border-color 0.3s ease;
     max-width: 90px;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 .langToggle:hover {
     border-color: #B99D75;
+}
+
+.langToggle:focus:not(:focus-visible) {
+    outline: none;
 }
 
 .langActive {

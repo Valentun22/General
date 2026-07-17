@@ -2,21 +2,22 @@ import {FC, useEffect, useRef, useState} from "react";
 import css from './VideoPlayerComponent.module.css'
 import {CgPlayButton, CgPlayPause} from "react-icons/cg";
 import {LuVolume2, LuVolumeX} from "react-icons/lu";
-import logo from "../../img/logo.png";
 
 interface IProps {
     src: string;
+    poster?: string;
     index: number;
     activeIndex: number | null;
     onPlay: (index: number) => void;
     wrapClassName?: string;
 }
 
-export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapClassName}) => {
+export const VideoPlayer: FC<IProps> = ({src, poster, index, activeIndex, onPlay, wrapClassName}) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [playing, setPlaying] = useState(false);
     const [muted, setMuted] = useState(false);
     const [loaded, setLoaded] = useState(false);
+    const [buffering, setBuffering] = useState(false);
     const isActive = activeIndex === index;
 
     useEffect(() => {
@@ -33,7 +34,13 @@ export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapCl
                 setPlaying(false);
                 onPlay(-1);
             } else {
-                videoRef.current.play();
+                if (videoRef.current.readyState === 0) {
+                    setBuffering(true);
+                    videoRef.current.load();
+                }
+                videoRef.current.play().catch(() => {
+                    setPlaying(false);
+                });
                 setPlaying(true)
                 onPlay(index);
             }
@@ -53,9 +60,13 @@ export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapCl
                 ref={videoRef}
                 className={css.video}
                 src={src}
+                poster={poster}
                 playsInline
                 preload="none"
-                onLoadedData={() => setLoaded(true)}
+                onLoadedData={() => {
+                    setLoaded(true);
+                    setBuffering(false);
+                }}
                 onPlay={() => setPlaying(true)}
                 onPause={() => setPlaying(false)}
                 onEnded={() => {
@@ -67,9 +78,11 @@ export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapCl
                     }
                 }}
             />
-            <div className={`${css.placeholder} ${loaded ? css.placeholderHidden : ""}`} aria-hidden={loaded}>
-                <img src={logo} alt="" className={css.placeholderLogo}/>
-            </div>
+            {buffering && !loaded && (
+                <div className={css.placeholder} aria-hidden={loaded}>
+                    <span className={css.placeholderSpinner}/>
+                </div>
+            )}
             <div className={css.videoControls}>
                 <button className={`${css.videoBtnOne} ${css.videoBtn}`} onClick={togglePlay}>
                     {playing ? <CgPlayPause/> : <CgPlayButton/>}

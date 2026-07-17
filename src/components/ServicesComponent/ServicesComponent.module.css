@@ -115,10 +115,32 @@
 }
 
 .cardFront {
-    background: #f5f2f0;
+    background: linear-gradient(90deg, transparent 0%, rgba(185, 157, 117, 0.55) 50%, transparent 100%) 0 0 / 250% 100% no-repeat,
+    #f5f2f0;
     border: 1px solid rgba(185, 157, 117, 0.25);
     border-left: 3px solid #B99D75;
     transition: box-shadow 0.3s ease;
+}
+
+.cardWrap0 .cardFront {
+    animation: cardShimmerSweep 3.4s ease-in-out infinite;
+}
+
+.cardWrap1 .cardFront {
+    animation: cardShimmerSweep 3.4s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes cardShimmerSweep {
+    0% {
+        background-position: 250% 0, 0 0;
+    }
+    65.75% {
+        background-position: -100% 0, 0 0;
+    }
+    100% {
+        background-position: -150% 0, 0 0;
+    }
 }
 
 .cardWrap:hover .cardFront {
@@ -163,6 +185,7 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
+
 
 .cardBack {
     background: linear-gradient(135deg, #0b0a0a 0%, #242424 60%, #12100e 100%);
@@ -394,6 +417,11 @@
     .cardWrap {
         opacity: 1;
         transform: none;
+        animation: none !important;
+    }
+
+    .cardWrap0 .cardFront,
+    .cardWrap1 .cardFront {
         animation: none !important;
     }
 }

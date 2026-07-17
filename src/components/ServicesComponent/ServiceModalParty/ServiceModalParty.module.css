@@ -153,6 +153,16 @@
     letter-spacing: 1px;
     transition: background 0.25s ease, color 0.25s ease;
     align-self: flex-start;
+    animation: modalBtnPulse 2s ease-in-out infinite;
+}
+
+@keyframes modalBtnPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
 }
 
 .modalBtn:hover {
@@ -387,6 +397,10 @@
 
     .close, .modalHeader, .modalText, .modalPhotos {
         opacity: 1;
+        animation: none;
+    }
+
+    .modalBtn {
         animation: none;
     }
 }

@@ -5,6 +5,8 @@ import {IServiceGeneralInterface} from "../../interfaces/IServiceGeneralInterfac
 import {MdOutlineCelebration, MdOutlineDirectionsCar} from 'react-icons/md';
 import partyOne from "../../video/partyOne.mp4";
 import partyTwo from "../../video/partyTwo.mp4";
+import partyOnePoster from "../../img/party/partyOnePoster.jpg";
+import partyTwoPoster from "../../img/party/partyTwoPoster.jpg";
 import {ServiceModalParty} from "./ServiceModalParty/ServiceModalParty";
 import {ServiceModalDrive} from "./ServiceModalDrive/ServiceModalDrive";
 
@@ -24,6 +26,7 @@ const ServicesComponent: FC = () => {
             modalText: t('servicesPlus.events.modalText'),
             photos: [],
             videos: [partyOne, partyTwo],
+            videoPosters: [partyOnePoster, partyTwoPoster],
         },
         {
             id: 'transfer',

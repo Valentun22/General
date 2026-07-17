@@ -58,6 +58,7 @@ const ServiceModalParty: FC<IProps> = ({open, service, onClose}) => {
                                         <VideoPlayer
                                             key={`video-${i}`}
                                             src={video}
+                                            poster={service.videoPosters?.[i]}
                                             index={i}
                                             activeIndex={activeVideo}
                                             onPlay={setActiveVideo}
