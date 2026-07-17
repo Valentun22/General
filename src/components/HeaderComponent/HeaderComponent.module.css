@@ -46,9 +46,12 @@
     text-decoration: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .phoneLink:hover {
     color: #B99D75;
     transition: color 0.3s ease;
+}
 }
 
 .contactIcon {

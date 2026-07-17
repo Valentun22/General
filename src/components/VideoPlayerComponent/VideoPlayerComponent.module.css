@@ -74,9 +74,12 @@
     font-size: 1.8rem;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .videoBtn:hover {
     background: #B99D75;
     color: white;
+}
 }
 
 @media (max-width: 1400px) {

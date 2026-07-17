@@ -84,9 +84,12 @@
     animation: fadeSlideUp 0.3s ease 0.35s forwards;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .close:hover {
     color: #B99D75;
     transform: rotate(90deg);
+}
 }
 
 .modalHeader {
@@ -119,6 +122,7 @@
 
 
 .modalBodyDrive {
+    margin-top: 7px;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -141,7 +145,7 @@
     font-family: 'Ysabeau', sans-serif;
     font-size: 1.05rem;
     color: #444;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -172,9 +176,12 @@
     }
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .modalBtn:hover {
     background: #B99D75;
     color: white;
+}
 }
 
 .modalMapWrap {
@@ -274,6 +281,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 0.7rem;
+        padding: 12px 20px;
     }
 
     .modalMapWrap {

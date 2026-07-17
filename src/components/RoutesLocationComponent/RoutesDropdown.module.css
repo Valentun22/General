@@ -129,10 +129,13 @@
     user-select: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .navPrev:hover,
 .navNext:hover {
     background: rgba(185, 157, 117, 0.25);
     border-color: #B99D75;
+}
 }
 
 .navHidden {
@@ -149,8 +152,11 @@
     transition: transform 0.3s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .card:hover {
     transform: translateY(-5px);
+}
 }
 
 .cardImg {
@@ -168,8 +174,11 @@
     transition: transform 0.4s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .card:hover .cardImg img {
     transform: scale(1.05);
+}
 }
 
 .cardLabel {
@@ -185,8 +194,11 @@
     padding-bottom: 5px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .card:hover .cardLabel {
     color: #B99D75;
+}
 }
 
 .cardDistance {

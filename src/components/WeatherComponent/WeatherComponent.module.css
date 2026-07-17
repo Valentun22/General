@@ -337,10 +337,13 @@
         animation: tempReveal 0.4s ease 380ms forwards;
     }
 
+    @media (hover: hover) and (pointer: fine) {
+
     .forecastToggleBtn:hover {
         background: #B99D75;
         color: #131212;
     }
+}
 
     .weatherForecastMobile {
         width: 100%;

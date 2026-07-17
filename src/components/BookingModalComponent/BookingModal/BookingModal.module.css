@@ -32,7 +32,7 @@
     height: 20px !important;
     position: absolute;
     top: 18px;
-    right: 15px;
+    right: 18px;
     border: none;
     font-size: 1.3rem !important;
     cursor: pointer;
@@ -43,15 +43,18 @@
     background-color: #242424;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .closeBtn:hover {
     color: #B99D75 !important;
     transform: rotate(90deg);
+}
 }
 
 .left {
     width: 100%;
     background: #1a1a1a;
-    padding: 45px 35px 25px 35px;
+    padding: 35px 35px 25px 35px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -95,8 +98,11 @@
     transition: color 0.25s;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .contactItem:hover {
     color: #B99D75;
+}
 }
 
 .contactIcon {
@@ -231,7 +237,7 @@
     }
 
     .closeBtn {
-        font-size: 1.1rem;
+        font-size: 1rem !important;
         top: 14px;
         right: 14px;
     }
@@ -247,6 +253,7 @@
     }
 
     .contacts {
+        padding-top: 10px;
         gap: 12px;
     }
 

@@ -1,5 +1,8 @@
+@media (hover: hover) and (pointer: fine) {
+
 .langToggle:hover {
     border-color: #B99D75;
+}
 }
 
 .langActive {
@@ -45,8 +48,11 @@
     outline: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .langToggle:hover {
     border-color: #B99D75;
+}
 }
 
 .langToggle:focus:not(:focus-visible) {

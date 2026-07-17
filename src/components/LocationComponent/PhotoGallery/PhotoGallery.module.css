@@ -22,8 +22,11 @@
     transition: opacity 0.2s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .photoItem:hover {
     opacity: 0.85;
+}
 }
 
 .fullOverlay {
@@ -82,9 +85,12 @@
     z-index: 1;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .fullPrev:hover,
 .fullNext:hover {
     color: #B99D75;
+}
 }
 
 .fullPrev {
@@ -108,8 +114,11 @@
     line-height: 1;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .fullClose:hover {
     color: #B99D75;
+}
 }
 
 @media (max-width: 1400px) {

@@ -59,12 +59,18 @@
     transition: border-color 0.3s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .scrollTop:hover {
     background: #B99D75;
 }
+}
+
+@media (hover: hover) and (pointer: fine) {
 
 .scrollTop:hover::after {
     border-color: white;
+}
 }
 
 @media (max-width: 480px) {

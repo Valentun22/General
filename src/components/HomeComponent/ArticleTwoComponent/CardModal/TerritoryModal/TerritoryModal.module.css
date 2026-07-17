@@ -68,8 +68,11 @@
     transition: color 0.2s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .close:hover {
     color: #B99D75;
+}
 }
 
 .header {

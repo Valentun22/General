@@ -197,9 +197,12 @@
     transition: 0.3s ease-in-out;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .phoneLink:hover {
     color: #B99D75;
     transition: color 0.3s ease;
+}
 }
 
 .instaLink {
@@ -211,9 +214,12 @@
 
 .instaLink h3 { margin: 0; }
 
+@media (hover: hover) and (pointer: fine) {
+
 .instaLink h3:hover {
     color: #B99D75;
     transition: color 0.3s ease;
+}
 }
 
 .footerImage {
@@ -274,9 +280,12 @@
     text-transform: uppercase;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .boxThreeContText a:hover {
     color: #B99D75;
     transition: color 0.3s ease;
+}
 }
 
 .boxThreeCont h3 {

@@ -115,8 +115,11 @@
     transition: all 0.2s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .question:hover .questionText {
     color: #B99D75;
+}
 }
 
 .questionText {

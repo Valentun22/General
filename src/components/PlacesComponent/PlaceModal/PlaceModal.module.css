@@ -54,8 +54,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .placeNavPrev:hover, .placeNavNext:hover {
     color: #B99D75;
+}
 }
 
 .placeNavPrev:disabled, .placeNavNext:disabled {
@@ -97,8 +100,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .mobileNavPrev:hover, .mobileNavNext:hover {
     color: #4e4332;
+}
 }
 
 .mobileNavPrev:disabled, .mobileNavNext:disabled {
@@ -211,8 +217,11 @@
     transition: color 0.2s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .contactLink:hover {
     color: #B99D75;
+}
 }
 
 .links {
@@ -240,9 +249,12 @@
     transition: all 0.25s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .linkBtn:hover {
     background: #B99D75;
     color: white;
+}
 }
 
 .linkBtnInstagram {
@@ -250,9 +262,12 @@
     color: #c13584;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .linkBtnInstagram:hover {
     background: #c13584;
     color: white;
+}
 }
 
 .gallery {
@@ -284,8 +299,11 @@
     transition: border-color 0.2s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .galleryItem:hover {
     border-color: #B99D75;
+}
 }
 
 .galleryItem img {
@@ -295,8 +313,11 @@
     transition: transform 0.4s ease;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .galleryItem:hover img {
     transform: scale(1.05);
+}
 }
 
 .fullOverlay {
@@ -332,9 +353,12 @@
     transition: color 0.2s;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .fullPrev:hover,
 .fullNext:hover {
     color: #B99D75;
+}
 }
 
 .fullPrev {

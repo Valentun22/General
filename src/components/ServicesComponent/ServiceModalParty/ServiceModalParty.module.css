@@ -76,9 +76,12 @@
     will-change: transform, opacity;
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .close:hover {
     color: #B99D75;
     transform: rotate(90deg);
+}
 }
 
 .modalHeader {
@@ -112,6 +115,7 @@
 
 .modalBody {
     display: flex;
+    margin-top: 7px;
     gap: 40px;
     align-items: stretch;
     height: auto;
@@ -165,9 +169,12 @@
     }
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .modalBtn:hover {
     background: #B99D75;
     color: white;
+}
 }
 
 .modalPhotos {
@@ -226,9 +233,12 @@
     backdrop-filter: blur(4px);
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .videoBtn:hover {
     background: #B99D75;
     color: white;
+}
 }
 
 .modalVideoWrap {

@@ -15,10 +15,13 @@
     backdrop-filter: blur(2px);
 }
 
+@media (hover: hover) and (pointer: fine) {
+
 .bookingBtn:hover {
     background-color: #B99D75 !important;
     color: #131212;
     border-radius: 5px;
+}
 }
 
 @keyframes fadeDown {
