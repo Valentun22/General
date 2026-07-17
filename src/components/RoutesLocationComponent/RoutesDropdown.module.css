@@ -196,7 +196,7 @@
     background: rgba(185, 157, 117, 0.85);
     color: white;
     font-family: 'Jost', sans-serif;
-    font-size: clamp(0.7rem, 0.8vw, 0.9rem);
+    font-size: clamp(0.6rem, 0.7vw, 0.8rem);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
