@@ -175,6 +175,7 @@
 .cardLabel {
     font-family: "Ysabeau", sans-serif;
     font-size: 0.8rem;
+    gap: 5px;
     font-weight: 600;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.85);
