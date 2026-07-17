@@ -88,7 +88,7 @@
 .counter {
     position: absolute;
     bottom: 20px;
-    left: 50%;
+    text-align: center;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;

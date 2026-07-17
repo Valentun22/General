@@ -15,11 +15,12 @@ const BookingModal: React.FC<IProps> = ({open, onClose}) => {
     useScrollLock(open);
     const {t} = useTranslation();
 
+    if (!open) return null;
+
     return createPortal(
         <div
-            className={`${css.overlay} ${open ? '' : css.overlayHidden}`}
+            className={css.overlay}
             onClick={onClose}
-            aria-hidden={!open}
         >
             <div className={css.modal} onClick={e => e.stopPropagation()}>
                 <button className={css.closeBtn} onClick={onClose}>✕</button>
