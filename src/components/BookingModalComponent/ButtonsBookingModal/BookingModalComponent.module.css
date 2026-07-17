@@ -6,6 +6,7 @@
     padding: 12px 1.6vw;
     cursor: pointer;
     color: #ffffff;
+    gap: 5px;
     transition: background 1.3s ease, color 0.3s ease, border-radius 0.9s ease;
     font-family: "Ysabeau", sans-serif;
     font-size: clamp(12px, 0.8vw, 15px) !important;
