@@ -11,8 +11,54 @@
     width: auto;
     height: 500px;
     max-height: 500px;
+    aspect-ratio: 9 / 16;
     display: block;
     object-fit: cover;
+}
+
+.placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(232, 227, 227, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    padding: 12%;
+    box-sizing: border-box;
+}
+
+.placeholderHidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.placeholderLogo {
+    width: 40%;
+    height: 40%;
+    max-width: 56px;
+    max-height: 56px;
+    min-width: 22px;
+    min-height: 22px;
+    object-fit: contain;
+    animation: lazyVideoPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes lazyVideoPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.12);
+        opacity: 0.55;
+    }
 }
 
 .videoControls {

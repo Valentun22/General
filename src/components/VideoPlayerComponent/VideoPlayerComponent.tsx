@@ -2,6 +2,7 @@ import {FC, useEffect, useRef, useState} from "react";
 import css from './VideoPlayerComponent.module.css'
 import {CgPlayButton, CgPlayPause} from "react-icons/cg";
 import {LuVolume2, LuVolumeX} from "react-icons/lu";
+import logo from "../../img/logo.png";
 
 interface IProps {
     src: string;
@@ -15,6 +16,7 @@ export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapCl
     const videoRef = useRef<HTMLVideoElement>(null);
     const [playing, setPlaying] = useState(false);
     const [muted, setMuted] = useState(false);
+    const [loaded, setLoaded] = useState(false);
     const isActive = activeIndex === index;
 
     useEffect(() => {
@@ -52,6 +54,8 @@ export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapCl
                 className={css.video}
                 src={src}
                 playsInline
+                preload="metadata"
+                onLoadedData={() => setLoaded(true)}
                 onPlay={() => setPlaying(true)}
                 onPause={() => setPlaying(false)}
                 onEnded={() => {
@@ -63,6 +67,9 @@ export const VideoPlayer: FC<IProps> = ({src, index, activeIndex, onPlay, wrapCl
                     }
                 }}
             />
+            <div className={`${css.placeholder} ${loaded ? css.placeholderHidden : ""}`} aria-hidden={loaded}>
+                <img src={logo} alt="" className={css.placeholderLogo}/>
+            </div>
             <div className={css.videoControls}>
                 <button className={`${css.videoBtnOne} ${css.videoBtn}`} onClick={togglePlay}>
                     {playing ? <CgPlayPause/> : <CgPlayButton/>}
