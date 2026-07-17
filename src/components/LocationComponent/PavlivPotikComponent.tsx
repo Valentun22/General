@@ -71,7 +71,6 @@ const PavlivPotikComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhoto
                                 src="https://maps.google.com/maps?q=49.02940234502449, 23.510678100471903&z=16&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen
-                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
                         </div>

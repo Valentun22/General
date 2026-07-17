@@ -68,7 +68,6 @@ const KamyankaComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoPan
                                 src="https://maps.google.com/maps?q=49.0336,23.5642&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen
-                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
                         </div>

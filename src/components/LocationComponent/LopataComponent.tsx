@@ -71,7 +71,6 @@ const LopataComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoPanor
                                 src="https://maps.google.com/maps?q=49.0429,23.4553&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen
-                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
                         </div>

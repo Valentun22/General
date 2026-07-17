@@ -72,7 +72,6 @@ const ZakharBerkutComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhot
                                 src="https://maps.google.com/maps?q=49.2636,23.4760&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen
-                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
                         </div>

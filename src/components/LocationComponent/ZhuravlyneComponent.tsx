@@ -71,7 +71,6 @@ const ZhuravlyneComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoP
                                 src="https://www.google.com/maps?q=49.03540444068732,23.57176379047621&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen
-                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
                         </div>
