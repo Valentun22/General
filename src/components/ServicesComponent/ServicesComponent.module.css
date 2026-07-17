@@ -115,8 +115,8 @@
 }
 
 .cardFront {
-    background: linear-gradient(90deg, transparent 0%, rgba(185, 157, 117, 0.55) 50%, transparent 100%) 0 0 / 250% 100% no-repeat,
-    #f5f2f0;
+    background: linear-gradient(90deg, transparent 0%, rgb(198 178 151 / 0.44) 50%, transparent 100%) 0 0 / 250% 100% no-repeat,
+    rgb(246 239 235 / 0.87);
     border: 1px solid rgba(185, 157, 117, 0.25);
     border-left: 3px solid #B99D75;
     transition: box-shadow 0.3s ease;
