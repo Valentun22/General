@@ -84,6 +84,7 @@
 .navLink {
     font-family: "Ysabeau", sans-serif;
     font-weight: 600;
+    gap: 5px;
     font-size: clamp(0.8rem, 0.9vw, 1rem);
     color: white;
     text-decoration: none;
