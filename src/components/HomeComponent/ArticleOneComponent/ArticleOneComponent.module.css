@@ -369,6 +369,7 @@
     font-size: clamp(0.8rem, 0.9vw, 1rem);
     color: white;
     text-decoration: none;
+    gap: 5px;
     text-transform: uppercase;
     margin-right: 20px;
     position: relative;
