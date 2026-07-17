@@ -1,4 +1,4 @@
-import {FC, useState, useCallback} from "react";
+import {FC, useState, useCallback, useEffect} from "react";
 import React from "react";
 import css from './PhotoGalleryComponent.module.css';
 import {motion} from 'motion/react';
@@ -34,6 +34,7 @@ const allPhotos = rows.flat();
 const MobileCarousel: FC = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+    const [isNarrow, setIsNarrow] = useState(false);
     const total = allPhotos.length;
 
     const toPrev = useCallback(() => setActiveIndex(prev => (prev - 1 + total) % total), [total]);
@@ -46,11 +47,20 @@ const MobileCarousel: FC = () => {
     }, closeLightbox);
     useScrollLock(lightboxIndex !== null);
 
+    useEffect(() => {
+        const mql = window.matchMedia('(max-width: 500px)');
+        const update = () => setIsNarrow(mql.matches);
+        update();
+        mql.addEventListener('change', update);
+        return () => mql.removeEventListener('change', update);
+    }, []);
+
     const carouselSwipe = useSwipe(toPrev, toNext);
 
     const getVisibleSlides = () => {
+        const range = isNarrow ? 1 : 2;
         const slides = [];
-        for (let offset = -2; offset <= 2; offset++) {
+        for (let offset = -range; offset <= range; offset++) {
             const index = (activeIndex + offset + total) % total;
             slides.push({index, offset});
         }
