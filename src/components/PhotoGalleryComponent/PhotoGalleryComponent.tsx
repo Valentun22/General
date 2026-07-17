@@ -78,24 +78,31 @@ const MobileCarousel: FC = () => {
                 onClickCapture={carouselSwipe.onClickCapture}
                 style={{touchAction: 'pan-y'}}
             >
-                {getVisibleSlides().map(({index, offset}) => (
-                    <motion.div
-                        key={index}
-                        className={css.carouselSlide}
-                        animate={{
-                            rotateY: offset * 55,
-                            x: `${offset * 85}%`,
-                            scale: offset === 0 ? 1 : 0.82,
-                            opacity: Math.abs(offset) === 2 ? 0.4 : 1,
-                            zIndex: 10 - Math.abs(offset),
-                        }}
-                        transition={{type: 'spring', bounce: 0.05, duration: 0.7}}
-                        style={{perspective: 1000}}
-                        onClick={() => offset === 0 ? setLightboxIndex(index) : (offset < 0 ? toPrev() : toNext())}
-                    >
-                        <img src={allPhotos[index]} alt="" draggable={false}/>
-                    </motion.div>
-                ))}
+                <div className={css.carousel3d}>
+                    {getVisibleSlides().map(({index, offset}) => (
+                        <motion.div
+                            key={index}
+                            className={css.carouselSlide}
+                            initial={{
+                                rotateY: (offset + (offset >= 0 ? 1 : -1)) * 55,
+                                x: `${(offset + (offset >= 0 ? 1 : -1)) * 85}%`,
+                                scale: 0.7,
+                                opacity: 0,
+                            }}
+                            animate={{
+                                rotateY: offset * 55,
+                                x: `${offset * 85}%`,
+                                scale: offset === 0 ? 1 : 0.82,
+                                opacity: Math.abs(offset) === 2 ? 0.4 : 1,
+                            }}
+                            transition={{type: 'spring', bounce: 0.05, duration: 0.7}}
+                            style={{zIndex: 10 - Math.abs(offset)}}
+                            onClick={() => offset === 0 ? setLightboxIndex(index) : (offset < 0 ? toPrev() : toNext())}
+                        >
+                            <img src={allPhotos[index]} alt="" draggable={false}/>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
 
             <div className={css.carouselControls}>
