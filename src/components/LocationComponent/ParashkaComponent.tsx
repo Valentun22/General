@@ -66,6 +66,7 @@ const ParashkaComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoPan
                     <div className={css.articleFourBoxCont}>
                         <div className={`${css.mapBox} ${css.animSlideLeft}`} data-anim="" data-delay="150">
                             <iframe
+                                title="Карта розташування Парашка"
                                 src="https://maps.google.com/maps?q=49.0699123,23.4155077&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen

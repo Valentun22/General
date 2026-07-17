@@ -28,7 +28,7 @@ const usePageAnimation = (cssVisible: string) => {
         });
 
         return () => observerRef.current?.disconnect();
-    }, []);
+    }, [cssVisible]);
 };
 
 export {usePageAnimation};

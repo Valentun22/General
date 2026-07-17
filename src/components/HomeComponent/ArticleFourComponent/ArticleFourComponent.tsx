@@ -93,6 +93,7 @@ const ArticleFourComponent: FC = () => {
                             </div>
                             <div className={css.mapBox}>
                                 <iframe
+                                    title="Карта розташування Генералівська дача"
                                     src="https://maps.google.com/maps?q=49.046940377952275,23.513986549994847&z=15&output=embed"
                                     width="100%"
                                     height="100%"
@@ -112,6 +113,7 @@ const ArticleFourComponent: FC = () => {
 
                     <div ref={mapMobileRef} className={`${css.mapBoxMobile} ${css.animateFadeDown}`}>
                         <iframe
+                            title="Карта розташування Генералівська дача (мобільна версія)"
                             src="https://maps.google.com/maps?q=49.046940377952275,23.513986549994847&z=15&output=embed"
                             width="100%"
                             height="100%"

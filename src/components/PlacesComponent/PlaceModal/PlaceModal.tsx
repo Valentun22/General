@@ -161,7 +161,7 @@ const PlaceModal: FC<IProps> = ({open, places, currentIndex, onIndexChange, onCl
                                 <div className={css.contacts}>
                                     <div className={css.contactItem}>
                                         <span className={css.contactIcon}><IconLocation/></span>
-                                        <a>{place.address}</a>
+                                        <span>{place.address}</span>
                                     </div>
                                     {place.phone && (
                                         <div className={css.contactItem}>

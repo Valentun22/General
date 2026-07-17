@@ -66,6 +66,7 @@ const TustanComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoPanor
                     <div className={css.articleFourBoxCont}>
                         <div className={`${css.mapBox} ${css.animSlideLeft}`} data-anim="" data-delay="150">
                             <iframe
+                                title="Карта розташування Тустань"
                                 src="https://maps.google.com/maps?q=49.0789,23.3756&z=14&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen

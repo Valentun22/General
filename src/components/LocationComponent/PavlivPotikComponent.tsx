@@ -67,6 +67,7 @@ const PavlivPotikComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhoto
                     <div className={css.articleFourBoxCont}>
                         <div className={`${css.mapBox} ${css.animSlideLeft}`} data-anim="" data-delay="150">
                             <iframe
+                                title="Карта розташування Павлів Потік"
                                 src="https://maps.google.com/maps?q=49.02940234502449, 23.510678100471903&z=16&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen

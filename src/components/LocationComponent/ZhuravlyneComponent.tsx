@@ -67,6 +67,7 @@ const ZhuravlyneComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoP
                     <div className={css.articleFourBoxCont}>
                         <div className={`${css.mapBox} ${css.animSlideLeft}`} data-anim="" data-delay="150">
                             <iframe
+                                title="Карта розташування Журавлине"
                                 src="https://www.google.com/maps?q=49.03540444068732,23.57176379047621&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen

@@ -14,7 +14,7 @@ const BookingModalComponent: React.FC = () => {
     }, []);
 
     return (
-        <>
+        <div>
             <button
                 className={`${css.bookingBtn} ${css.bookingBtnAnimate} ${bookingAttention ? css.bookingBtnAttention : ''}`}
                 onClick={() => setBookingOpen(true)}
@@ -23,7 +23,7 @@ const BookingModalComponent: React.FC = () => {
             </button>
 
             <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)}/>
-        </>
+        </div>
     );
 };
 

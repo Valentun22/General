@@ -67,6 +67,7 @@ const OpirComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoPanoram
                     <div className={css.articleFourBoxCont}>
                         <div className={`${css.mapBox} ${css.animSlideLeft}`} data-anim="" data-delay="150">
                             <iframe
+                                title="Карта розташування Опір"
                                 src="https://maps.google.com/maps?q=49.03476351166719,23.52032079169608&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen

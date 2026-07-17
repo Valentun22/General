@@ -29,7 +29,7 @@ const PhotoGallery: FC<IProps> = ({photos}) => {
                             <img
                                 key={i}
                                 src={p}
-                                alt={`photo ${ri}-${i}`}
+                                alt={`Гірка Дача, галерея ${ri}-${i}`}
                                 className={css.photoItem}
                                 onClick={() => setFullIndex(ri * row.length + i)}
                             />

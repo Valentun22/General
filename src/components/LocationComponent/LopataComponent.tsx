@@ -67,6 +67,7 @@ const LopataComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhotoPanor
                     <div className={css.articleFourBoxCont}>
                         <div className={`${css.mapBox} ${css.animSlideLeft}`} data-anim="" data-delay="150">
                             <iframe
+                                title="Карта розташування Лопата"
                                 src="https://maps.google.com/maps?q=49.0429,23.4553&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen

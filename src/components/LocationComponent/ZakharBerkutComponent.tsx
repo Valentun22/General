@@ -68,6 +68,7 @@ const ZakharBerkutComponent: FC<ILocationPhotos> = ({backPhotoLocation, backPhot
                     <div className={css.articleFourBoxCont}>
                         <div className={`${css.mapBox} ${css.animSlideLeft}`} data-anim="" data-delay="150">
                             <iframe
+                                title="Карта розташування Захар Беркут"
                                 src="https://maps.google.com/maps?q=49.2636,23.4760&z=13&output=embed"
                                 style={{border: 0}}
                                 allowFullScreen

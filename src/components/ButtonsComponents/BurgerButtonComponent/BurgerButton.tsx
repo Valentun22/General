@@ -1,4 +1,4 @@
-import React, {FC, useRef, useEffect} from "react";
+import React, {FC, useRef, useEffect, useCallback} from "react";
 import css from "./BurgerButton.module.css";
 
 interface IProps {
@@ -20,9 +20,9 @@ const BurgerButton: FC<IProps> = ({
                                       menuWidth = 260,
                                       children,
                                   }) => {
-    const handleClose = () => {
+    const handleClose = useCallback(() => {
         onClose?.();
-    };
+    }, [onClose]);
 
     const menuRef = useRef<HTMLDivElement>(null);
     const burgerRef = useRef<HTMLButtonElement>(null);
@@ -39,7 +39,7 @@ const BurgerButton: FC<IProps> = ({
         };
         document.addEventListener('mousedown', handleOutside);
         return () => document.removeEventListener('mousedown', handleOutside);
-    }, [isOpen]);
+    }, [isOpen, handleClose]);
 
     return (
         <div>

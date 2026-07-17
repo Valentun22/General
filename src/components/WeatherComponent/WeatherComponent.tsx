@@ -1,4 +1,4 @@
-import {FC, useEffect, useRef, useState} from "react";
+import {FC, useCallback, useEffect, useMemo, useRef, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {WeatherDay} from "../../interfaces/IWeatherDayInterface";
 import css from './WeatherComponent.module.css';
@@ -14,23 +14,23 @@ const WeatherComponent: FC = () => {
     const boxRef = useRef<HTMLDivElement>(null);
     const animatedRef = useRef(false);
 
-    const days = t('weather.days', {returnObjects: true}) as string[];
+    const days = useMemo(() => t('weather.days', {returnObjects: true}) as string[], [t]);
 
-    const getIcon = (code: number) => {
+    const getIcon = useCallback((code: number) => {
         if (code === 0) return '☀️';
         if (code <= 3) return '⛅';
         if (code <= 67) return '🌧️';
         if (code <= 77) return '❄️';
         return '🌩️';
-    };
+    }, []);
 
-    const getDesc = (code: number) => {
+    const getDesc = useCallback((code: number) => {
         if (code === 0) return t('weather.clear');
         if (code <= 3) return t('weather.cloudy');
         if (code <= 67) return t('weather.rain');
         if (code <= 77) return t('weather.snow');
         return t('weather.storm');
-    };
+    }, [t]);
 
     useEffect(() => {
         fetch('https://api.open-meteo.com/v1/forecast?latitude=49.047&longitude=23.514&current_weather=true&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Europe/Kiev')
@@ -49,7 +49,7 @@ const WeatherComponent: FC = () => {
                 setForecast(result);
             })
             .catch(err => console.error('Weather load error:', err));
-    }, [t]);
+    }, [t, days, getDesc, getIcon]);
 
     useEffect(() => {
         const el = boxRef.current;
