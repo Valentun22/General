@@ -15,13 +15,10 @@
     backdrop-filter: blur(2px);
 }
 
-@media (hover: hover) and (pointer: fine) {
-
 .bookingBtn:hover {
     background-color: #B99D75 !important;
     color: #131212;
     border-radius: 5px;
-}
 }
 
 @keyframes fadeDown {
@@ -41,6 +38,12 @@
 
 .bookingBtnAttention {
     animation: subtleBounce 2s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+}
+
+.bookingBtnPressed {
+    background-color: #B99D75 !important;
+    color: #131212;
+    border-radius: 5px;
 }
 
 @keyframes subtleBounce {

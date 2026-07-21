@@ -18,18 +18,12 @@
     outline: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
-
 .burgerBtn:hover {
     transform: scale(1.1);
 }
-}
-
-@media (hover: hover) and (pointer: fine) {
 
 .burgerBtn:hover .burgerLine {
     background-color: #B99D75;
-}
 }
 
 .burgerLine {
