@@ -92,8 +92,8 @@
     },
     "house": [
       {
-        "question": "How does check-in work?",
-        "answer": "We offer contactless check-in — around 14:00, when the cottage is ready, we send you the key safe code. All necessary information will be provided in advance."
+        "question": "What are the check-in and check-out times?",
+        "answer": "Check-in is from 2:00 PM and check-out is until 11:00 AM. We have contactless check-in: before check-in you will receive the code for the key safe and all the necessary information in advance."
       },
       {
         "question": "Is there Wi-Fi and electricity?",
@@ -105,7 +105,7 @@
       },
       {
         "question": "What is the minimum stay?",
-        "answer": "The minimum stay is 2 nights."
+        "answer": "The minimum stay depends on the day of arrival: on weekdays - from 1 day, on weekends - from 2 days."
       },
       {
         "question": "How many guests can stay?",
