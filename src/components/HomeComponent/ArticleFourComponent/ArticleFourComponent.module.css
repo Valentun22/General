@@ -154,6 +154,9 @@
 .boxTwoContOneInfoTwoLogo img {
     padding-top: 5vh;
     width: 12vw;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .boxTwoContOneInfoTwo h3 {
@@ -239,6 +242,9 @@
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .mapBox iframe {
