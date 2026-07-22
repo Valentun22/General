@@ -346,3 +346,7 @@
         font-size: 1.6rem;
     }
 }
+
+.carouselBtnPressed {
+    color: #B99D75;
+}

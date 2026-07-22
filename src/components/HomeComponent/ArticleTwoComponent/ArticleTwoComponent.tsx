@@ -3,6 +3,7 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 import css from './ArticleTwoComponent.module.css';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import type {Swiper as SwiperType} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -37,19 +38,21 @@ import {TerritoryModal} from './CardModal/TerritoryModal/TerritoryModal';
 import {ServicesComponent} from "../../ServicesComponent/ServicesComponent";
 import {ServicesModal} from "./ServicesModal/ServicesModal";
 import {usePressState} from "../../../hooks/usePressState";
+import {CardTile} from "./CardTile/CardTile";
 
 type SelectedCard = 'house' | 'kitchen' | 'bathroom' | 'territory' | null;
 
 const ArticleTwoComponent: FC = () => {
     const {t} = useTranslation();
     const [modalOpen, setModalOpen] = useState(false);
+    const [visibleCards, setVisibleCards] = useState<boolean[]>(() => Array(4).fill(false));
     const [selectedCard, setSelectedCard] = useState<SelectedCard>(null);
 
     const imgRef1 = useRef<HTMLImageElement | null>(null);
     const imgRef2 = useRef<HTMLImageElement | null>(null);
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
     const modalBtnPress = usePressState();
-
+    const swiperInstanceRef = useRef<SwiperType | null>(null);
 
     const cards: { img: string; titleKey: string; id: SelectedCard }[] = [
         {img: columOne, titleKey: 'articleTwo.cards.house', id: 'house'},
@@ -95,7 +98,14 @@ const ArticleTwoComponent: FC = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add(css.cardVisible);
+                        const idx = cardRefs.current.indexOf(entry.target as HTMLDivElement);
+                        if (idx !== -1) {
+                            setVisibleCards(prev => {
+                                const next = [...prev];
+                                next[idx] = true;
+                                return next;
+                            });
+                        }
                         cardObserver.unobserve(entry.target);
                     }
                 });
@@ -109,6 +119,39 @@ const ArticleTwoComponent: FC = () => {
         return () => {
             imgObserver.disconnect();
             cardObserver.disconnect();
+        };
+    }, []);
+
+    useEffect(() => {
+        const swiper = swiperInstanceRef.current;
+        if (!swiper || !swiper.el) return;
+
+        const prevBtn = swiper.el.querySelector('.swiper-button-prev');
+        const nextBtn = swiper.el.querySelector('.swiper-button-next');
+        const pressedClass = css.swiperNavPressed;
+
+        const buttons = [prevBtn, nextBtn].filter(Boolean) as HTMLElement[];
+        const handlers: { el: HTMLElement; down: () => void; up: () => void }[] = [];
+
+        buttons.forEach((btn) => {
+            const down = () => btn.classList.add(pressedClass);
+            const up = () => btn.classList.remove(pressedClass);
+
+            btn.addEventListener('pointerdown', down);
+            btn.addEventListener('pointerup', up);
+            btn.addEventListener('pointercancel', up);
+            btn.addEventListener('pointerleave', up);
+
+            handlers.push({el: btn, down, up});
+        });
+
+        return () => {
+            handlers.forEach(({el, down, up}) => {
+                el.removeEventListener('pointerdown', down);
+                el.removeEventListener('pointerup', up);
+                el.removeEventListener('pointercancel', up);
+                el.removeEventListener('pointerleave', up);
+            });
         };
     }, []);
 
@@ -136,6 +179,9 @@ const ArticleTwoComponent: FC = () => {
                         loop={true}
                         centeredSlides={true}
                         autoplay={{delay: 2000, disableOnInteraction: false}}
+                        onSwiper={(swiper: SwiperType) => {
+                            swiperInstanceRef.current = swiper;
+                        }}
                     >
                         <SwiperSlide><img src={swiperOne} alt="photo1"/></SwiperSlide>
                         <SwiperSlide><img src={swiperTwo} alt="photo2"/></SwiperSlide>
@@ -161,21 +207,18 @@ const ArticleTwoComponent: FC = () => {
 
             <div className={css.boxFour}>
                 {cards.map((card, i) => (
-                    <div
+                    <CardTile
                         key={i}
-                        className={`${css.card} ${css.cardAnimate}`}
-                        ref={el => {
+                        img={card.img}
+                        title={t(card.titleKey)}
+                        btnLabel={t('articleTwo.cardMoreBtn')}
+                        delay={i * 0.15}
+                        isVisible={visibleCards[i]}
+                        onClick={() => setSelectedCard(card.id)}
+                        innerRef={el => {
                             cardRefs.current[i] = el;
                         }}
-                        style={{transitionDelay: `${i * 0.15}s`}}
-                        onClick={() => setSelectedCard(card.id)}
-                    >
-                        <div className={css.cardBg} style={{backgroundImage: `url(${card.img})`}}/>
-                        <div className={css.cardText}>
-                            <h3>{t(card.titleKey)}</h3>
-                            <button className={css.btn}>{t('articleTwo.cardMoreBtn')}</button>
-                        </div>
-                    </div>
+                    />
                 ))}
             </div>
 

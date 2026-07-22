@@ -2,6 +2,7 @@ import {FC, useEffect, useRef, useState} from "react";
 import css from './VideoPlayerComponent.module.css'
 import {CgPlayButton, CgPlayPause} from "react-icons/cg";
 import {LuVolume2, LuVolumeX} from "react-icons/lu";
+import {usePressState} from "../../hooks/usePressState";
 
 interface IProps {
     src: string;
@@ -19,6 +20,9 @@ export const VideoPlayer: FC<IProps> = ({src, poster, index, activeIndex, onPlay
     const [loaded, setLoaded] = useState(false);
     const [buffering, setBuffering] = useState(false);
     const isActive = activeIndex === index;
+
+    const playBtnPress = usePressState();
+    const muteBtnPress = usePressState();
 
     useEffect(() => {
         if (!isActive && videoRef.current) {
@@ -84,10 +88,18 @@ export const VideoPlayer: FC<IProps> = ({src, poster, index, activeIndex, onPlay
                 </div>
             )}
             <div className={css.videoControls}>
-                <button className={`${css.videoBtnOne} ${css.videoBtn}`} onClick={togglePlay}>
+                <button
+                    className={`${css.videoBtnOne} ${css.videoBtn} ${playBtnPress.isPressed ? css.videoBtnPressed : ''}`}
+                    onClick={togglePlay}
+                    {...playBtnPress.pressHandlers}
+                >
                     {playing ? <CgPlayPause/> : <CgPlayButton/>}
                 </button>
-                <button className={css.videoBtn} onClick={toggleMute}>
+                <button
+                    className={`${css.videoBtn} ${muteBtnPress.isPressed ? css.videoBtnPressed : ''}`}
+                    onClick={toggleMute}
+                    {...muteBtnPress.pressHandlers}
+                >
                     {muted ? <LuVolumeX/> : <LuVolume2/>}
                 </button>
             </div>

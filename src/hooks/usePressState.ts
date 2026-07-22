@@ -7,12 +7,10 @@ export function usePressState() {
     const release = useCallback(() => setIsPressed(false), []);
 
     const pressHandlers = {
-        onTouchStart: press,
-        onTouchEnd: release,
-        onTouchCancel: release,
-        onMouseDown: press,
-        onMouseUp: release,
-        onMouseLeave: release,
+        onPointerDown: press,
+        onPointerUp: release,
+        onPointerCancel: release,
+        onPointerLeave: release,
     };
 
     return { isPressed, press, release, pressHandlers };

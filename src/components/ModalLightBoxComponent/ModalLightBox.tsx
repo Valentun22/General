@@ -3,6 +3,7 @@ import {createPortal} from "react-dom";
 import {motion, AnimatePresence} from "motion/react";
 import {useKeyboardNav} from "../../hooks/useKeyboardNav";
 import {useSwipe} from "../../hooks/useSwipe";
+import {usePressFlash} from "../../hooks/usePressFlash";
 import {ButtonCloseComponent} from "../ButtonsComponents/CloseButtonComponent/ButtonCloseComponent";
 import css from './ModalLightBox.module.css';
 
@@ -35,6 +36,9 @@ const ModalLightbox: FC<IProps> = ({photos, index, onClose, onChangeIndex}) => {
     const total = photos.length;
     const directionRef = useRef(1);
 
+    const prevBtnFlash = usePressFlash();
+    const nextBtnFlash = usePressFlash();
+
     const prev = useCallback(() => {
         directionRef.current = -1;
         onChangeIndex((index - 1 + total) % total);
@@ -60,10 +64,11 @@ const ModalLightbox: FC<IProps> = ({photos, index, onClose, onChangeIndex}) => {
             <ButtonCloseComponent onClose={onClose}/>
 
             <button
-                className={css.fullPrev}
+                className={`${css.fullPrev} ${prevBtnFlash.isPressed ? css.fullPrevPressed : ''}`}
                 onClick={(e) => {
                     e.stopPropagation();
                     (e.currentTarget as HTMLButtonElement).blur();
+                    prevBtnFlash.flash();
                     prev();
                 }}
             >
@@ -101,10 +106,11 @@ const ModalLightbox: FC<IProps> = ({photos, index, onClose, onChangeIndex}) => {
             </div>
 
             <button
-                className={css.fullNext}
+                className={`${css.fullNext} ${nextBtnFlash.isPressed ? css.fullNextPressed : ''}`}
                 onClick={(e) => {
                     e.stopPropagation();
                     (e.currentTarget as HTMLButtonElement).blur();
+                    nextBtnFlash.flash();
                     next();
                 }}
             >

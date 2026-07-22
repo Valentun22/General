@@ -285,3 +285,20 @@
         padding: 2px 5px;
     }
 }
+
+.navPressed {
+    background: rgb(195 159 110 / 0.62);
+    border-color: #B99D75;
+}
+
+.cardPressed {
+    transform: translateY(-5px);
+}
+
+.cardPressed .cardImg img {
+    transform: scale(1.05);
+}
+
+.cardPressed .cardLabel {
+    color: #B99D75;
+}

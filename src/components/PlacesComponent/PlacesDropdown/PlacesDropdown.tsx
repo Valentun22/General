@@ -48,6 +48,8 @@ import pinsaMiaPhotoThree from '../../../img/place/pinsaMia/pinsaMiaPhotoThree.j
 import pinsaMiaPhotoFour from '../../../img/place/pinsaMia/pinsaMiaPhotoFour.jpg';
 import {useClickOutside} from "../../../hooks/useClickOutside";
 import {useCloseOnScroll} from "../../../hooks/useCloseOnScroll";
+import {usePressState} from "../../../hooks/usePressState";
+import {PlaceCard} from "../PlaceCard/PlaceCard";
 
 const placesStatic = [
     {
@@ -117,6 +119,7 @@ const placesStatic = [
     },
 ];
 
+
 interface IProps {
     open: boolean;
     onMouseLeave: () => void;
@@ -133,6 +136,8 @@ const PlacesDropdown: FC<IProps> = ({open, onMouseLeave, onMouseEnter, onClose, 
     const [isEnd, setIsEnd] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const menuRef = useRef<HTMLDivElement>(null);
+    const navPrevPress = usePressState();
+    const navNextPress = usePressState();
 
     const places = useMemo(() => {
         const placesI18n = t('places', {returnObjects: true}) as Array<{
@@ -162,7 +167,13 @@ const PlacesDropdown: FC<IProps> = ({open, onMouseLeave, onMouseEnter, onClose, 
                 onMouseLeave={onMouseLeave}
             >
                 <div className={css.swiperWrapper}>
-                    <div ref={setPrevEl} className={`${css.navPrev} ${isBeginning ? css.navHidden : ''}`}>‹</div>
+                    <div
+                        ref={setPrevEl}
+                        className={`${css.navPrev} ${isBeginning ? css.navHidden : ''} ${navPrevPress.isPressed ? css.navPressed : ''}`}
+                        {...navPrevPress.pressHandlers}
+                    >
+                        ‹
+                    </div>
                     <Swiper
                         modules={[Navigation]}
                         navigation={{prevEl, nextEl}}
@@ -180,17 +191,22 @@ const PlacesDropdown: FC<IProps> = ({open, onMouseLeave, onMouseEnter, onClose, 
                     >
                         {places.map((place, i) => (
                             <SwiperSlide key={i}>
-                                <div className={css.card} onClick={() => setSelectedIndex(i)}>
-                                    <div className={css.cardImg}>
-                                        {place.mainImg && <img src={place.mainImg} alt={place.name}/>}
-                                        <span className={css.cardCategory}>{place.category}</span>
-                                    </div>
-                                    <span className={css.cardLabel}>{place.name}</span>
-                                </div>
+                                <PlaceCard
+                                    mainImg={place.mainImg}
+                                    name={place.name}
+                                    category={place.category}
+                                    onClick={() => setSelectedIndex(i)}
+                                />
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div ref={setNextEl} className={`${css.navNext} ${isEnd ? css.navHidden : ''}`}>›</div>
+                    <div
+                        ref={setNextEl}
+                        className={`${css.navNext} ${isEnd ? css.navHidden : ''} ${navNextPress.isPressed ? css.navPressed : ''}`}
+                        {...navNextPress.pressHandlers}
+                    >
+                        ›
+                    </div>
                 </div>
             </div>
 

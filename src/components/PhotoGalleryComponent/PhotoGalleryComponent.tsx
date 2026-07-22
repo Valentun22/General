@@ -22,6 +22,7 @@ import {useKeyboardNav} from "../../hooks/useKeyboardNav";
 import {useSwipe} from "../../hooks/useSwipe";
 import {ModalLightbox} from "../ModalLightBoxComponent/ModalLightBox";
 import {useScrollLock} from "../../hooks/useScrollLock";
+import {usePressState} from "../../hooks/usePressState";
 
 const rows = [
     [photo1, photo2, photo3, photo4, photo5],
@@ -36,6 +37,9 @@ const MobileCarousel: FC = () => {
     const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
     const [isNarrow, setIsNarrow] = useState(false);
     const total = allPhotos.length;
+
+    const prevBtnPress = usePressState();
+    const nextBtnPress = usePressState();
 
     const toPrev = useCallback(() => setActiveIndex(prev => (prev - 1 + total) % total), [total]);
     const toNext = useCallback(() => setActiveIndex(prev => (prev + 1) % total), [total]);
@@ -106,7 +110,13 @@ const MobileCarousel: FC = () => {
             </div>
 
             <div className={css.carouselControls}>
-                <button className={css.carouselBtn} onClick={toPrev}>‹</button>
+                <button
+                    className={`${css.carouselBtn} ${prevBtnPress.isPressed ? css.carouselBtnPressed : ''}`}
+                    onClick={toPrev}
+                    {...prevBtnPress.pressHandlers}
+                >
+                    ‹
+                </button>
                 <div className={css.carouselDots}>
                     {allPhotos.map((_, i) => (
                         <div
@@ -116,7 +126,13 @@ const MobileCarousel: FC = () => {
                         />
                     ))}
                 </div>
-                <button className={css.carouselBtn} onClick={toNext}>›</button>
+                <button
+                    className={`${css.carouselBtn} ${nextBtnPress.isPressed ? css.carouselBtnPressed : ''}`}
+                    onClick={toNext}
+                    {...nextBtnPress.pressHandlers}
+                >
+                    ›
+                </button>
             </div>
 
             {lightboxIndex !== null && (

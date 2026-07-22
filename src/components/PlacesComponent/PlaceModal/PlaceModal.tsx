@@ -9,6 +9,7 @@ import {IconInstagram, IconLocation, IconMenu, IconPhone, IconWeb} from "../../.
 import {useScrollLock} from "../../../hooks/useScrollLock";
 import {useKeyboardNav} from "../../../hooks/useKeyboardNav";
 import {useSwipe} from "../../../hooks/useSwipe";
+import {usePressState} from "../../../hooks/usePressState";
 import {ButtonCloseComponent} from "../../ButtonsComponents/CloseButtonComponent/ButtonCloseComponent";
 import {ModalLightbox} from "../../ModalLightBoxComponent/ModalLightBox";
 import {LazyImage} from "../../LazyImageComponent/LazyImage";
@@ -31,6 +32,11 @@ const PlaceModal: FC<IProps> = ({open, places, currentIndex, onIndexChange, onCl
     const [isSwipeAllowed, setIsSwipeAllowed] = useState(false);
     const total = places.length;
     const directionRef = React.useRef(1);
+
+    const placePrevPress = usePressState();
+    const placeNextPress = usePressState();
+    const mobilePrevPress = usePressState();
+    const mobileNextPress = usePressState();
 
     useEffect(() => {
         setFullIndex(null);
@@ -104,13 +110,14 @@ const PlaceModal: FC<IProps> = ({open, places, currentIndex, onIndexChange, onCl
         <div className={css.overlay} onClick={onClose}>
 
             <button
-                className={css.placeNavPrev}
+                className={`${css.placeNavPrev} ${placePrevPress.isPressed ? css.placeNavPressed : ''}`}
                 disabled={isAnimating}
                 onClick={e => {
                     e.stopPropagation();
                     (e.currentTarget as HTMLButtonElement).blur();
                     prevPlace();
                 }}
+                {...placePrevPress.pressHandlers}
             >
                 ‹
             </button>
@@ -218,36 +225,39 @@ const PlaceModal: FC<IProps> = ({open, places, currentIndex, onIndexChange, onCl
             </div>
 
             <button
-                className={css.placeNavNext}
+                className={`${css.placeNavNext} ${placeNextPress.isPressed ? css.placeNavPressed : ''}`}
                 disabled={isAnimating}
                 onClick={e => {
                     e.stopPropagation();
                     (e.currentTarget as HTMLButtonElement).blur();
                     nextPlace();
                 }}
+                {...placeNextPress.pressHandlers}
             >
                 ›
             </button>
 
             <button
-                className={css.mobileNavPrev}
+                className={`${css.mobileNavPrev} ${mobilePrevPress.isPressed ? css.mobileNavPressed : ''}`}
                 disabled={isAnimating}
                 onClick={e => {
                     e.stopPropagation();
                     (e.currentTarget as HTMLButtonElement).blur();
                     prevPlace();
                 }}
+                {...mobilePrevPress.pressHandlers}
             >
                 ‹
             </button>
             <button
-                className={css.mobileNavNext}
+                className={`${css.mobileNavNext} ${mobileNextPress.isPressed ? css.mobileNavPressed : ''}`}
                 disabled={isAnimating}
                 onClick={e => {
                     e.stopPropagation();
                     (e.currentTarget as HTMLButtonElement).blur();
                     nextPlace();
                 }}
+                {...mobileNextPress.pressHandlers}
             >
                 ›
             </button>

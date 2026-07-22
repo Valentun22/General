@@ -15,14 +15,13 @@
     animation: overlayFadeIn 0.3s ease forwards;
 }
 
-@keyframes fadeDownZ {
-    from { opacity: 0; transform: translateX(20px); }
-    to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeDownX {
-    from { opacity: 0; transform: translateX(-20px); }
-    to   { opacity: 1; transform: translateX(0); }
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .modal {
@@ -42,7 +41,6 @@
 .placeNavPrev, .placeNavNext {
     position: absolute;
     top: 46%;
-    transform: translateY(-50%);
     background: transparent;
     border: none;
     color: white;
@@ -56,9 +54,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.placeNavPrev:hover, .placeNavNext:hover {
-    color: #B99D75;
-}
+    .placeNavPrev:hover, .placeNavNext:hover {
+        color: #B99D75;
+    }
 }
 
 .placeNavPrev:disabled, .placeNavNext:disabled {
@@ -73,14 +71,62 @@
     }
 }
 
+.placeNavPressed {
+    color: #B99D75;
+}
+
+@keyframes navPrevAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+@keyframes navNextAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+@keyframes navPrevNudge {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(-6px);
+    }
+}
+
+@keyframes navNextNudge {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(6px);
+    }
+}
+
 .placeNavPrev {
     left: 10px;
-    animation: fadeDownX 0.3s ease 1s both !important;
+    animation:
+            navPrevAppear 0.3s ease 1s both,
+            navPrevNudge 2.6s ease-in-out 1.4s infinite;
 }
 
 .placeNavNext {
     right: 10px;
-    animation: fadeDownZ 0.3s ease 1s both !important;
+    animation:
+            navNextAppear 0.3s ease 1s both,
+            navNextNudge 2.6s ease-in-out 1.4s infinite;
 }
 
 
@@ -90,7 +136,6 @@
     display: none;
     position: fixed;
     top: 46%;
-    transform: translateY(-50%);
     background: transparent;
     border: none;
     color: #B99D75;
@@ -102,9 +147,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.mobileNavPrev:hover, .mobileNavNext:hover {
-    color: #4e4332;
-}
+    .mobileNavPrev:hover, .mobileNavNext:hover {
+        color: #4e4332;
+    }
 }
 
 .mobileNavPrev:disabled, .mobileNavNext:disabled {
@@ -113,14 +158,62 @@
     color: #B99D75;
 }
 
+.mobileNavPressed {
+    color: #4e4332;
+}
+
+@keyframes mobileNavPrevAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+@keyframes mobileNavNextAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+@keyframes mobileNavPrevNudge {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(-6px);
+    }
+}
+
+@keyframes mobileNavNextNudge {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(6px);
+    }
+}
+
 .mobileNavPrev {
     left: 20px;
-    animation: fadeDownX 0.8s ease 0.55s both;
+    animation:
+            mobileNavPrevAppear 0.8s ease 0.55s both,
+            mobileNavPrevNudge 2.6s ease-in-out 1.35s infinite;
 }
 
 .mobileNavNext {
     right: 20px;
-    animation: fadeDownZ 0.8s ease 0.55s both;
+    animation:
+            mobileNavNextAppear 0.8s ease 0.55s both,
+            mobileNavNextNudge 2.6s ease-in-out 1.35s infinite;
 }
 
 .header {
@@ -219,9 +312,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.contactLink:hover {
-    color: #B99D75;
-}
+    .contactLink:hover {
+        color: #B99D75;
+    }
 }
 
 .links {
@@ -251,10 +344,10 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.linkBtn:hover {
-    background: #B99D75;
-    color: white;
-}
+    .linkBtn:hover {
+        background: #B99D75;
+        color: white;
+    }
 }
 
 .linkBtnInstagram {
@@ -264,10 +357,10 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.linkBtnInstagram:hover {
-    background: #c13584;
-    color: white;
-}
+    .linkBtnInstagram:hover {
+        background: #c13584;
+        color: white;
+    }
 }
 
 .gallery {
@@ -301,9 +394,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.galleryItem:hover {
-    border-color: #B99D75;
-}
+    .galleryItem:hover {
+        border-color: #B99D75;
+    }
 }
 
 .galleryItem img {
@@ -315,9 +408,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.galleryItem:hover img {
-    transform: scale(1.05);
-}
+    .galleryItem:hover img {
+        transform: scale(1.05);
+    }
 }
 
 .fullOverlay {
@@ -355,10 +448,10 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.fullPrev:hover,
-.fullNext:hover {
-    color: #B99D75;
-}
+    .fullPrev:hover,
+    .fullNext:hover {
+        color: #B99D75;
+    }
 }
 
 .fullPrev {
@@ -368,16 +461,6 @@
 .fullNext {
     right: 20px;
 }
-
-@keyframes overlayFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 
 @media (max-width: 1400px) {
     .name {

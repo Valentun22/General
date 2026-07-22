@@ -1,5 +1,4 @@
 import {FC, useState, useEffect, useRef, useMemo} from "react";
-import {NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
@@ -16,6 +15,8 @@ import columEight from '../../../src/img/navbar/columEight.jpg';
 import React from "react";
 import {useCloseOnScroll} from "../../hooks/useCloseOnScroll";
 import {useClickOutside} from "../../hooks/useClickOutside";
+import {usePressState} from "../../hooks/usePressState";
+import {RouteCard} from "./RouteCard/RouteCard";
 
 const routesStatic = [
     {path: '/parashka', img: columOne},
@@ -43,6 +44,8 @@ const RoutesDropdown: FC<IProps> = ({open, onMouseLeave, onMouseEnter, onClose, 
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
+    const navPrevPress = usePressState();
+    const navNextPress = usePressState();
 
     const routes = useMemo(() => {
         const routesI18n = t('routes', {returnObjects: true}) as Array<{ label: string; distance: string }>;
@@ -83,7 +86,13 @@ const RoutesDropdown: FC<IProps> = ({open, onMouseLeave, onMouseEnter, onClose, 
                 onMouseLeave={onMouseLeave}
             >
                 <div className={css.swiperWrapper}>
-                    <div ref={setPrevEl} className={`${css.navPrev} ${isBeginning ? css.navHidden : ''}`}>‹</div>
+                    <div
+                        ref={setPrevEl}
+                        className={`${css.navPrev} ${isBeginning ? css.navHidden : ''} ${navPrevPress.isPressed ? css.navPressed : ''}`}
+                        {...navPrevPress.pressHandlers}
+                    >
+                        ‹
+                    </div>
 
                     <Swiper
                         modules={[Navigation]}
@@ -97,20 +106,24 @@ const RoutesDropdown: FC<IProps> = ({open, onMouseLeave, onMouseEnter, onClose, 
                     >
                         {routes.map((route, i) => (
                             <SwiperSlide key={i}>
-                                <NavLink to={route.path} className={css.card}>
-                                    <div className={css.cardImg}>
-                                        <img src={route.img} alt={route.label}/>
-                                        <span className={css.cardDistance}>
-                                            {t('locationRoutesDropdown.distanceLabel')} {route.distance}
-                                        </span>
-                                    </div>
-                                    <span className={css.cardLabel}>{route.label}</span>
-                                </NavLink>
+                                <RouteCard
+                                    path={route.path}
+                                    img={route.img}
+                                    label={route.label}
+                                    distance={route.distance}
+                                    distanceLabel={t('locationRoutesDropdown.distanceLabel')}
+                                />
                             </SwiperSlide>
                         ))}
                     </Swiper>
 
-                    <div ref={setNextEl} className={`${css.navNext} ${isEnd ? css.navHidden : ''}`}>›</div>
+                    <div
+                        ref={setNextEl}
+                        className={`${css.navNext} ${isEnd ? css.navHidden : ''} ${navNextPress.isPressed ? css.navPressed : ''}`}
+                        {...navNextPress.pressHandlers}
+                    >
+                        ›
+                    </div>
                 </div>
             </div>
         </div>

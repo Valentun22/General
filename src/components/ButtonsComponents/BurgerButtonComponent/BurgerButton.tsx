@@ -1,5 +1,6 @@
 import React, {FC, useRef, useEffect, useCallback} from "react";
 import css from "./BurgerButton.module.css";
+import {usePressState} from "../../../hooks/usePressState";
 
 interface IProps {
     isOpen?: boolean;
@@ -26,6 +27,7 @@ const BurgerButton: FC<IProps> = ({
 
     const menuRef = useRef<HTMLDivElement>(null);
     const burgerRef = useRef<HTMLButtonElement>(null);
+    const btnPress = usePressState();
 
     useEffect(() => {
         if (!isOpen) return;
@@ -45,9 +47,10 @@ const BurgerButton: FC<IProps> = ({
         <div>
             <button
                 ref={burgerRef}
-                className={`${css.burgerBtn} ${isOpen ? css.burgerOpen : ''} ${className ?? ''}`}
+                className={`${css.burgerBtn} ${isOpen ? css.burgerOpen : ''} ${btnPress.isPressed ? css.burgerBtnPressed : ''} ${className ?? ''}`}
                 onClick={isOpen ? handleClose : onClick}
                 aria-label="Меню"
+                {...btnPress.pressHandlers}
             >
                 <span className={css.burgerLine}/>
                 <span className={css.burgerLine}/>

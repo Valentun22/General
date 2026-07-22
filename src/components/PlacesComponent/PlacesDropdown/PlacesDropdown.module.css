@@ -50,10 +50,9 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-
-.card:hover .cardImg img {
-    transform: scale(1.05);
-}
+    .card:hover .cardImg img {
+        transform: scale(1.05);
+    }
 }
 
 .cardCategory {
@@ -84,10 +83,9 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-
-.card:hover .cardLabel {
-    color: #B99D75;
-}
+    .card:hover .cardLabel {
+        color: #B99D75;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -178,11 +176,11 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.navPrev:hover,
-.navNext:hover {
-    background: rgba(185, 157, 117, 0.25);
-    border-color: #B99D75;
-}
+    .navPrev:hover,
+    .navNext:hover {
+        background: rgba(185, 157, 117, 0.25);
+        border-color: #B99D75;
+    }
 }
 
 .navHidden {
@@ -201,9 +199,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.card:hover {
-    transform: translateY(-5px);
-}
+    .card:hover {
+        transform: translateY(-5px);
+    }
 }
 
 .cardImg {
@@ -282,4 +280,21 @@
         left: 10px;
         padding: 2px 5px;
     }
+}
+
+.navPressed {
+    background: rgb(195 159 110 / 0.62);
+    border-color: #B99D75;
+}
+
+.modalHoverBtnPress {
+    transform: translateY(-5px);
+}
+
+.modalHoverBtnPress .cardImg img {
+    transform: scale(1.05);
+}
+
+.modalHoverBtnPress .cardLabel {
+    color: #B99D75;
 }

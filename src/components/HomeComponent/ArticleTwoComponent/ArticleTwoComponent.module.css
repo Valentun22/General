@@ -1334,3 +1334,18 @@
         padding-top: 50px;
     }
 }
+
+.swiperNavPressed {
+    background-color: rgba(185, 157, 117, 0.55) !important;
+}
+
+.cardPressed::before {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.cardPressed .cardBg {
+    transform: scale(1.07);
+}

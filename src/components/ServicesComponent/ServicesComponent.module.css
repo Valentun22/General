@@ -87,6 +87,8 @@
     height: 220px;
     perspective: 1200px;
     cursor: pointer;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .card {
