@@ -339,11 +339,16 @@
 
     @media (hover: hover) and (pointer: fine) {
 
-    .forecastToggleBtn:hover {
-        background: #B99D75;
-        color: #131212;
+        .forecastToggleBtn:hover {
+            background: #B99D75;
+            color: #131212;
+        }
     }
-}
+
+    .modalBtnPressed {
+        background: #B99D75;
+        color: white;
+    }
 
     .weatherForecastMobile {
         width: 100%;

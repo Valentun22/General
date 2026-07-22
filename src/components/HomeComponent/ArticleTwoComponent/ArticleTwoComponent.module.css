@@ -317,6 +317,11 @@
 }
 }
 
+.modalBtnPressed{
+    background: #B99D75;
+    color: white;
+}
+
 .price {
     position: absolute;
     top: 15px;

@@ -36,6 +36,7 @@ import {BathroomModal} from './CardModal/BathroomModal/BathroomModal';
 import {TerritoryModal} from './CardModal/TerritoryModal/TerritoryModal';
 import {ServicesComponent} from "../../ServicesComponent/ServicesComponent";
 import {ServicesModal} from "./ServicesModal/ServicesModal";
+import {usePressState} from "../../../hooks/usePressState";
 
 type SelectedCard = 'house' | 'kitchen' | 'bathroom' | 'territory' | null;
 
@@ -47,6 +48,8 @@ const ArticleTwoComponent: FC = () => {
     const imgRef1 = useRef<HTMLImageElement | null>(null);
     const imgRef2 = useRef<HTMLImageElement | null>(null);
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const modalBtnPress = usePressState();
+
 
     const cards: { img: string; titleKey: string; id: SelectedCard }[] = [
         {img: columOne, titleKey: 'articleTwo.cards.house', id: 'house'},
@@ -193,7 +196,9 @@ const ArticleTwoComponent: FC = () => {
                             </div>
                         ))}
                         <div className={css.serviceItem}>
-                            <button className={css.moreBtn} onClick={() => setModalOpen(true)}>
+                            <button className={`${css.moreBtn} ${modalBtnPress.isPressed ? css.modalBtnPressed : ''}`}
+                                    {...modalBtnPress.pressHandlers}
+                                    onClick={() => setModalOpen(true)}>
                                 {t('articleTwo.moreBtn')}
                             </button>
                         </div>

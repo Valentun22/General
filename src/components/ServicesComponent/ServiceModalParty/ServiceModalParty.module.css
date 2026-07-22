@@ -78,10 +78,10 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.close:hover {
-    color: #B99D75;
-    transform: rotate(90deg);
-}
+    .close:hover {
+        color: #B99D75;
+        transform: rotate(90deg);
+    }
 }
 
 .modalHeader {
@@ -171,10 +171,10 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.modalBtn:hover {
-    background: #B99D75;
-    color: white;
-}
+    .modalBtn:hover {
+        background: #B99D75;
+        color: white;
+    }
 }
 
 .modalPhotos {
@@ -234,16 +234,31 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-
-.videoBtn:hover {
-    background: #B99D75;
-    color: white;
-}
+    .videoBtn:hover {
+        background: #B99D75;
+        color: white;
+    }
 }
 
 .modalVideoWrap {
     border-radius: 4px;
 }
+
+.closePressed {
+    color: #B99D75;
+    transform: rotate(90deg);
+}
+
+.modalBtnPressed {
+    background: #B99D75;
+    color: white;
+}
+
+.videoBtnPressed {
+    background: #B99D75;
+    color: white;
+}
+
 
 @media (max-width: 1400px) {
     .modal {
@@ -360,6 +375,7 @@
         font-size: 0.7rem;
         margin-bottom: 15px;
     }
+
     .modalHeader {
         padding-bottom: 12px;
         margin-bottom: 5px;

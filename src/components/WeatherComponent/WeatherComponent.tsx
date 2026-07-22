@@ -2,6 +2,7 @@ import {FC, useCallback, useEffect, useMemo, useRef, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {WeatherDay} from "../../interfaces/IWeatherDayInterface";
 import css from './WeatherComponent.module.css';
+import {usePressState} from "../../hooks/usePressState";
 
 const WeatherComponent: FC = () => {
     const {t} = useTranslation();
@@ -12,6 +13,7 @@ const WeatherComponent: FC = () => {
     const [forecastOpen, setForecastOpen] = useState(false);
     const [visible, setVisible] = useState(false);
     const boxRef = useRef<HTMLDivElement>(null);
+    const modalBtnPress = usePressState();
     const animatedRef = useRef(false);
 
     const days = useMemo(() => t('weather.days', {returnObjects: true}) as string[], [t]);
@@ -122,7 +124,8 @@ const WeatherComponent: FC = () => {
                     <p className={css.weatherDesc}>{desc}</p>
                 </div>
                 <button
-                    className={css.forecastToggleBtn}
+                    className={`${css.forecastToggleBtn} ${modalBtnPress.isPressed ? css.modalBtnPressed : ''}`}
+                    {...modalBtnPress.pressHandlers}
                     onClick={() => setForecastOpen(prev => !prev)}
                     aria-expanded={forecastOpen}
                 >

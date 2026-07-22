@@ -167,6 +167,11 @@
     animation: modalBtnPulse 2s ease-in-out infinite;
 }
 
+.modalBtnPressed {
+    background: #B99D75;
+    color: white;
+}
+
 @keyframes modalBtnPulse {
     0%, 100% {
         transform: scale(1);

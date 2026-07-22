@@ -1,6 +1,7 @@
 import {FC, useState} from "react";
 import css from './ServiceModalParty.module.css';
 import {useScrollLock} from "../../../hooks/useScrollLock";
+import {usePressState} from "../../../hooks/usePressState";
 import {IServiceGeneralInterface} from "../../../interfaces/IServiceGeneralInterface";
 import {VideoPlayer} from "../../VideoPlayerComponent/VideoPlayerComponent";
 import {useTranslation} from "react-i18next";
@@ -16,10 +17,19 @@ const ServiceModalParty: FC<IProps> = ({open, service, onClose}) => {
     const [activeVideo, setActiveVideo] = useState<number | null>(null);
     const {t} = useTranslation();
 
+    const closeBtnPress = usePressState();
+    const modalBtnPress = usePressState();
+
     return (
         <div className={css.overlay} onClick={onClose}>
             <div className={css.modal} onClick={e => e.stopPropagation()}>
-                <button className={css.close} onClick={onClose}>✕</button>
+                <button
+                    className={`${css.close} ${closeBtnPress.isPressed ? css.closePressed : ''}`}
+                    onClick={onClose}
+                    {...closeBtnPress.pressHandlers}
+                >
+                    ✕
+                </button>
 
                 <div className={css.modalHeader}>
                     <span className={css.modalSubtitle}>General's Dacha</span>
@@ -32,47 +42,48 @@ const ServiceModalParty: FC<IProps> = ({open, service, onClose}) => {
                             <p key={i}>{para}</p>
                         ))}
                         <a
-                            href="https://ig.me/m/_generals_dacha_"
-                            target="_blank"
-                            rel="noreferrer"
-                            className={css.modalBtn}
+                        href="https://ig.me/m/_generals_dacha_"
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`${css.modalBtn} ${modalBtnPress.isPressed ? css.modalBtnPressed : ''}`}
+                        {...modalBtnPress.pressHandlers}
                         >
-                            {t('servicesTextBut.textOne')}
-                        </a>
-                    </div>
-
-                    {(service.photos.length > 0 || (service.videos ?? []).length > 0) && (
-                        <div className={css.modalPhotos}>
-                            {service.photos.map((photo, i) => (
-                                <img
-                                    key={`photo-${i}`}
-                                    src={photo}
-                                    alt={service.title}
-                                    className={css.modalPhoto}
-                                />
-                            ))}
-
-                            {(service.videos ?? []).length > 0 && (
-                                <div className={css.videosRow}>
-                                    {(service.videos ?? []).map((video, i) => (
-                                        <VideoPlayer
-                                            key={`video-${i}`}
-                                            src={video}
-                                            poster={service.videoPosters?.[i]}
-                                            index={i}
-                                            activeIndex={activeVideo}
-                                            onPlay={setActiveVideo}
-                                            wrapClassName={css.modalVideoWrap}
-                                        />
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    )}
+                        {t('servicesTextBut.textOne')}
+                    </a>
                 </div>
+
+                {(service.photos.length > 0 || (service.videos ?? []).length > 0) && (
+                    <div className={css.modalPhotos}>
+                        {service.photos.map((photo, i) => (
+                            <img
+                                key={`photo-${i}`}
+                                src={photo}
+                                alt={service.title}
+                                className={css.modalPhoto}
+                            />
+                        ))}
+
+                        {(service.videos ?? []).length > 0 && (
+                            <div className={css.videosRow}>
+                                {(service.videos ?? []).map((video, i) => (
+                                    <VideoPlayer
+                                        key={`video-${i}`}
+                                        src={video}
+                                        poster={service.videoPosters?.[i]}
+                                        index={i}
+                                        activeIndex={activeVideo}
+                                        onPlay={setActiveVideo}
+                                        wrapClassName={css.modalVideoWrap}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
-    );
+</div>
+);
 };
 
 export {ServiceModalParty};

@@ -40,12 +40,6 @@
     animation: subtleBounce 2s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
 }
 
-.bookingBtnPressed {
-    background-color: #B99D75 !important;
-    color: #131212;
-    border-radius: 5px;
-}
-
 @keyframes subtleBounce {
     0%, 100% {
         transform: translateY(0);

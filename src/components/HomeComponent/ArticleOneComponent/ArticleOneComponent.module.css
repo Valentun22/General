@@ -90,6 +90,7 @@
         opacity: 1;
     }
 }
+
 @keyframes navFadeIn {
     from {
         opacity: 0;
@@ -194,9 +195,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.dropdownTrigger:hover::after {
-    width: 100%;
-}
+    .dropdownTrigger:hover::after {
+        width: 100%;
+    }
 }
 
 .dropdownArrow {
@@ -268,11 +269,11 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.swiperNavPrev:hover,
-.swiperNavNext:hover {
-    background: rgba(185, 157, 117, 0.25);
-    border-color: #B99D75;
-}
+    .swiperNavPrev:hover,
+    .swiperNavNext:hover {
+        background: rgba(185, 157, 117, 0.25);
+        border-color: #B99D75;
+    }
 }
 
 .dropdownSwiper :global(.swiper-button-next),
@@ -291,9 +292,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.dropdownCard:hover {
-    transform: translateY(-5px);
-}
+    .dropdownCard:hover {
+        transform: translateY(-5px);
+    }
 }
 
 .dropdownCardImg {
@@ -313,9 +314,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.dropdownCard:hover .dropdownCardImg img {
-    transform: scale(1.05);
-}
+    .dropdownCard:hover .dropdownCardImg img {
+        transform: scale(1.05);
+    }
 }
 
 .dropdownCardLabel {
@@ -332,9 +333,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.dropdownCard:hover .dropdownCardLabel {
-    color: #B99D75;
-}
+    .dropdownCard:hover .dropdownCardLabel {
+        color: #B99D75;
+    }
 }
 
 .swiperNavHidden {
@@ -368,9 +369,9 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.navLink:hover::after {
-    width: 100%;
-}
+    .navLink:hover::after {
+        width: 100%;
+    }
 }
 
 .contactIcon {
@@ -410,11 +411,17 @@
     transition: width 0.3s ease;
 }
 
-@media (hover: hover) and (pointer: fine) {
-
-.navLinkBtn:hover::after {
-    width: 100%;
+.mobileBookingBtnPressed {
+    background-color: #B99D75 !important;
+    color: #131212;
+    box-shadow: 0 0 14px 4px rgba(185, 157, 117, 0.45);
+    font-size: 13.5px;
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .navLinkBtn:hover::after {
+        width: 100%;
+    }
 }
 
 
@@ -536,12 +543,12 @@
 
 @media (hover: hover) and (pointer: fine) {
 
-.mobileBookingBtn:hover {
-    background-color: #B99D75;
-    color: #131212;
-    box-shadow: 0 0 14px 4px rgba(185, 157, 117, 0.45);
-    font-size: 13.5px;
-}
+    .mobileBookingBtn:hover {
+        background-color: #B99D75;
+        color: #131212;
+        box-shadow: 0 0 14px 4px rgba(185, 157, 117, 0.45);
+        font-size: 13.5px;
+    }
 }
 
 .arrow {

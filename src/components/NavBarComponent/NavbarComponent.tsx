@@ -49,6 +49,10 @@ const NavbarComponent: FC<IProps> = ({title}) => {
         places.toggle(() => routes.close());
     }, [routes, places]);
 
+    const [mobileBtnPressed, setMobileBtnPressed] = useState(false);
+    const pressMobileBtn = () => setMobileBtnPressed(true);
+    const releaseMobileBtn = () => setMobileBtnPressed(false);
+
     const drawerContent = (
         <>
             <NavLink to="/" className={css.mobileMenuItem} onClick={closeMobileMenu}>
@@ -68,11 +72,20 @@ const NavbarComponent: FC<IProps> = ({title}) => {
             }}>
                 <MdOutlineCoffee size={20}/> {t('nav.places')}
             </button>
-            <button className={css.mobileBookingBtn} onClick={() => {
-                closeAllDropdowns();
-                setMobileBookingOpen(true);
-                closeMobileMenu();
-            }}>
+            <button
+                className={`${css.mobileBookingBtn} ${mobileBtnPressed ? css.mobileBookingBtnPressed : ''}`}
+                onClick={() => {
+                    closeAllDropdowns();
+                    setMobileBookingOpen(true);
+                    closeMobileMenu();
+                }}
+                onTouchStart={pressMobileBtn}
+                onTouchEnd={releaseMobileBtn}
+                onTouchCancel={releaseMobileBtn}
+                onMouseDown={pressMobileBtn}
+                onMouseUp={releaseMobileBtn}
+                onMouseLeave={releaseMobileBtn}
+            >
                 {t('nav.bookNow')}
             </button>
         </>

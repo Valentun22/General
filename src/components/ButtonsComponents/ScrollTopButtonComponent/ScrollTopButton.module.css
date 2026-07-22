@@ -1,19 +1,42 @@
 @keyframes floatBounce {
-    0%   { transform: translateY(30px); opacity: 0; }
-    55%  { transform: translateY(-8px); opacity: 1; }
-    75%  { transform: translateY(4px); }
-    90%  { transform: translateY(-3px); }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    55% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(4px);
+    }
+    90% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes floatDown {
-    from { transform: translateY(0); opacity: 1; }
-    to   { transform: translateY(30px); opacity: 0; }
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(30px);
+        opacity: 0;
+    }
 }
 
 @keyframes floating {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-6px); }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 .scrollTop {
@@ -37,9 +60,8 @@
 
 .scrollTop.show {
     pointer-events: all;
-    animation:
-            floatBounce 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-            floating 2.5s ease-in-out 0.65s infinite;
+    animation: floatBounce 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    floating 2.5s ease-in-out 0.65s infinite;
 }
 
 .scrollTop.hide {
@@ -59,18 +81,25 @@
     transition: border-color 0.3s ease;
 }
 
-@media (hover: hover) and (pointer: fine) {
-
-.scrollTop:hover {
+.scrollTopPressed {
     background: #B99D75;
 }
+
+.scrollTopPressed::after {
+    border-color: white;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .scrollTop:hover {
+        background: #B99D75;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
 
-.scrollTop:hover::after {
-    border-color: white;
-}
+    .scrollTop:hover::after {
+        border-color: white;
+    }
 }
 
 @media (max-width: 480px) {
@@ -80,8 +109,6 @@
         right: 20px;
         width: 35px;
         height: 35px;
-        background: transparent;
-        border: 2px solid #B99D75;
         border-radius: 50%;
         cursor: pointer;
         display: flex;

@@ -51,6 +51,10 @@ const ArticleOneComponent: FC = () => {
         setMobileMenuOpen(prev => !prev);
     };
 
+    const [mobileBtnPressed, setMobileBtnPressed] = useState(false);
+    const pressMobileBtn = () => setMobileBtnPressed(true);
+    const releaseMobileBtn = () => setMobileBtnPressed(false);
+
     useCloseOnScroll(mobileMenuOpen, closeMobileMenu);
 
     const drawerContent = (
@@ -81,10 +85,19 @@ const ArticleOneComponent: FC = () => {
             }}>
                 <MdOutlineRule size={20}/> {t('nav.rules')}
             </button>
-            <button className={css.mobileBookingBtn} onClick={() => {
-                setMobileBookingOpen(true);
-                closeMobileMenu();
-            }}>
+            <button
+                className={`${css.mobileBookingBtn} ${mobileBtnPressed ? css.mobileBookingBtnPressed : ''}`}
+                onClick={() => {
+                    setMobileBookingOpen(true);
+                    closeMobileMenu();
+                }}
+                onTouchStart={pressMobileBtn}
+                onTouchEnd={releaseMobileBtn}
+                onTouchCancel={releaseMobileBtn}
+                onMouseDown={pressMobileBtn}
+                onMouseUp={releaseMobileBtn}
+                onMouseLeave={releaseMobileBtn}
+            >
                 {t('nav.bookNow')}
             </button>
         </>
