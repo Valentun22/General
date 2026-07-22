@@ -50,6 +50,9 @@
     max-width: 450px;
     padding-top: 50px;
     transition: 0.5s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .boxTwoContThree {

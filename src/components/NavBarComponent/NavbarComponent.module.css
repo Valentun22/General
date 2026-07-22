@@ -183,6 +183,9 @@
     flex-direction: column;
     width: 100%;
     transition: 0.5s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .boxTwoContTwo img {

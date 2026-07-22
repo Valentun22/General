@@ -242,6 +242,9 @@
     border: 1px solid #ffffff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     max-width: 900px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .mapBox iframe {

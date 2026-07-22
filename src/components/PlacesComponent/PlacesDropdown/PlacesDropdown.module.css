@@ -9,6 +9,9 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .overlay.visible {
@@ -31,6 +34,9 @@
     transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease, height 0.35s ease;
     z-index: 1004;
     box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .dropdownMenuVisible {
