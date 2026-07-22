@@ -28,6 +28,9 @@
     padding: 7vw 5vw;
     display: flex;
     flex-direction: column;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .row {

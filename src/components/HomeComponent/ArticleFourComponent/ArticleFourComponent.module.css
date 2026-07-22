@@ -12,6 +12,9 @@
     justify-content: center;
     background-size: cover;
     background-position: center 50%;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .animateFadeDown {
@@ -119,6 +122,9 @@
 .boxTwoContOneInfoOne {
     width: 27vw;
     max-width: 420px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .boxTwoContOneInfoOne h2 {

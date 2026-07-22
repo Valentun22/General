@@ -84,6 +84,9 @@
     color: #B99D75;
     border: 1px solid #B99D75;
     opacity: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .weatherBoxVisible {

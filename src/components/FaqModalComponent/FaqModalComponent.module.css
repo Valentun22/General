@@ -7,7 +7,11 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);}
+    -webkit-backdrop-filter: blur(2px);
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
 
 .modal {
     background: #ffffff;
